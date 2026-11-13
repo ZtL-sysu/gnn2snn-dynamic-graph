@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-11-13T21:19:44+0800",
+  "source_record": "10.5281/zenodo.7213796 (CC BY 4.0)",
+  "policy": "Chronological 70/15/15. Validation query IDs alone select T, gamma and calibration percentile. Test query IDs are read once at P5. These IDs were used in a predecessor local project and are DISCLOSED AS NON-BLIND.",
+  "streams": [
+    {
+      "name": "wikipedia",
+      "file": "wikipedia-events.npz",
+      "bytes": 1253310,
+      "file_sha256": "4851f7bb3c21074d3444885abdf285a941c802a48794e52a592eb44faa737365",
+      "n_events": 157474,
+      "validation_query": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64",
+        "sha256": "fff3eaee362591da568346e87d46ccf548bd26dcdb4b069c6acb222e68e81f36",
+        "n": 1024
+      },
+      "test_query": {
+        "shape": [
+          4096
+        ],
+        "dtype": "int64",
+        "sha256": "afbc18e97b416334fa799770bd6649f4f7d4b811b68b333e55db394a4561fac9",
+        "n": 4096
+      },
+      "catalog": {
+        "shape": [
+          1000
+        ],
+        "dtype": "int64",
+        "sha256": "17762d6b998101069afdff9fd92a4c6eb56bcebbdf105e3adb8a910cef046449",
+        "n": 1000
+      }
+    },
+    {
+      "name": "mooc",
+      "file": "mooc-events.npz",
+      "bytes": 2821369,
+      "file_sha256": "739bea635f55ab1509a64439c71e6599990498a259f9d9468b0914049c3e3c65",
+      "n_events": 411749,
+      "validation_query": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64",
+        "sha256": "9e68b01a4c5bb5466365d853552aaba4cd086ad94beb84573152e5878354ffaf",
+        "n": 1024
+      },
+      "test_query": {
+        "shape": [
+          4096
+        ],
+        "dtype": "int64",
+        "sha256": "508a948dfd2caad8efa95a3ea0826554239eaae6d0c11da22e653e88c6e98b1a",
+        "n": 4096
+      },
+      "catalog": {
+        "shape": [
+          97
+        ],
+        "dtype": "int64",
+        "sha256": "a14cb343e1124efcf4350e1e2541615f078f4865bee0a4884e2ab80a63e87a41",
+        "n": 97
+      }
+    },
+    {
+      "name": "reddit",
+      "file": "reddit-events.npz",
+      "bytes": 7266991,
+      "file_sha256": "cf6241560c42a763616fb03c18be6a089164800e97d30a2b0f23f375936346cf",
+      "n_events": 672447,
+      "validation_query": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64",
+        "sha256": "9057ec51feb95a0567fb0ca834951f9f3cdc45963d11869a5e84659041a41288",
+        "n": 1024
+      },
+      "test_query": {
+        "shape": [
+          4096
+        ],
+        "dtype": "int64",
+        "sha256": "2f16d925cce79e142694907a418c8a206d5ec1915040b24cdba57bd0a2b3b532",
+        "n": 4096
+      },
+      "catalog": {
+        "shape": [
+          984
+        ],
+        "dtype": "int64",
+        "sha256": "e0b53c10a83765b22b2221f0b03d96ecd87039c4883da7b98163c13f83b14dae",
+        "n": 984
+      }
+    },
+    {
+      "name": "lastfm",
+      "file": "lastfm-events.npz",
+      "bytes": 10938846,
+      "file_sha256": "38ebd46df6f5b400c053542fc44d5bafcfbc143a9c62d210ef99f9a98215f3fc",
+      "n_events": 1293103,
+      "validation_query": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64",
+        "sha256": "0231d84cd4c516583bc4f6549a80058e31871827e2d4e1674c0e502fa65f8993",
+        "n": 1024
+      },
+      "test_query": {
+        "shape": [
+          4096
+        ],
+        "dtype": "int64",
+        "sha256": "6e14b2bebdda582b4e0bb5e2327636688d438d62a3d75e65a66daf69e5ede8ba",
+        "n": 4096
+      },
+      "catalog": {
+        "shape": [
+          1000
+        ],
+        "dtype": "int64",
+        "sha256": "6268f94524b89ef92fc46f922d5ecbe796037aca7b1efab82e1249d46ba39ffc",
+        "n": 1000
+      }
+    }
+  ]
+}

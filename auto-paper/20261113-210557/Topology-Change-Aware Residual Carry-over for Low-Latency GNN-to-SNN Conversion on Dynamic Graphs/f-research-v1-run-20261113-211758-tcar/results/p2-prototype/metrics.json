@@ -1,0 +1,26 @@
+{
+  "status": "smoke_completed",
+  "coverage": "smoke/2000-events",
+  "events_processed": 2000,
+  "nodes_in_subset": 643,
+  "candidate_catalog_size": 64,
+  "calibration_theta": 12.301837619228786,
+  "calibration_activation_max": 13.217274700350854,
+  "clipping_rate": 0.001,
+  "agreement_hard_reset_fraction": 0.0755,
+  "agreement_global_carry_over_fraction": 0.33,
+  "mean_epsilon_hard": 8.496924340002547,
+  "mean_epsilon_carry": 3.4067882389533652,
+  "mean_delta_v": 0.37234296161354985,
+  "wall_clock_seconds": 0.981,
+  "device_probe": {
+    "python": "3.14.6",
+    "torch": "2.13.0",
+    "mps_available": true,
+    "cuda_available": false,
+    "mps_matmul": true,
+    "mps_relu": true,
+    "cpu_matmul": true
+  },
+  "note": "Smoke numbers are NOT scientific results and must never appear in the manuscript as findings."
+}

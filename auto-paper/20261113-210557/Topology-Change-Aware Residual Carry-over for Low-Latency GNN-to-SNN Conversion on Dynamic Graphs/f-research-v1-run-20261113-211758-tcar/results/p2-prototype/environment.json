@@ -1,0 +1,9 @@
+{
+  "python": "3.14.6",
+  "torch": "2.13.0",
+  "mps_available": true,
+  "cuda_available": false,
+  "mps_matmul": true,
+  "mps_relu": true,
+  "cpu_matmul": true
+}

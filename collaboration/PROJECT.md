@@ -22,10 +22,10 @@
 
 | 项 | 状态 |
 |---|---|
-| `guidance.md` | **未生成**（`f-guidance-builder-v1` 进行中）。生成后路径写入本表并附 SHA-256 |
-| `ccfa-startup-packet/feasibility-contract.json` | 未生成 |
-| `guidance-pipeline-state.md` | 未生成（canonical order: CCFA-startup → G0…G8 → validation → handoff） |
-| `f-research-v1` 的 `pipeline-state.json` | 未生成（canonical order: P0 → P1 → P1A → P1B → P2 … P21） |
+| `guidance.md` | **已生成并通过校验**：`auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/guidance.md`（TCAR，Neurocomputing） |
+| `ccfa-startup-packet/feasibility-contract.json` | 已生成；3 条 binding claim 哈希绑定 7 个 startup artifacts；`startup-decision.md` = `proceed` |
+| `guidance-pipeline-state.md` | 已生成；`CCFA-startup → G0…G8 → validation → handoff` 依序全 passed，`pipeline_state.py --complete` EXIT=0 |
+| `f-research-v1` 的 `pipeline-state.json` | 已生成于 `f-research-v1-run-20261113-211758-tcar/`；P0–P2 依序 passed，P3–P21 pending；`--before P3` EXIT=0，`--complete` 正确报未全通过 |
 | 协作协议 | `collaboration/PROTOCOL.md` v1 |
 
 ## 真实状态入口

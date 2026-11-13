@@ -20,4 +20,11 @@
 - 2026-11-13T21:07+0800 | 选题重定义 | 因 CRPI 已占「跨步残差结转」，把主机制改为「事件轴误差递推 + `‖ΔA_k‖` 拓扑变化项 + 事件门控重校准」，并把 CRPI 提升为 `must-rerun` 对照；S1/S2/S3 场景在 G4/G3/G7 判死 | `scenario-decision-log.md`、`idea-cards.md`
 - 2026-11-13T21:12+0800 | guidance 全套产物落盘 | guidance.md、8 个旁证、CCFA startup packet 7 个 md、`feasibility-contract.json`（3 claims 哈希绑定 7 文件）、`guidance-pipeline-state.md`、`generated-research-directions.md` 完成 | run 目录
 - 2026-11-13T21:14+0800 | 两个校验器通过 | `validate_guidance.py --strict --packet` → `Guidance structure is valid.` EXIT=0；`pipeline_state.py --complete` 与 `--before G0` → `PASS: ordered, current evidence` EXIT=0。**E2 PASS** | `validation-report.md`
-- 2026-11-13T21:15+0800 | 账本更新与第二个检查点 | `goal-ledger.md` v1.1：E1/E2 PASS、M1/M2 PASS、R2 换道至 S2、A8 升级为源码级可用；HANDOFF/LOG/依赖解析同步；准备生成 manifest 并推送 | 本检查点
+- 2026-11-13T21:15+0800 | 账本更新与第二个检查点 | `goal-ledger.md` v1.1：E1/E2 PASS、M1/M2 PASS、R2 换道至 S2、A8 升级为源码级可用；HANDOFF/LOG/依赖解析同步；生成 25-artifact manifest 并推送，远程 `3fca914…` = 本地 HEAD | 检查点 `20261113T131524Z-guidance`
+- 2026-11-13T21:18+0800 | f-research-v1 P0 初始化 | 在 guidance 目录内创建 `f-research-v1-run-20261113-211758-tcar/`，`realpath` 验证包含关系；`pipeline_state.py --init` 生成 26 阶段 pending 账本；写 path-containment manifest 与 pipeline-state.md | run root
+- 2026-11-13T21:18+0800 | P2 原型第 1 次运行 **FAIL** | 实测 agreement 0.003 / 0.038、mean_epsilon 13.99 / 10.78。诊断：IF 转换 helper 未展开 T 步且电流多除一个 T，SNN 几乎不发脉冲。败因归类「策略错（实现缺陷）」，保留失败记录不删 | `audits/P2-environment-check.md`
+- 2026-11-13T21:19+0800 | 修复后重跑 | 真实 T 步积分 + 正确解码 scale；agreement 0.0755 / 0.33、epsilon 8.4969 / 3.4068、clipping 0.001、0.981 s；carry-over 优于 hard reset，仪器化有区分力。**绝对一致率无意义**（随机未训练教师 + 状态饱和），不得引用为结果 | `results/p2-prototype/metrics.json`
+- 2026-11-13T21:19+0800 | 数据路径参数化 + 冻结标识 | 脚本改用 `CTDG_FROZEN_STREAM` 环境变量，公开产物不写本机绝对路径；`inputs/frozen-identities.json` 记录 4 个流与 1024/4096 查询 ID 的 SHA-256，明示非盲测 | run root `inputs/`
+- 2026-11-13T21:20+0800 | P1/P1A/P1B 产物 | 契约提取、三条 claim 强结果锁全 pass 且目标未下调、预实验对抗评审（无未解决致命风险）、claim-audit 全标 planned evidence、concern-to-action ledger 10 项 | `audits/`
+- 2026-11-13T21:21+0800 | 顺序账本校验 | `pipeline_state.py --before P3` → PASS；`--complete` → `ERROR: delivery requires every stage passed`（P3–P21 pending），如实记录未达成 | run root `pipeline-state.json`
+- 2026-11-13T21:21+0800 | 第三个检查点 | 发布 P0–P2 产物、`goal-ledger.md` v1.2（R3 与 P3 绑定前置）、HANDOFF/LOG、工作日志；准备生成 manifest 并推送 | 检查点 `20261113T132155Z-p0p2`
