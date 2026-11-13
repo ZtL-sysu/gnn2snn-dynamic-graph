@@ -1,0 +1,27 @@
+# Local read-only reference clones (separate git repos / third-party code)
+_refs/
+_probe/
+
+# WorkBuddy project data (not a cache; keep local)
+.workbuddy/
+
+# Model weights, cached datasets and large binary evidence
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.parquet
+*.feather
+*.zip
+*.tar.gz
+datasets/
+data/raw/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Credentials / local identity
+.env
+*token*.json
+auth.json
