@@ -29,7 +29,7 @@
 
 | 项 | 事实 | 处理 |
 |---|---|---|
-| AutoResearchClaw CLI（stages 16–23） | 本机 `find` 全盘未发现 `researchclaw` 可执行、无 pip 包、无仓库克隆 | 依 `f-research-v1/references/dependency-map.md`，使用 `bundled-skills/0-autoresearch-skill/SKILL.md` 的规范做**本地等价执行**：按 stage 契约产出 PAPER_OUTLINE / PAPER_DRAFT / PEER_REVIEW / PAPER_REVISION / QUALITY_GATE / EXPORT_PUBLISH / CITATION_VERIFY 对应的 artifacts，并在 run root 记录「CLI 不可用，等价执行」及原因。不等价于宣称运行了 AutoResearchClaw |
+| AutoResearchClaw CLI 端到端运行（stages 16–23） | **源码可用，完整 CLI 运行不可用**：源码在历史 run 的 `dependencies/AutoResearchClaw/`（含 `pyproject.toml`、`researchclaw/` 包、`config.researchclaw.example.yaml`、`pipeline/stages.py` 中的 16–23 契约）；`PYTHONPATH=<该目录>` 下 `import researchclaw` 实测成功。但 `pyproject.toml` 的 CLI 依赖 OpenAI 兼容 LLM 端点与 API key，用户未提供凭据，且用户要求「不再安装」 | 依 `f-research-v1/references/dependency-map.md`，用本地源码的 stage 契约 + `bundled-skills/0-autoresearch-skill/SKILL.md` 规范做**本地等价执行**：按 stage 契约产出 PAPER_OUTLINE / PAPER_DRAFT / PEER_REVIEW / PAPER_REVISION / QUALITY_GATE / EXPORT_PUBLISH / CITATION_VERIFY 对应 artifacts，并在 run root 记录「未运行 ARC CLI，按源码契约等价执行」及原因。不等价于宣称运行了 AutoResearchClaw；不编造 API 凭据 |
 | `ccf-*` 未在 WorkBuddy 的 Skill 注册路径 | WorkBuddy 的 `available_skills` 只列 `/Users/xhf/.workbuddy/skills/` | 直接读取 `/Users/xhf/.codex/skills/ccf-*/SKILL.md` 与 `references/`，由本会话/子代理按规范执行；在产物中注明「按该技能规范执行」而非「通过 Skill 工具加载」 |
 
 ## 约束

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "decision": "proceed",
+  "claims": [
+    {
+      "id": "C-1",
+      "claim": "Conversion error on a continuous-time dynamic graph accumulates along the event axis and contains a term proportional to the change in the neighbor-aggregation operator ||A_k - A_{k-1}||.",
+      "mechanism": "Lift the single-layer conversion identity E^l_i = sum_j w_ij E^{l-1}_j + (V_i(T)-V_i(0))/T to the event recursion epsilon_k <= rho*epsilon_{k-1} + L_A*||A_k-A_{k-1}||*||s_{k-1}|| + c/T + eta_k; the topology term is absent from static-graph conversion and from RL continuous control.",
+      "falsifying_ablation": "A3 frozen static base, A5 ||delta A|| quartile stratification, A4 frozen-topology control, and a per-event bound-violation rate; if the slope confidence interval contains zero or the inequality is violated, the claim is falsified.",
+      "primary_metric": "Slope of per-event state error epsilon_k against cumulative ||A_k - A_{k-1}||, plus bound-violation rate (direction: higher slope, lower violation rate).",
+      "minimum": "A measurable non-zero slope with paired bootstrap 95 percent confidence interval excluding zero on the primary stream.",
+      "expected_strong": "Monotone dose-response across four topology-change quartiles, zero bound violations within numerical tolerance, and replication on Wikipedia, MOOC and Enron.",
+      "failure": "Slope confidence interval contains zero, no monotone dose-response, or bound (1) is empirically violated.",
+      "simple_baseline": "B1 EdgeBank and B2 Base3 k=10 for teacher sanity; C0 hard-reset rate-coded IF for conversion sanity.",
+      "strong_baseline": "C4 CRPI-style global cross-step residual carry-over adapted from arXiv:2601.21778 (ICML 2026), implemented as a direct rerun control.",
+      "metric_direction": "higher",
+      "dataset_url": "https://zenodo.org/api/records/7213796/files/wikipedia.zip/content",
+      "split_protocol": "Chronological 70/15/15 on Zenodo 10.5281/zenodo.7213796; 1024 validation and 4096 test query IDs SHA-256 frozen at P2; validation alone selects T, gamma and calibration percentile; test read once at P5.",
+      "assumptions": "A1-A7 in theoretical-feasibility-audit.md: measured Lipschitz rho of the state update, normalized aggregation operator A_k, ReLU/clip teacher with folded BN, label-free calibration covering the activation range, consistent threshold/gauge, frozen event order, small T.",
+      "matched_control": "C0: the same frozen ANN teacher converted with rate-coded IF, hard reset, no calibration; B0 unconverted ANN teacher as oracle upper bound.",
+      "implementation_path": "New plain-PyTorch implementation in the f-research-v1 run root: lightweight CTDG teacher, graded differential IF coder reimplemented independently (ZtL-sysu/gnn2snn grants no blanket license), event-loop topology tracker, four conversion controls, six ablation switches. DyGLib/Base3 copies are local read-only baselines.",
+      "prototype_check": "P2 must complete one seed end-to-end (teacher train, calibration, 10k-event window, metrics JSONL, END_OF_RUN_OK) within 30 minutes on Apple M1 CPU/MPS before the full campaign is released.",
+      "calibration_evidence": "Measured three-seed static-graph prior range from ZtL-sysu/gnn2snn: T=4/T=8 teacher agreement 99.28-99.98 percent, GatedGCN CIFAR10 T4 99.55 plus or minus 0.16 percent (fixed-gcn-test-three-seed-summary-v1.md, gated-three-teacher-seed-summary-v1.md). Stated as prior ranges, not as this project's results.",
+      "test_isolation": "Test query IDs are hash-frozen at P2 and read once at P5; IDs were used in a predecessor local project and are disclosed as non-blind. Main claim rests on paired within-run comparisons, not absolute MRR.",
+      "stop_return_condition": "Return to scenario/method design before P2 if the 30-minute prototype fails, measured rho is unbounded with no repair, validation clipping rate exceeds 1 percent with no percentile repair, the ANN teacher fails to beat EdgeBank/Base3 on validation, the CRPI-style control cannot be implemented, or bound (1) is empirically violated. A missed binding target at P5 enters the versioned correction loop, never a post-hoc target reduction.",
+      "runtime_hours": 12.0,
+      "memory_gb": 16.0,
+      "seeds": 5,
+      "search_trials": 24
+    },
+    {
+      "id": "C-2",
+      "claim": "Topology-change-gated residual carry-over reduces end-of-window teacher-to-SNN decision disagreement at small T relative to hard reset and to global carry-over.",
+      "mechanism": "Carry residual membrane potential forward for nodes touched by an event (removes eta_k there) and recompute the static base, threshold and shared residual prefix only when relative neighbor-set change delta_v(k) exceeds gamma (attacks the ||delta A|| term).",
+      "falsifying_ablation": "A2 no carry-over, A1 no topology gate, C4 matched recomputation-budget comparison, S1 T sweep in {1,2,4,8}.",
+      "primary_metric": "agreement@K: fraction of evaluation queries in the last segment of a 10000-event window where converted SNN argmax equals the frozen ANN teacher argmax (higher is better), with 5 seeds and paired bootstrap 95 percent confidence intervals.",
+      "minimum": "T=4 agreement@K at least 95.0 percent and MRR retention at least 95.0 percent on Wikipedia, with the ANN teacher beating B1/B2 on validation.",
+      "expected_strong": "T=4 agreement@K at least 98.5 percent and MRR retention at least 99.0 percent; TCAR agreement decay at most 0.5 percentage points over a 10000-event window while C4 decays at least 2.0 percentage points, paired bootstrap 95 percent confidence interval excluding zero; direction replicated on MOOC and Enron.",
+      "failure": "T=8 agreement@K below 95 percent, or TCAR indistinguishable from C4 at matched recomputation budget with confidence interval containing zero.",
+      "simple_baseline": "C0 hard-reset rate-coded IF with no calibration, on the identical teacher.",
+      "strong_baseline": "C4 CRPI-style global carry-over plus C1 SNNC-AP-light calibration, C2 DCGS graded differential coder, C3 QCFS/FTBC clipped conversion.",
+      "metric_direction": "higher",
+      "dataset_url": "https://zenodo.org/api/records/7213796/files/wikipedia.zip/content",
+      "split_protocol": "Chronological 70/15/15 on Zenodo 10.5281/zenodo.7213796; 1024 validation and 4096 test query IDs SHA-256 frozen at P2; validation alone selects T, gamma and calibration percentile; test read once at P5.",
+      "assumptions": "A1-A7 in theoretical-feasibility-audit.md: measured Lipschitz rho of the state update, normalized aggregation operator A_k, ReLU/clip teacher with folded BN, label-free calibration covering the activation range, consistent threshold/gauge, frozen event order, small T.",
+      "matched_control": "C0: the same frozen ANN teacher converted with rate-coded IF, hard reset, no calibration; B0 unconverted ANN teacher as oracle upper bound.",
+      "implementation_path": "New plain-PyTorch implementation in the f-research-v1 run root: lightweight CTDG teacher, graded differential IF coder reimplemented independently (ZtL-sysu/gnn2snn grants no blanket license), event-loop topology tracker, four conversion controls, six ablation switches. DyGLib/Base3 copies are local read-only baselines.",
+      "prototype_check": "P2 must complete one seed end-to-end (teacher train, calibration, 10k-event window, metrics JSONL, END_OF_RUN_OK) within 30 minutes on Apple M1 CPU/MPS before the full campaign is released.",
+      "calibration_evidence": "Measured three-seed static-graph prior range from ZtL-sysu/gnn2snn: T=4/T=8 teacher agreement 99.28-99.98 percent, GatedGCN CIFAR10 T4 99.55 plus or minus 0.16 percent (fixed-gcn-test-three-seed-summary-v1.md, gated-three-teacher-seed-summary-v1.md). Stated as prior ranges, not as this project's results.",
+      "test_isolation": "Test query IDs are hash-frozen at P2 and read once at P5; IDs were used in a predecessor local project and are disclosed as non-blind. Main claim rests on paired within-run comparisons, not absolute MRR.",
+      "stop_return_condition": "Return to scenario/method design before P2 if the 30-minute prototype fails, measured rho is unbounded with no repair, validation clipping rate exceeds 1 percent with no percentile repair, the ANN teacher fails to beat EdgeBank/Base3 on validation, the CRPI-style control cannot be implemented, or bound (1) is empirically violated. A missed binding target at P5 enters the versioned correction loop, never a post-hoc target reduction.",
+      "runtime_hours": 12.0,
+      "memory_gb": 16.0,
+      "seeds": 5,
+      "search_trials": 24
+    },
+    {
+      "id": "C-3",
+      "claim": "The event-triggered recomputation policy binds conversion overhead to topology-change events rather than to total events.",
+      "mechanism": "Recompute a node's static base and threshold only when delta_v(k) > gamma; between such events reuse the cached base, so recalibration count scales with the number of topology-change events.",
+      "falsifying_ablation": "A1 recompute-every-event at matched accuracy, S2 gamma sweep over at most six values, and A4 frozen-topology control.",
+      "primary_metric": "Recalibration trigger rate as a fraction of processed events (lower is better), with graded-event count, parameter count and local PyTorch milliseconds per event as supporting cost quantities.",
+      "minimum": "Recalibration triggered on at most 50 percent of events with no accuracy loss versus A1.",
+      "expected_strong": "Recalibration triggered on at most 20 percent of events with no accuracy loss versus A1, and a visible cost-accuracy Pareto frontier across the gamma sweep; direction replicated on three streams.",
+      "failure": "No cost-accuracy trade-off appears across the gamma sweep, or the trigger rate does not depend on measured topology change.",
+      "simple_baseline": "A1 recompute at every event (upper-cost control) and B0 ANN teacher inference with no events.",
+      "strong_baseline": "C4 global carry-over with no recomputation (lower-cost control).",
+      "metric_direction": "lower",
+      "dataset_url": "https://zenodo.org/api/records/7213796/files/wikipedia.zip/content",
+      "split_protocol": "Chronological 70/15/15 on Zenodo 10.5281/zenodo.7213796; 1024 validation and 4096 test query IDs SHA-256 frozen at P2; validation alone selects T, gamma and calibration percentile; test read once at P5.",
+      "assumptions": "A1-A7 in theoretical-feasibility-audit.md: measured Lipschitz rho of the state update, normalized aggregation operator A_k, ReLU/clip teacher with folded BN, label-free calibration covering the activation range, consistent threshold/gauge, frozen event order, small T.",
+      "matched_control": "C0: the same frozen ANN teacher converted with rate-coded IF, hard reset, no calibration; B0 unconverted ANN teacher as oracle upper bound.",
+      "implementation_path": "New plain-PyTorch implementation in the f-research-v1 run root: lightweight CTDG teacher, graded differential IF coder reimplemented independently (ZtL-sysu/gnn2snn grants no blanket license), event-loop topology tracker, four conversion controls, six ablation switches. DyGLib/Base3 copies are local read-only baselines.",
+      "prototype_check": "P2 must complete one seed end-to-end (teacher train, calibration, 10k-event window, metrics JSONL, END_OF_RUN_OK) within 30 minutes on Apple M1 CPU/MPS before the full campaign is released.",
+      "calibration_evidence": "Measured three-seed static-graph prior range from ZtL-sysu/gnn2snn: T=4/T=8 teacher agreement 99.28-99.98 percent, GatedGCN CIFAR10 T4 99.55 plus or minus 0.16 percent (fixed-gcn-test-three-seed-summary-v1.md, gated-three-teacher-seed-summary-v1.md). Stated as prior ranges, not as this project's results.",
+      "test_isolation": "Test query IDs are hash-frozen at P2 and read once at P5; IDs were used in a predecessor local project and are disclosed as non-blind. Main claim rests on paired within-run comparisons, not absolute MRR.",
+      "stop_return_condition": "Return to scenario/method design before P2 if the 30-minute prototype fails, measured rho is unbounded with no repair, validation clipping rate exceeds 1 percent with no percentile repair, the ANN teacher fails to beat EdgeBank/Base3 on validation, the CRPI-style control cannot be implemented, or bound (1) is empirically violated. A missed binding target at P5 enters the versioned correction loop, never a post-hoc target reduction.",
+      "runtime_hours": 12.0,
+      "memory_gb": 16.0,
+      "seeds": 5,
+      "search_trials": 24
+    }
+  ],
+  "evidence": [
+    {
+      "path": "startup-stage-plan.md",
+      "sha256": "28ba403b7a923cb4bee9cd3154fc6debde5e5767ccf8bf48e51b586715a8ab1e"
+    },
+    {
+      "path": "idea-cards.md",
+      "sha256": "fb48d0f9849baa57b44bc7021d85ad7c9c320ef2e24262899a7b267249e295c5"
+    },
+    {
+      "path": "prior-art-opportunity-map.md",
+      "sha256": "1e62c5f7113531c4d82af98809f58fb7d747228f25ffd36ea7e873acef703e7f"
+    },
+    {
+      "path": "idea-red-team-review.md",
+      "sha256": "1d636be67f069c6ba29bc69542b5e0c27c1e70d84676c96ebbe79766a3a3cb7b"
+    },
+    {
+      "path": "claim-evidence-matrix.md",
+      "sha256": "bb0222dbb0db01e12ce5147902a9f560459a214b7321afffa27fd59762765976"
+    },
+    {
+      "path": "strong-result-feasibility-contract.md",
+      "sha256": "a05da1a2b701f751b544e5cbdc4d6e92837b0fa8bb393941914b2311b682f241"
+    },
+    {
+      "path": "startup-decision.md",
+      "sha256": "e4de49466831aa466d4f7fcaf2bbd0be97a60bf2fcc2658854da4d5692c46ba2"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # 目标死磕状态账本
 
-> 唯一进度载体。历史记录不得改写，修正只追加。账本版本 v1.0。最后更新：2026-11-13T20:58:54+0800。
+> 唯一进度载体。历史记录不得改写，修正只追加。账本版本 v1.1。最后更新：2026-11-13T21:15:24+0800。
 
 ## 1 目标档案
 
@@ -26,8 +26,8 @@
 | A5 | 可检索能力 | 17 个 `ccf-*` 技能包（CCFA 全流程职责规范） | 可用（只读复用，不安装） | `/Users/xhf/.codex/skills/ccf-*/SKILL.md` | 低 | PASS |
 | A6 | 可组合编排 | 写作/配图/编译/引用 9 个 vendored 子技能 | 可用 | `~/.workbuddy/skills/f-research-v1/bundled-skills/` | 低 | PASS |
 | A7 | 内置能力 | LaTeX 编译与 PDF 验收 | 可用 | `/Library/TeX/texbin/{pdflatex,xelatex,latexmk}` | 低 | PASS |
-| A8 | 可检索能力 | AutoResearchClaw CLI（stages 16–23） | **不可用（降级）** | 本机无 CLI / 无安装包；改用 `bundled-skills/0-autoresearch-skill/SKILL.md` 规范 + 本地等价执行，产物格式对齐 stage 契约 | 低 | PASS（降级如实记录） |
-| A9 | 外部资源 | Zenodo 公开动态图事件流 + 本机已存 DyGLib/Base3/TPNet baseline 代码 | 可达（待 G1 实测下载核验） | `10.5281/zenodo.7213796`；`/Users/xhf/full-paper/dynamic graph/d2/.../dependencies/` | 低 | PASS |
+| A8 | 可检索能力 | AutoResearchClaw 完整源码 + stages 16–23 契约 | **可用（源码级）** | `/Users/xhf/full-paper/dynamic graph/d2/.../dependencies/AutoResearchClaw/`；`PYTHONPATH=<该目录>` 下 `import researchclaw` 实测成功；stage 名见 `researchclaw/pipeline/stages.py`。完整 CLI 运行需 LLM API 配置（用户未提供凭据），故 stages 仍按契约做本地等价执行并如实标注 | 低 | PASS |
+| A9 | 外部资源 | Zenodo 公开动态图事件流 + 本机 DyGLib/Base3/TPNet baseline 代码 | **可用（已实测）** | `10.5281/zenodo.7213796` API HTTP 200、文件 HEAD HTTP 200、CC BY 4.0；4 个冻结 `.npz` 已 `numpy.load` 核验 | 低 | PASS |
 | A10 | 内置能力 | torch 2.13.0 + MPS 训练/推理 | 可用 | conda python，`device=mps` | 低 | PASS |
 | A11 | 可组合编排 | 定时心跳自动化 | 可用但**默认关闭** | `automation_update`（用户未开启，不主动创建） | 中 | PASS |
 | A12 | 外部资源 | 远程 exp-4090 GPU 池 | **剔除**：用户未授权远程执行，历史记录显示节点 offline、`eligible_nodes=0` | — | — | 剔除（超出授权算力范围） |
@@ -37,8 +37,8 @@
 
 | 编号 | 标准（可观测事实） | 判定者 | 反例排除（什么不算达成） | 当前状态 |
 |------|-------------------|--------|------------------------|---------|
-| E1 | 公开仓库 `ZtL-sysu/gnn2snn-dynamic-graph` 存在 `collaboration/` 骨架与本任务 agent 分支检查点（含 `manifest.json`），`git ls-remote` 远程 SHA 与本地 HEAD 一致 | 系统 + 用户 | 只有本地 commit / 只有空仓库 / 远程 SHA 不一致 | 待验证 |
-| E2 | `guidance.md` 通过 `validate_guidance.py --strict --packet`；`guidance-pipeline-state.md` 证明 `CCFA-startup → G0…G8 → validation → handoff` 依序全 `passed`；8 个必需旁证文件与 `ccfa-startup-packet/` 齐全 | 系统 + 用户 | 跳关、倒填状态、把未核查的新颖性写成已核查 | 待验证 |
+| E1 | 公开仓库 `ZtL-sysu/gnn2snn-dynamic-graph` 存在 `collaboration/` 骨架与本任务 agent 分支检查点（含 `manifest.json`），`git ls-remote` 远程 SHA 与本地 HEAD 一致 | 系统 + 用户 | 只有本地 commit / 只有空仓库 / 远程 SHA 不一致 | **PASS**（`96afc01…` 远程=本地；首检查点 `20261113T125854Z-init`） |
+| E2 | `guidance.md` 通过 `validate_guidance.py --strict --packet`；`guidance-pipeline-state.md` 证明 `CCFA-startup → G0…G8 → validation → handoff` 依序全 `passed`；8 个必需旁证文件与 `ccfa-startup-packet/` 齐全 | 系统 + 用户 | 跳关、倒填状态、把未核查的新颖性写成已核查 | **PASS**（strict 与 `--complete` 均 EXIT=0，见 `validation-report.md`） |
 | E3 | `pipeline-state.json` 证明 P0…P21 依序全 `passed`；run root 内 `paper.tex` 与编译成功的 `paper.pdf` 存在，且 clean-extraction 重编译 PDF 与验收版一致；交付清单在 run root 内 | 系统 + 用户 | 只写稿未跑实验 / 编译失败 / 源码与 PDF 不同版 | 待验证 |
 | E4 | guidance 承诺的每个实验 `done`，主 claim 达到**预先锁定**的 `expected_strong`；baseline 先于方法结论；逐 seed 原始日志 + `metrics.csv` + 复现命令可回溯 | 系统 + 用户 | 数字只出现在论文正文 / 事后下调目标 / 把计划值写成实测 | 待验证 |
 | E5 | 稿件为 `1 Introduction / 2 Related Work / 3 Method / 4 Experiments and Results / 5 Discussion / 6 Conclusion` 六节；引用真实且 `reference-dedup-audit.md` 通过；目标期刊硬性限制有官方来源记录；`paper-guidance-audit.md` 无未覆盖项 | 系统 + 用户 | 占位引用 / 自编期刊限制 / 承诺实验未出现在稿中 | 待验证 |
@@ -49,8 +49,8 @@
 
 | 里程碑 | 绑定证据 | 预期完成依据 | 状态 |
 |--------|---------|-------------|------|
-| M1 | E1 | 仓库 + 协议 + 账本 + 依赖解析 + 首个检查点远端确认 | 进行中 |
-| M2 | E2 | guidance.md 与各审计文件、CCFA packet、strict 校验通过 | 未开始 |
+| M1 | E1 | 仓库 + 协议 + 账本 + 依赖解析 + 首个检查点远端确认 | **PASS** |
+| M2 | E2 | guidance.md 与各审计文件、CCFA packet、strict 校验通过 | **PASS** |
 | M3 | E4 | 全部实验原始证据 + 达到 expected_strong + baseline 先行 | 未开始 |
 | M4 | E3, E5 | P0–P21 状态全 passed + TeX/PDF + 各类审计 | 未开始 |
 | M5 | E1–E5 | 用户验收、检查点归档、停止报告 | 未开始 |
@@ -59,10 +59,10 @@
 
 | 项 | 内容 |
 |----|------|
-| 当前策略 | S1「先封锁基础设施与证据纪律，再以机制级空白（GNN→SNN 转换 × 动态图时序状态）做证据优先的 guidance」 |
-| 核心假设 | 动态图上真正未被占领的不是"新 SNN 架构"而是"ANN→SNN 转换在时序记忆/状态更新下的等价性与误差累积"；且小事件流 + 轻量教师可在 M1/MPS 上完成可信实验 |
-| 动作清单 | ①建仓库/协议/账本并推首个检查点 ②真实文献检索 G0/G4（含 SpikeNet/Dy-SIGN/Lite-SDGN 与 ANN→SNN 转换近作）③G1 实测 Zenodo 下载 ④G3/G5/G6/G7 机制与算力可行性 ⑤CCFA startup packet ⑥G8 故事强度 ⑦guidance.md + strict 校验 ⑧上传检查点 ⑨启动 f-research-v1 P0–P2 |
-| 敏感标记 | 创建公开仓库、首次 push、新建 conda env、实际投稿（后者不在授权内） |
+| 当前策略 | S1「先封锁基础设施与证据纪律，再以机制级空白（GNN→SNN 转换 × 动态图时序状态）做证据优先的 guidance」→ 已进入 S2「以 guidance 为契约、baseline 先行推进 f-research-v1」 |
+| 核心假设 | 动态图上真正未被占领的不是"新 SNN 架构"而是"ANN→SNN 转换在时序记忆/状态更新下的等价性与误差累积"；且小事件流 + 轻量教师可在 M1/MPS 上完成可信实验。该假设仍待 P2 原型与 P3–P5 实证，未被证实 |
+| 动作清单 | ①上传 guidance 检查点 ②在 guidance 目录内建 `f-research-v1-run-*` 并初始化 26 阶段账本 ③P1/P1A/P1B（契约校验、强结果锁、预实验对抗评审）④P2 环境与 30 分钟单 seed 原型 ⑤P3 baseline-first ⑥P4 全矩阵与消融 ⑦P5 强结果锁 ⑧P6–P21 写作/图表/引用/编译/交付 |
+| 敏感标记 | 创建公开仓库、首次 push（已完成）；新建 conda env、实际投稿（后者不在授权内） |
 | 连败计数 | 0 |
 
 ## 6 执行轮与换道日志
@@ -70,6 +70,7 @@
 | 轮次 | 策略 | 动作与结果 | 证据核验 | 败因归类 | 换道决策 |
 |------|------|-----------|---------|---------|---------|
 | R1 | S1 基础设施 | 已核实本机算力、GitHub 账号、`gnn2snn` 归档全貌与历史动态图流水线；依赖由「安装」改道为「复用 `~/.codex/skills/` 现成包」（用户 2026-11-13 20:45 指令）；公开仓库已创建；协议/账本/依赖解析已落盘 | E1 待验证（检查点尚未 push），E2–E5 待验证 | 条件不备（ccf-* 未装在 WorkBuddy skills 路径）→ 用户指令换道解决 | 继续 S1，完成首个检查点推送 |
+| R2 | S1 证据优先 guidance | 真实文献检索命中 CRPI(ICML 2026)/MPEF(ICML 2026) 最强威胁并据此重定义机制（拓扑变化项 + 事件门控）；G1 实测 Zenodo HTTP 200 与四个 npz 可读；G0–G8 依序通过；CCFA startup packet 8 文件 + guidance.md 全套落盘；两个校验器 EXIT=0 | **E1 PASS、E2 PASS**；E3–E5 待验证 | 无失败；风险归类为「条件不备已缓解」：A8 源码找到、A9 数据实测可达 | 换道 → S2，以 guidance 为契约启动 f-research-v1，仍不换目标 |
 
 > 失败日志只追加不改写。卡死检测：同策略连败 3 次强制换道。
 
@@ -80,23 +81,23 @@
 | 白名单校验 | A12 远程 GPU、A13 历史稿/大权重已剔除（见第 2 节）；其余均在法律法规与平台规则内 |
 | 确认档位切换 | 2026-11-13：默认严格档 → **授权档**，用户通过选项明确确认 |
 | 敏感操作确认 | 2026-11-13 用户一次性授权：创建公开仓库、本地文件写入、新建 conda 环境、运行实验、按协议推送检查点。清单外（对外发送、删分支、改历史、合并 main、实际投稿）仍逐项确认 |
-| 合规存疑处理 | AutoResearchClaw CLI 缺失：不伪造调用记录，按 `dependency-map.md` 使用 vendored 规范做等价执行并在 run root 记录降级原因 |
-| 依赖解析 | 见 `dependency-resolution.md`；用户明确「没有的技能你可以去本地的 codex 目录下找来用，不用再装了」 |
+| 合规存疑处理 | AutoResearchClaw 源码级可用但完整 CLI 需 LLM API 凭据，用户未提供；stages 16–23 将按本地源码契约做等价执行，并在 run root 记录「未运行 ARC CLI」及原因，不伪造调用记录 |
+| 依赖解析 | 见 `dependency-resolution.md`；用户明确「没有的技能你可以去本地的 codex 目录下找来用，不用再装了」；全程未执行任何安装 |
 
 ## 8 停止门状态
 
 | 门 | 状态 | 触发依据 |
 |----|------|---------|
-| ①达成 | 未触发 | E1–E5 均未 PASS |
+| ①达成 | 未触发 | E1、E2 PASS；E3、E4、E5 未 PASS，证据清单未全通过 |
 | ②用户叫停 | 未触发 | 无 |
-| ③穷尽 | 未触发 | 策略库 S1 首轮，弹药库未穷尽 |
+| ③穷尽 | 未触发 | 策略库 S1→S2，弹药库未穷尽 |
 | ④期限 | 未触发 | 用户未设预设期限（会话内 + 账本续跑） |
 
 ## 9 迭代与复盘
 
 | 项 | 内容 |
 |----|------|
-| 账本版本 | v1.0 |
+| 账本版本 | v1.1（R2 更新证据状态与弹药库，结构未变） |
 | 目标迭代记录 | 无（标准锁定后未修改） |
-| 复盘沉淀 | ①历史 P3「无限创意筛选死循环」是最大已知陷阱：必须先冻结协议与强结果契约再开实验；②本机强基线 TGN 单 seed 曾耗时 8 h 超时，G6 必须选择可在 M1 上实证的 baseline 组合，不能只写 literature-context；③非神经形态硬件上不做能耗主张 |
+| 复盘沉淀 | ①历史 P3「无限创意筛选死循环」是最大已知陷阱：必须先冻结协议与强结果契约再开实验；②本机强基线 TGN 单 seed 曾耗时 8 h 超时，G6 把强预测基线明确降级为 literature-context，主比较改由可实证的转换方法族承担；③非神经形态硬件上不做能耗主张；④真实文献检索救了一次选题：若未发现 CRPI，「跨步残差结转」会被写成原创而遭 reject，因此 G0/G4 必须在写 guidance 之前做；⑤本地 codex 目录与历史 run 的 dependencies/ 里藏着完整技能栈，先全盘搜索再谈安装 |
 | 归档状态 | 进行中 |
