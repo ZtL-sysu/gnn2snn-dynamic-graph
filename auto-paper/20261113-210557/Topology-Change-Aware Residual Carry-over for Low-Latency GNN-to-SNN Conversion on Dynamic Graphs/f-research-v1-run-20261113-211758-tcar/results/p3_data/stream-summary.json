@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-14T08:51:55+0800",
+  "streams": {
+    "wikipedia": {
+      "n_events": 157474,
+      "catalog": 1000,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "mooc": {
+      "n_events": 411749,
+      "catalog": 97,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "enron": {
+      "n_events": 125235,
+      "catalog": 184,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    }
+  }
+}

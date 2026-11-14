@@ -22,11 +22,13 @@
 
 | 项 | 状态 |
 |---|---|
-| `guidance.md` | **已生成并通过校验**：`auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/guidance.md`（TCAR，Neurocomputing） |
+| `guidance.md` (v1, preserved) | **已生成并通过校验**：`auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/guidance.md`（TCAR，Neurocomputing） |
 | `ccfa-startup-packet/feasibility-contract.json` | 已生成；3 条 binding claim 哈希绑定 7 个 startup artifacts；`startup-decision.md` = `proceed` |
 | `guidance-pipeline-state.md` | 已生成；`CCFA-startup → G0…G8 → validation → handoff` 依序全 passed，`pipeline_state.py --complete` EXIT=0 |
-| `f-research-v1` 的 `pipeline-state.json` | 已生成于 `f-research-v1-run-20261113-211758-tcar/`；P0–P2 依序 passed，P3–P21 pending；`--before P3` EXIT=0，`--complete` 正确报未全通过 |
+| `f-research-v1` 的 `pipeline-state.json` | 已生成于 `f-research-v1-run-20261113-211758-tcar/`；**P0–P21 依序全 passed**（含 v2 契约 `reopen P0` back-edge）；`--complete` EXIT=0 |
 | 协作协议 | `collaboration/PROTOCOL.md` v1 |
+| 生效科研契约 | `guidance-v2.md` + `ccfa-startup-packet-v2/`（strict 校验通过）；修订理由见 `guidance-v2-amendment.md` |
+| 最终成稿 | `f-research-v1-run-20261113-211758-tcar/paper/main.tex` 与 `main.pdf`（14 页，Neurocomputing 预印格式） |
 
 ## 真实状态入口
 
@@ -34,7 +36,7 @@
 2. `collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/HANDOFF.md`
 3. `auto-paper/<timestamp>/<paper-title>/guidance-pipeline-state.md` 与 run root 的 `pipeline-state.json`
 
-**当前无任何实验结论、无稿件。** 本文件中所有"未生成"状态不得被后来的 agent 静默改写为 completed，除非对应产物真实存在且可核验。
+**当前状态：科研流水线已走完，成稿已交付，等待用户验收与投稿决定。** 15 次真实测试运行、全部审计与交付清单位于上述 run root。所有状态均由可核验产物支撑。
 
 ## 历史材料定位
 

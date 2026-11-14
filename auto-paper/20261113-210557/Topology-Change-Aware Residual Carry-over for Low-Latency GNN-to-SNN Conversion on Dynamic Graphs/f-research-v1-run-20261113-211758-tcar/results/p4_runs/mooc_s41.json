@@ -1,0 +1,130 @@
+{
+  "phase": "test",
+  "stream": "mooc",
+  "seed": 41,
+  "cfg": {
+    "stream": "mooc",
+    "T": 4,
+    "gamma": 0.5,
+    "percentile": 0.9
+  },
+  "window": [
+    349993,
+    359993
+  ],
+  "n_queries": 667,
+  "theta_global": 0.14218654548813664,
+  "methods": {
+    "C0": {
+      "agreement": 0.9880059970014993,
+      "mrr": 0.22007155468018583,
+      "mrr_retention": 0.9918390711868907,
+      "logit_mse": 0.5998761563384877,
+      "decay_pp": -0.7789519555507107,
+      "mean_epsilon": 0.03473344323594993,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "C1": {
+      "agreement": 0.9895052473763118,
+      "mrr": 0.22039180366441324,
+      "mrr_retention": 0.9932823992695512,
+      "logit_mse": 0.5729793554103136,
+      "decay_pp": -0.032683298834301766,
+      "mean_epsilon": 0.03400292489899631,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "C2": {
+      "agreement": 0.9985007496251874,
+      "mrr": 0.22182401764587587,
+      "mrr_retention": 0.9997372352304237,
+      "logit_mse": 0.04715805934795197,
+      "decay_pp": 0.7299270072992692,
+      "mean_epsilon": 0.012272721083781093,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "C3": {
+      "agreement": 0.9985007496251874,
+      "mrr": 0.2218327632730623,
+      "mrr_retention": 0.9997766508412151,
+      "logit_mse": 0.04847726333008606,
+      "decay_pp": 0.7299270072992692,
+      "mean_epsilon": 0.012428400556572489,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "C4": {
+      "agreement": 0.9970014992503748,
+      "mrr": 0.2219121313696833,
+      "mrr_retention": 1.0001343544042622,
+      "logit_mse": 0.061594171307271225,
+      "decay_pp": -0.016341649417150883,
+      "mean_epsilon": 0.012345157138326115,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "M0": {
+      "agreement": 0.9970014992503748,
+      "mrr": 0.22199443805076435,
+      "mrr_retention": 1.0005053018546701,
+      "logit_mse": 0.04142647204210467,
+      "decay_pp": -0.016341649417150883,
+      "mean_epsilon": 0.00969748473566479,
+      "recalibration_rate": 0.1294,
+      "n_queries": 667
+    },
+    "A1": {
+      "agreement": 0.9940029985007496,
+      "mrr": 0.22089980666083833,
+      "mrr_retention": 0.995571914699506,
+      "logit_mse": 0.28901062952264195,
+      "decay_pp": 0.7135853578821183,
+      "mean_epsilon": 0.02046466497702088,
+      "recalibration_rate": 1.0,
+      "n_queries": 667
+    },
+    "A2": {
+      "agreement": 0.9940029985007496,
+      "mrr": 0.22052514761030448,
+      "mrr_retention": 0.9938833662397413,
+      "logit_mse": 0.432763988300109,
+      "decay_pp": -0.762610306133571,
+      "mean_epsilon": 0.026874638204728712,
+      "recalibration_rate": 0.1294,
+      "n_queries": 667
+    },
+    "A3": {
+      "agreement": 0.9985007496251874,
+      "mrr": 0.2218415644640613,
+      "mrr_retention": 0.9998163168721952,
+      "logit_mse": 0.07246584877470531,
+      "decay_pp": -0.7462686567164201,
+      "mean_epsilon": 0.012637342083828816,
+      "recalibration_rate": 0.1294,
+      "n_queries": 667
+    },
+    "A4": {
+      "agreement": 0.9955022488755623,
+      "mrr": 0.22194122564752103,
+      "mrr_retention": 1.0002654792175047,
+      "logit_mse": 0.060569192108523816,
+      "decay_pp": -0.762610306133571,
+      "mean_epsilon": 0.012110267834049731,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    },
+    "D1": {
+      "agreement": 0.9985007496251874,
+      "mrr": 0.22182401764587587,
+      "mrr_retention": 0.9997372352304237,
+      "logit_mse": 0.04715805934795197,
+      "decay_pp": 0.7299270072992692,
+      "mean_epsilon": 0.012272721083781093,
+      "recalibration_rate": 0.0,
+      "n_queries": 667
+    }
+  },
+  "ann_mrr": 0.22188232050269582
+}

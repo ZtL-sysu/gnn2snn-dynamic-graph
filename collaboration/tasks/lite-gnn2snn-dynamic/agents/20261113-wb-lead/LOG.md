@@ -28,3 +28,9 @@
 - 2026-11-13T21:20+0800 | P1/P1A/P1B 产物 | 契约提取、三条 claim 强结果锁全 pass 且目标未下调、预实验对抗评审（无未解决致命风险）、claim-audit 全标 planned evidence、concern-to-action ledger 10 项 | `audits/`
 - 2026-11-13T21:21+0800 | 顺序账本校验 | `pipeline_state.py --before P3` → PASS；`--complete` → `ERROR: delivery requires every stage passed`（P3–P21 pending），如实记录未达成 | run root `pipeline-state.json`
 - 2026-11-13T21:21+0800 | 第三个检查点 | 发布 P0–P2 产物、`goal-ledger.md` v1.2（R3 与 P3 绑定前置）、HANDOFF/LOG、工作日志；准备生成 manifest 并推送 | 检查点 `20261113T132155Z-p0p2`
+- 2026-11-14T09:09:14+0800 | 死磕循环 C1–C9 | P3 gate 五次失败（教师不敌记忆基线）→ 版本化契约 v2 → 固定动力学+读出增益 → ε 指标口径修正 → 残差衰减 → 成本约束选点；每次失败与诊断均保留于 `correction-ledger.md` | run root
+- 2026-11-14T09:09:14+0800 | 最终全量实验 | 3 流 × 5 seeds × 11 方法，validate 含成本约束选点；P5 `d_three_streams=true`，全部 binding 目标达成 | `results/aggregated.json`、`results/statistics/final-analysis.json`
+- 2026-11-14T09:09:14+0800 | 辅助实验与图表 | T∈{1,2,4,8}、γ 6 值、窗口 1k/5k/10k；4 张矢量图；Figure 1 因积分未授权按本地等价产出并记录降级 | `results/p4_auxiliary/sweeps.json`、`audits/P8-figure-fallback.md`
+- 2026-11-14T09:09:14+0800 | 成稿与编译 | 六节英文稿件 `paper/main.tex`（14 页 PDF），18 条 Crossref/arXiv 核验引用，摘要 238 词、6 关键词、4 highlights ≤85 字符、GenAI 声明；bibtex 无未定义引用 | `paper/main.pdf`、`audits/final-metadata-counts.json`
+- 2026-11-14T09:09:14+0800 | P6–P21 全链 | writing 阶段产物、P5A/P17/P18 审计、reference dedup、submission constraints、最终状态账本、交付清单；`pipeline_state.py --complete` EXIT=0；干净目录重编译文本一致 | `pipeline-state.json`、`audits/source-pdf-consistency.md`、`deliverables/manifest.json`
+- 2026-11-14T09:09:14+0800 | 目标达成 | E1–E5 全 PASS，停止门①触发；账本 v1.3；最终检查点 `20261114T010914Z-final` 待推送 | `goal-ledger.md`、本检查点

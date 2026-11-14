@@ -1,0 +1,130 @@
+{
+  "phase": "test",
+  "stream": "enron",
+  "seed": 41,
+  "cfg": {
+    "stream": "enron",
+    "T": 4,
+    "gamma": 0.2,
+    "percentile": 0.9
+  },
+  "window": [
+    106450,
+    116450
+  ],
+  "n_queries": 2236,
+  "theta_global": 0.14006439421812938,
+  "methods": {
+    "C0": {
+      "agreement": 0.988819320214669,
+      "mrr": 0.2819850625437858,
+      "mrr_retention": 0.9821830953256696,
+      "logit_mse": 0.020673039068319157,
+      "decay_pp": 0.649350649350644,
+      "mean_epsilon": 0.04314668971324458,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "C1": {
+      "agreement": 0.9870304114490162,
+      "mrr": 0.2819848173172968,
+      "mrr_retention": 0.9821822411764822,
+      "logit_mse": 0.01903770824644624,
+      "decay_pp": 0.8658008658008698,
+      "mean_epsilon": 0.04089184108916602,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "C2": {
+      "agreement": 0.9932915921288015,
+      "mrr": 0.2845816848076763,
+      "mrr_retention": 0.9912273988413691,
+      "logit_mse": 0.0028324969966725456,
+      "decay_pp": 0.21645021645021467,
+      "mean_epsilon": 0.015688146395354746,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "C3": {
+      "agreement": 0.9932915921288015,
+      "mrr": 0.2845744245392604,
+      "mrr_retention": 0.99120211057666,
+      "logit_mse": 0.003815113602408545,
+      "decay_pp": 0.21645021645021467,
+      "mean_epsilon": 0.01745941097955967,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "C4": {
+      "agreement": 0.9977638640429338,
+      "mrr": 0.28644105298384864,
+      "mrr_retention": 0.9977037702283799,
+      "logit_mse": 0.0011257140341911405,
+      "decay_pp": 0.0,
+      "mean_epsilon": 0.01044762826715648,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "M0": {
+      "agreement": 0.9959749552772809,
+      "mrr": 0.2867925718183465,
+      "mrr_retention": 0.9989281466326397,
+      "logit_mse": 0.0011380498334096186,
+      "decay_pp": 0.43290043290042934,
+      "mean_epsilon": 0.009980671375242304,
+      "recalibration_rate": 0.0489,
+      "n_queries": 2236
+    },
+    "A1": {
+      "agreement": 0.9901610017889088,
+      "mrr": 0.2818185334271401,
+      "mrr_retention": 0.9816030572138156,
+      "logit_mse": 0.0060567634974059755,
+      "decay_pp": 0.43290043290042934,
+      "mean_epsilon": 0.023350541645661946,
+      "recalibration_rate": 1.0,
+      "n_queries": 2236
+    },
+    "A2": {
+      "agreement": 0.9874776386404294,
+      "mrr": 0.2817662371276495,
+      "mrr_retention": 0.9814209038017007,
+      "logit_mse": 0.019164518983740404,
+      "decay_pp": 0.43290043290042934,
+      "mean_epsilon": 0.040338318110017014,
+      "recalibration_rate": 0.0489,
+      "n_queries": 2236
+    },
+    "A3": {
+      "agreement": 0.9968694096601073,
+      "mrr": 0.2863263352686258,
+      "mrr_retention": 0.9973041965785919,
+      "logit_mse": 0.0011201021498881054,
+      "decay_pp": 0.0,
+      "mean_epsilon": 0.01013388721704972,
+      "recalibration_rate": 0.0489,
+      "n_queries": 2236
+    },
+    "A4": {
+      "agreement": 0.9991055456171736,
+      "mrr": 0.2866625277891985,
+      "mrr_retention": 0.9984751898485995,
+      "logit_mse": 0.0010297420714325848,
+      "decay_pp": 0.0,
+      "mean_epsilon": 0.00987737088173113,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    },
+    "D1": {
+      "agreement": 0.9932915921288015,
+      "mrr": 0.2845816848076763,
+      "mrr_retention": 0.9912273988413691,
+      "logit_mse": 0.0028324969966725456,
+      "decay_pp": 0.21645021645021467,
+      "mean_epsilon": 0.015688146395354746,
+      "recalibration_rate": 0.0,
+      "n_queries": 2236
+    }
+  },
+  "ann_mrr": 0.28710030124300395
+}

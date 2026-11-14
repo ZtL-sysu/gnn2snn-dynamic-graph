@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "task_id": "lite-gnn2snn-dynamic",
+  "agent_id": "20261113-wb-lead",
+  "created_at_utc": "2026-11-14T01:10:22.443505+00:00",
+  "status": "completed",
+  "input_git_head": "a7276813f73d809e97cd0d089a0af61f79ca8992",
+  "protocol": {
+    "path": "collaboration/PROTOCOL.md",
+    "sha256": "2257d1240c9e8620e98cb662366b5c937acd26c6f02777e85978421e0b941f16",
+    "bytes": 3562
+  },
+  "artifacts": [
+    {
+      "path": "goal-ledger.md",
+      "sha256": "71cc9935147c6e27e04bbb7396196316c288726a34fc610b6491ed2e300d6d54",
+      "bytes": 13410
+    },
+    {
+      "path": "collaboration/PROJECT.md",
+      "sha256": "d3a7cef45a61196b22cd09f80b5a54be069fac372a1804fd63062d199661a77e",
+      "bytes": 5160
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/HANDOFF.md",
+      "sha256": "fbacd42c13901f8211c9a836ef8b44297b36c8ec873cda7c95d4dc08e5c56273",
+      "bytes": 3268
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/LOG.md",
+      "sha256": "727ef3ed8632cde4953ccd6a2a45700bc6a3decbbc7a78a7ccddfc3c47b68d64",
+      "bytes": 9185
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/guidance-v2.md",
+      "sha256": "29a38606f89a47d8049f868ede4f08b8f30ea70bdda947d1204eda3f311d5012",
+      "bytes": 30797
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/guidance-v2-amendment.md",
+      "sha256": "b9f353dc148a1cd810db28829b2b4742df3db1bc9cea499fc389b906464f7c79",
+      "bytes": 9600
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/ccfa-startup-packet-v2/feasibility-contract.json",
+      "sha256": "f17aba53b9458513cf2df3af4e91e3cfb2b24d445d58094d489f66d608226684",
+      "bytes": 13574
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/pipeline-state.md",
+      "sha256": "0ecbf6c0ed66b733084af04b2fa4360da956f4aac9b9568c07c24bf6cc48a3d0",
+      "bytes": 3979
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/pipeline-state.json",
+      "sha256": "6ba4de826d4f0777596be07cf6641b02b76c5fbca15192b55659cb0019a38a50",
+      "bytes": 23139
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/experiment-traceability.md",
+      "sha256": "3cea82c4ba1509fd32332a6e231d14f8fe65276b3b2dfccdf6f3f265e90e60fe",
+      "bytes": 3710
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/correction-ledger.md",
+      "sha256": "154fb4652f25464cb24ed38ae99a008edc2b78c978db9c5c54593c6fafb1f778",
+      "bytes": 3345
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/correction-loop-state.md",
+      "sha256": "6fc92f8c0d6e63de9243cd47bfbd5f58763ffdde454c5b0995f4cf7230b038c5",
+      "bytes": 2598
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/P5-strong-result-lock.md",
+      "sha256": "6085e6018c3a698e90f616fbdd553fe1b3eec7c5b74f53426d4c3071afb74629",
+      "bytes": 3094
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/ccfa-pre-draft-scientific-review.md",
+      "sha256": "35c70f3d4a56ed755129ab77e4d543929c5c3e5bc4525c746337041a03d8a194",
+      "bytes": 2221
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/reference-dedup-audit.md",
+      "sha256": "32169174dade660ec6da8c63687b8652e5a75a8a2143aa8a243c9288cab89569",
+      "bytes": 5080
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/submission-constraints.md",
+      "sha256": "9920c29120d8822dc601452cbac40e823bb84f595fbb8ce28bc4b4c42c051602",
+      "bytes": 4036
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/final-metadata-counts.json",
+      "sha256": "cbc1f858da50d250a4a19841767256ab48bbe56c4d18cc0baea0fd8ba2d901f6",
+      "bytes": 1333
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/source-pdf-consistency.md",
+      "sha256": "247fddca1bb83234a9e5ab84ab4d35c71a557992483c91be307b63bffb7177ff",
+      "bytes": 940
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/final-audit-note.md",
+      "sha256": "a45aa0ca15e9790c807359c6f5335c72bcc36bc9a60970ccaee68fe7c61b58de",
+      "bytes": 2564
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/audits/metrics.csv",
+      "sha256": "df22baec7a863c9877b0e1af8ad3a2373cd38c0f2905e085c54734fb97717f2a",
+      "bytes": 164947
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/results/aggregated.json",
+      "sha256": "7d3b7e92dd28763ae66c8ffa4c17714da17d22322548cbfe23c173d1ea134402",
+      "bytes": 64010
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/results/statistics/final-analysis.json",
+      "sha256": "80301ad3330e95a6d22650727414b588a4cee9f78aa0b21875fa523212938b33",
+      "bytes": 101294
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/results/p4_auxiliary/sweeps.json",
+      "sha256": "02e40402d2b389b3f9ffe27146e4cb42a27d726160cdb167c832b54df54212c2",
+      "bytes": 4773
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/main.tex",
+      "sha256": "523e237fbff7a70dc7b56ee5b45a8593bf45dc05f9a7deee69b574eb06b73cb7",
+      "bytes": 26227
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/main.pdf",
+      "sha256": "34c2ff2b3a42c84d9b25420d68aa90de6181323b15623fee629dace9d34a8ba3",
+      "bytes": 429312
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/references.bib",
+      "sha256": "f8c1a21aa08a1ac4a70fe1305657f0a2f56a3bc923038d85878c101682e36925",
+      "bytes": 6765
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/highlights.txt",
+      "sha256": "4846bb7b12be7ef056411d7c2300880a331a15a932c5061e5667f8046b933779",
+      "bytes": 270
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/figures/fig1_framework.pdf",
+      "sha256": "f077b5173d72c5a1ee489e39be3a498d1c2bbae6453e8c8af299aec15941eb4d",
+      "bytes": 36165
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/figures/fig2_methods.pdf",
+      "sha256": "c8779317bcd05fff87c8e095d661b300b9a450bbe6e0c669a9e49ff0be035c4d",
+      "bytes": 20915
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/paper/figures/fig4_dose.pdf",
+      "sha256": "8c741639ff87e51dbaaa646105f778ffe95ac7f804a5dec4ba48128dd5f7d729",
+      "bytes": 16822
+    },
+    {
+      "path": "auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/deliverables/manifest.json",
+      "sha256": "4aabc17e71e3f7b3732bdf51379a7947ec4c4a4de04631519fcc3c9f6c048e3a",
+      "bytes": 19747
+    }
+  ]
+}

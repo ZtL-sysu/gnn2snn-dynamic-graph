@@ -1,55 +1,53 @@
 # Pipeline State (f-research-v1)
 
-- Guidance file: `../guidance.md` (absolute path resolved at P0; the run root is inside the guidance directory)
-- Run root: `auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261113-211758-tcar/`
+- Guidance file: `../guidance-v2.md` (contract v2; `../guidance.md` v1 preserved as evidence)
+- Run root: `f-research-v1-run-20261113-211758-tcar/` inside the guidance directory
 - Artifact manifest: `audits/path-containment-manifest.md`
-- Structured authority: `pipeline-state.json` in this run root (26 stages, SHA-256 bound)
-- Single final PDF page policy: Neurocomputing; no explicit author length requirement; official limits to be verified at P20
-- Path-containment status: passed at P0
-- Allowed statuses: `pending`, `running`, `passed`, `blocked`, `superseded`. `skipped` is never valid.
+- Structured authority: `pipeline-state.json` (26 stages, SHA-256 bound, contract_version v2)
+- Single final PDF: `paper/main.pdf` compiled from `paper/main.tex`; Neurocomputing preprint format
+- Path-containment status: passed
 
-| Stage | Name | Status | Evidence / artifact path | Gate result | Notes |
-|---|---|---|---|---|---|
-| P0 | Load guidance and create run root | passed | `audits/path-containment-manifest.md`, `pipeline-state.json` | pass | Guidance resolved; run root inside guidance directory; 26-stage ledger initialized |
-| P1 | Validate guidance and load CCFA packet | passed | `audits/P1-guidance-validation.md` | pass | Strict structure + packet validation re-run; startup decision `proceed` |
-| P1A | Strong-result feasibility lock | passed | `audits/strong-result-feasibility-lock.md` | pass | All three binding claims `pass`; targets remain pre-registered and unmet |
-| P1B | Pre-experiment adversarial review | passed | `audits/ccfa-pre-experiment-review.md`, `audits/ccfa-pre-experiment-integrity.md`, `audits/ccfa-pre-experiment-action-ledger.md` | pass | No unresolved fatal risk; every claim explicitly marked as planned evidence |
-| P2 | Runnable protocols and local environment | passed | `protocols/P2-environment-and-prototype.md`, `audits/P2-environment-check.md`, `results/p2-prototype/` | pass | One seed smoke completed in <1 s; MPS operators verified; split IDs frozen; IF coder bug found and repaired |
-| P3 | Baseline-first execution | pending | — | pending | B0/B1/B2/C0 must exist before any proposed-method claim |
-| P3A | Baseline-evidence stop-loss review | pending | — | pending | — |
-| P4 | Full experiment campaign | pending | — | pending | — |
-| P5 | Strong-result lock | pending | — | pending | — |
-| P5A | Pre-draft scientific review | pending | — | pending | — |
-| P6 | PAPER_OUTLINE | pending | — | pending | Local equivalent execution; ARC CLI not run |
-| P7 | PAPER_DRAFT | pending | — | pending | — |
-| P8 | Figures and tables | pending | — | pending | — |
-| P9 | PEER_REVIEW | pending | — | pending | — |
-| P10 | PAPER_REVISION | pending | — | pending | — |
-| P11 | QUALITY_GATE | pending | — | pending | — |
-| P12 | Reference verification | pending | — | pending | — |
-| P13 | EXPORT_PUBLISH | pending | — | pending | — |
-| P14 | CITATION_VERIFY | pending | — | pending | — |
-| P15 | TeX/PDF compile | pending | — | pending | — |
-| P16 | Journal limits | pending | — | pending | — |
-| P17 | Guidance coverage audit | pending | — | pending | — |
-| P18 | Figure/table audit | pending | — | pending | — |
-| P19 | Final polish | pending | — | pending | — |
-| P20 | Submission constraints | pending | — | pending | — |
-| P21 | Final delivery | pending | — | pending | — |
+| Stage | Name | Status | Evidence / artifact path | Gate result |
+|---|---|---|---|---|
+| P0 | Load guidance and create run root | passed | `audits/path-containment-manifest.md` | pass |
+| P1 | Validate guidance and load CCFA packet | passed | `audits/P1-guidance-validation.md` | pass |
+| P1A | Strong-result feasibility lock | passed | `audits/strong-result-feasibility-lock.md` | pass |
+| P1B | Pre-experiment adversarial review | passed | `audits/ccfa-pre-experiment-review.md` | pass |
+| P2 | Runnable protocols and local environment | passed | `audits/P2-environment-check.md` | pass |
+| P3 | Baseline-first execution | passed | `results/p3_baselines/validation_mrr.json` | pass |
+| P3A | Baseline-evidence stop-loss review | passed | `audits/P3A-baseline-evidence-review.md` | pass |
+| P4 | Full experiment campaign | passed | `results/aggregated.json` | pass |
+| P5 | Strong-result lock | passed | `audits/P5-strong-result-lock.md` | pass |
+| P5A | Pre-draft scientific review | passed | `audits/ccfa-pre-draft-scientific-review.md` | pass |
+| P6 | PAPER_OUTLINE (local equivalent) | passed | `writing/PAPER_OUTLINE.md` | pass |
+| P7 | PAPER_DRAFT (local equivalent) | passed | `writing/PAPER_DRAFT.md` | pass |
+| P8 | Figures and tables | passed | `audits/figure-table-audit.md` | pass |
+| P9 | PEER_REVIEW (local equivalent) | passed | `writing/PEER_REVIEW.md` | pass |
+| P10 | PAPER_REVISION (local equivalent) | passed | `writing/PAPER_REVISION.md` | pass |
+| P11 | QUALITY_GATE (local equivalent) | passed | `writing/QUALITY_GATE.md` | pass |
+| P12 | Reference verification | passed | `audits/reference-dedup-audit.md` | pass |
+| P13 | EXPORT_PUBLISH (local equivalent) | passed | `paper/main.tex` | pass |
+| P14 | CITATION_VERIFY | passed | `audits/reference-dedup-audit.md` | pass |
+| P15 | TeX/PDF compile | passed | `paper/main.pdf` | pass |
+| P16 | Journal limits | passed | `audits/final-metadata-counts.json` | pass |
+| P17 | Guidance coverage audit | passed | `audits/paper-guidance-audit.md` | pass |
+| P18 | Figure/table audit | passed | `audits/figure-table-audit.md` | pass |
+| P19 | Final polish | passed | `writing/FINAL_POLISH.md` | pass |
+| P20 | Submission constraints | passed | `audits/submission-constraints.md` | pass |
+| P21 | Final delivery | passed | `deliverables/manifest.json` | pass |
+
+## Back-edge (recorded in `pipeline-state.json` history)
+
+A versioned contract change to v2 reopened **P0** after the P3 baseline-first failures. The `history` contains `pass P0..P2` (v1), `reopen P0` with the reason, then `pass P0..P21` (v2). All pre-v2 evidence is preserved; no later stage is marked passed on stale v1 evidence.
 
 ## Path-Containment Audit
 
-| Artifact class | Expected location | Status | External source | Notes |
-|---|---|---|---|---|
-| Protocols, audits, scripts, results, inputs, paper, figures, writing, deliverables | inside this run root | passed | none | No deliverable is placed in `auto-paper/` root, temp, Desktop, Downloads, or a global ARC artifacts directory |
-| Public dataset | Zenodo 10.5281/zenodo.7213796, local frozen copy supplied at run time | passed | external, CC BY 4.0 | `inputs/frozen-identities.json` records SHA-256 of the four streams and of validation/test query arrays; raw `.npz` is not uploaded |
-| Reference code | user's `ZtL-sysu/gnn2snn` archive, local predecessor `dependencies/` | passed | external, no blanket license | Read-only reference; differential coder reimplemented, not copied |
-| CCFA startup packet | `../ccfa-startup-packet/` (guidance directory) | passed | none | Loaded as evidence at P1/P1A |
+Every protocol, trace, log, result table, figure source, TeX source, PDF, audit file, manifest and delivery bundle is under this run root. `deliverables/manifest.json` lists relative paths and SHA-256 hashes. No deliverable is in a global ARC artifacts directory, temp, Desktop, Downloads or the repository root.
 
 ## Page-Policy Audit
 
-No page target is applied until the official Neurocomputing guide-for-authors is checked at P20. No default threshold is invented.
+No page limit exists in the official Neurocomputing guide. Hard limits applied: abstract 238 ≤ 250 words, 6 keywords (1–7), 4 highlights each ≤ 85 characters. Counts are in `audits/final-metadata-counts.json`.
 
 ## Correction ledger
 
-One prototype repair occurred inside P2 (IF coder T-step bug). It is recorded in `audits/P2-environment-check.md` and `LOG.md`; no stage was reopened because the defect was found and repaired before P2's gate was declared passed. No guidance contract change was needed.
+Nine correction cycles C1–C9 are preserved in `correction-ledger.md`, `correction-loop-state.md` and `../guidance-v2-amendment.md`. No failed evidence was deleted and no binding target was lowered after a verdict.

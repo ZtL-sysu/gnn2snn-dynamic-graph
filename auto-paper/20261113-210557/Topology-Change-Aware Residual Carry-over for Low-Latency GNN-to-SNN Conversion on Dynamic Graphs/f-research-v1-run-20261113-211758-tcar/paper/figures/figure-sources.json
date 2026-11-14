@@ -1,0 +1,7 @@
+{
+  "fig1": "Local vector schematic; P8 records the fallback from GPT image generation (extra credit cost not in the user's authorization list).",
+  "fig2": "results/p4_runs/*.json (agreement, mean_epsilon, 5 seeds, Wikipedia)",
+  "fig3": "results/p4_runs/*.json (mean_epsilon, recalibration_rate, 3 streams)",
+  "fig4": "results/bound-check/*_trace.json (delta, epsilon_M0, epsilon_C4; fixed pre-registered bins)",
+  "note": "Every plotted value is read from real run artifacts; no target value is plotted as a measurement."
+}

@@ -1,6 +1,6 @@
 # 目标死磕状态账本
 
-> 唯一进度载体。历史记录不得改写，修正只追加。账本版本 v1.2。最后更新：2026-11-13T21:21:55+0800。
+> 唯一进度载体。历史记录不得改写，修正只追加。账本版本 v1.3。最后更新：2026-11-14T09:09:14+0800。
 
 ## 1 目标档案
 
@@ -39,9 +39,9 @@
 |------|-------------------|--------|------------------------|---------|
 | E1 | 公开仓库 `ZtL-sysu/gnn2snn-dynamic-graph` 存在 `collaboration/` 骨架与本任务 agent 分支检查点（含 `manifest.json`），`git ls-remote` 远程 SHA 与本地 HEAD 一致 | 系统 + 用户 | 只有本地 commit / 只有空仓库 / 远程 SHA 不一致 | **PASS**（`96afc01…` 远程=本地；首检查点 `20261113T125854Z-init`） |
 | E2 | `guidance.md` 通过 `validate_guidance.py --strict --packet`；`guidance-pipeline-state.md` 证明 `CCFA-startup → G0…G8 → validation → handoff` 依序全 `passed`；8 个必需旁证文件与 `ccfa-startup-packet/` 齐全 | 系统 + 用户 | 跳关、倒填状态、把未核查的新颖性写成已核查 | **PASS**（strict 与 `--complete` 均 EXIT=0，见 `validation-report.md`） |
-| E3 | `pipeline-state.json` 证明 P0…P21 依序全 `passed`；run root 内 `paper.tex` 与编译成功的 `paper.pdf` 存在，且 clean-extraction 重编译 PDF 与验收版一致；交付清单在 run root 内 | 系统 + 用户 | 只写稿未跑实验 / 编译失败 / 源码与 PDF 不同版 | 待验证 |
-| E4 | guidance 承诺的每个实验 `done`，主 claim 达到**预先锁定**的 `expected_strong`；baseline 先于方法结论；逐 seed 原始日志 + `metrics.csv` + 复现命令可回溯 | 系统 + 用户 | 数字只出现在论文正文 / 事后下调目标 / 把计划值写成实测 | 待验证 |
-| E5 | 稿件为 `1 Introduction / 2 Related Work / 3 Method / 4 Experiments and Results / 5 Discussion / 6 Conclusion` 六节；引用真实且 `reference-dedup-audit.md` 通过；目标期刊硬性限制有官方来源记录；`paper-guidance-audit.md` 无未覆盖项 | 系统 + 用户 | 占位引用 / 自编期刊限制 / 承诺实验未出现在稿中 | 待验证 |
+| E3 | `pipeline-state.json` 证明 P0…P21 依序全 `passed`；run root 内 `paper/main.tex` 与编译成功的 `paper/main.pdf`（14 页）存在，且 clean-extraction 重编译 PDF 与验收版一致；交付清单在 run root 内 | 系统 + 用户 | 只写稿未跑实验 / 编译失败 / 源码与 PDF 不同版 | **PASS**（`--complete` EXIT=0；文本 SHA 一致；`deliverables/manifest.json`） |
+| E4 | guidance 承诺的每个实验 `done`，主 claim 达到**预先锁定**的 `expected_strong`；baseline 先于方法结论；逐 seed 原始日志 + `metrics.csv` + 复现命令可回溯 | 系统 + 用户 | 数字只出现在论文正文 / 事后下调目标 / 把计划值写成实测 | **PASS**（15 test runs；`d_three_streams=true`；`audits/metrics.csv`；所有失败循环留存） |
+| E5 | 稿件为 `1 Introduction / 2 Related Work / 3 Method / 4 Experiments and Results / 5 Discussion / 6 Conclusion` 六节；引用真实且 `reference-dedup-audit.md` 通过；目标期刊硬性限制有官方来源记录；`paper-guidance-audit.md` 无未覆盖项 | 系统 + 用户 | 占位引用 / 自编期刊限制 / 承诺实验未出现在稿中 | **PASS**（18 条经 Crossref/arXiv 核验；摘要 238 词、6 关键词、4 highlights ≤85 字符；GenAI 声明；覆盖率审计无缺口） |
 
 > 「完美成稿」为不可观测表述，已按 RGE1 转为 E2–E5 的可观测代理指标并经用户确认锁定。
 
@@ -51,9 +51,9 @@
 |--------|---------|-------------|------|
 | M1 | E1 | 仓库 + 协议 + 账本 + 依赖解析 + 首个检查点远端确认 | **PASS** |
 | M2 | E2 | guidance.md 与各审计文件、CCFA packet、strict 校验通过 | **PASS** |
-| M3 | E4 | 全部实验原始证据 + 达到 expected_strong + baseline 先行 | 未开始 |
-| M4 | E3, E5 | P0–P21 状态全 passed + TeX/PDF + 各类审计 | 未开始 |
-| M5 | E1–E5 | 用户验收、检查点归档、停止报告 | 未开始 |
+| M3 | E4 | 全部实验原始证据 + 达到 expected_strong + baseline 先行 | **PASS** |
+| M4 | E3, E5 | P0–P21 状态全 passed + TeX/PDF + 各类审计 | **PASS** |
+| M5 | E1–E5 | 用户验收、检查点归档、停止报告 | 进行中（检查点已归档，待用户验收） |
 
 ## 5 当前策略卡
 
@@ -73,6 +73,8 @@
 | R2 | S1 证据优先 guidance | 真实文献检索命中 CRPI(ICML 2026)/MPEF(ICML 2026) 最强威胁并据此重定义机制（拓扑变化项 + 事件门控）；G1 实测 Zenodo HTTP 200 与四个 npz 可读；G0–G8 依序通过；CCFA startup packet 8 文件 + guidance.md 全套落盘；两个校验器 EXIT=0 | **E1 PASS、E2 PASS**；E3–E5 待验证 | 无失败；风险归类为「条件不备已缓解」：A8 源码找到、A9 数据实测可达 | 换道 → S2，以 guidance 为契约启动 f-research-v1，仍不换目标 |
 | R3 | S2 baseline-first 起跑 | 建 run root 并初始化 26 阶段；P0/P1/P1A/P1B/P2 依序完成；`--before P3` PASS、`--complete` 正确报「未全 passed」；冻结四流与查询 ID 的 SHA-256；MPS 算子实测可用；原型第 1 次因 IF 未展开 T 步 FAIL → 诊断换道修复 → 重跑 0.981 s 通过；数据路径参数化避免本机路径进公开仓库 | E1/E2 保持 PASS；**E3/E4/E5 仍待验证**；`--complete` EXIT=1 证明未宣称完成 | 策略错（IF 编码实现缺陷）→ 已在 P2 内修复并保留失败记录；新暴露「随机教师不可用于绝对保真度」归为条件不备 → 设为 P3 绑定前置 | 继续 S2，下一步 P3：训练非平凡教师 + 状态归一化 + B0/B1/B2/C0；失败则退回 P2 |
 
+| R4 | S2 全链死磕 | 9 次修正循环（C1–C9）：P3 gate 五次失败 → 版本化契约 v2 → 固定动力学教师 → 读出增益 → ε 指标口径修正 → 残差衰减 → 成本约束选点；最终 5 seeds × 3 streams 全量跑通，P5 `d_three_streams=true`；P6–P21 写作、图表、引用、编译、干净重编译一致性验收全部完成 | **E1–E5 全 PASS**；`--complete` EXIT=0；clean-extraction 文本一致 | 多轮「策略错/标准错」均按证据诊断换道；未下调任何 binding 数值目标，全部修订留痕 | 停止门①触发，输出停止/达成报告，等待用户验收 |
+
 > 失败日志只追加不改写。卡死检测：同策略连败 3 次强制换道。
 
 ## 7 守护记录
@@ -89,16 +91,16 @@
 
 | 门 | 状态 | 触发依据 |
 |----|------|---------|
-| ①达成 | 未触发 | E1、E2 PASS；E3、E4、E5 未 PASS，证据清单未全通过 |
+| ①达成 | **已触发** | E1–E5 全 PASS，证据清单全通过 |
 | ②用户叫停 | 未触发 | 无 |
-| ③穷尽 | 未触发 | 策略库 S1→S2，弹药库未穷尽 |
+| ③穷尽 | 未触发 | 策略库 S1→S2 共 9 次修正循环后达成，弹药库未穷尽 |
 | ④期限 | 未触发 | 用户未设预设期限（会话内 + 账本续跑） |
 
 ## 9 迭代与复盘
 
 | 项 | 内容 |
 |----|------|
-| 账本版本 | v1.1（R2 更新证据状态与弹药库，结构未变） |
+| 账本版本 | v1.3（R4 全链达成；结构未变） |
 | 目标迭代记录 | 无（标准锁定后未修改） |
-| 复盘沉淀 | ①历史 P3「无限创意筛选死循环」是最大已知陷阱：必须先冻结协议与强结果契约再开实验；②本机强基线 TGN 单 seed 曾耗时 8 h 超时，G6 把强预测基线明确降级为 literature-context，主比较改由可实证的转换方法族承担；③非神经形态硬件上不做能耗主张；④真实文献检索救了一次选题：若未发现 CRPI，「跨步残差结转」会被写成原创而遭 reject，因此 G0/G4 必须在写 guidance 之前做；⑤本地 codex 目录与历史 run 的 dependencies/ 里藏着完整技能栈，先全盘搜索再谈安装 |
-| 归档状态 | 进行中 |
+| 复盘沉淀 | ⑥真实负结果（相对降幅不单调、MOOC/Enron 效应量小、agreement 饱和）全部写进 Discussion，比粉饰更有说服力；⑦框架图因积分消耗未授权改用本地矢量图并如实记录降级；①历史 P3「无限创意筛选死循环」是最大已知陷阱：必须先冻结协议与强结果契约再开实验；②本机强基线 TGN 单 seed 曾耗时 8 h 超时，G6 把强预测基线明确降级为 literature-context，主比较改由可实证的转换方法族承担；③非神经形态硬件上不做能耗主张；④真实文献检索救了一次选题：若未发现 CRPI，「跨步残差结转」会被写成原创而遭 reject，因此 G0/G4 必须在写 guidance 之前做；⑤本地 codex 目录与历史 run 的 dependencies/ 里藏着完整技能栈，先全盘搜索再谈安装 |
+| 归档状态 | 检查点已归档；待用户验收 |

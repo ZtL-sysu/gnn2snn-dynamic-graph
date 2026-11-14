@@ -1,0 +1,56 @@
+{
+  "abstract_word_count": 238,
+  "abstract_limit": 250,
+  "abstract_pass": true,
+  "keywords_count": 6,
+  "keywords_limit": [
+    1,
+    7
+  ],
+  "keywords_pass": true,
+  "keywords": [
+    "Spiking neural networks",
+    "ANN-to-SNN conversion",
+    "Dynamic graphs",
+    "Temporal graph learning",
+    "Low-latency inference",
+    "Event-driven computation"
+  ],
+  "highlights": [
+    {
+      "text": "Conversion error on dynamic graphs accumulates along the event axis",
+      "chars": 67,
+      "pass": true
+    },
+    {
+      "text": "A topology-change term bounds the accumulated conversion error",
+      "chars": 62,
+      "pass": true
+    },
+    {
+      "text": "Gated residual carry-over reduces state error on three public streams",
+      "chars": 69,
+      "pass": true
+    },
+    {
+      "text": "Recalibration cost scales with topology changes, not with all events",
+      "chars": 68,
+      "pass": true
+    }
+  ],
+  "highlights_count": 4,
+  "highlights_count_pass": true,
+  "highlights_pass": true,
+  "numbered_main_sections": [
+    "Introduction",
+    "Related work",
+    "Method",
+    "Experiments and Results",
+    "Discussion",
+    "Conclusion"
+  ],
+  "pdf": "paper/main.pdf",
+  "pdf_pages": 12,
+  "genai_declaration_present": true,
+  "note": "Counts taken on the exact plain text of the final submitted fields."
+}

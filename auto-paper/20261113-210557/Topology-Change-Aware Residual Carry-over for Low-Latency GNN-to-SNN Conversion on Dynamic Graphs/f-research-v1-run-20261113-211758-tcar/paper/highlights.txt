@@ -1,0 +1,4 @@
+Conversion error on dynamic graphs accumulates along the event axis
+A topology-change term bounds the accumulated conversion error
+Gated residual carry-over reduces state error on three public streams
+Recalibration cost scales with topology changes, not with all events

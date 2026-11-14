@@ -1,38 +1,35 @@
-# Handoff: lite-gnn2snn-dynamic / 20261113-wb-lead
-
-- Updated: 2026-11-13T21:21:55+0800
+- Updated: 2026-11-14T09:09:14+0800
 - Branch: `agent/lite-gnn2snn-dynamic/20261113-wb-lead`
-- Work status: `in_progress`
+- Work status: `completed` (scientific pipeline delivered; user acceptance and submission still pending)
 - Protocol: `collaboration/PROTOCOL.md` v1（SHA-256 见首个检查点 `manifest.json`）
-- Latest checkpoint: `checkpoints/20261113T132155Z-p0p2/`
-- Sync: `main` = `75aee0ef95f57f6c8a12285e596aac3b3998c9ba`；已核对的检查点提交：`96afc01…`(init)、`3fca914…`(guidance)。p0p2 检查点待本轮推送后补 SHA。
+- Latest checkpoint: `checkpoints/20261114T010914Z-final/`
+- Sync: `main` = `75aee0ef95f57f6c8a12285e596aac3b3998c9ba`；历史检查点 `96afc01…`(init)、`3fca914…`(guidance)、`a727681…`(P0–P2)。最终检查点待本轮推送后补 SHA。
 
 ## Established
 
-- **E1 PASS**、**E2 PASS**：公开仓库 + 协议骨架 + 校验通过的 guidance 契约（strict 与 `--complete` 均 EXIT=0），见 `validation-report.md`。
-- **f-research-v1 P0–P2 依序 passed**，结构化账本 `f-research-v1-run-20261113-211758-tcar/pipeline-state.json`：`--before P3` 返回 PASS；`--complete` 正确返回 `ERROR: delivery requires every stage passed`（P3–P21 pending），证明未宣称完成。
-- P1A 三条 binding claim 全部 `pass`，`expected_strong` 未被下调；P1B 无未解决致命风险，所有 claim 标为 planned evidence。
-- P2 真实运行：冻结标识 `inputs/frozen-identities.json`（四个流与 1024/4096 查询 ID 的 SHA-256）；MPS matmul/ReLU 可用、CUDA 不可用；原型 0.981 s（远低于 30 分钟里程碑）。**原型第 1 次因 IF 未展开 T 步而 FAIL，修复后重跑**，两次原始记录都保留在 `audits/P2-environment-check.md`。修复后 carry-over 优于 hard reset（epsilon 3.4068 vs 8.4969；agreement 0.33 vs 0.0755），说明仪器化有区分力，但随机未训练教师使绝对一致率无意义。
-- 脚本数据路径已参数化为 `CTDG_FROZEN_STREAM` 环境变量，公开产物不写本机绝对路径。
-- 依赖：`~/.codex/skills/` 17 个 `ccf-*` 只读复用；AutoResearchClaw 源码在历史 run 的 `dependencies/AutoResearchClaw/`（`import researchclaw` 成功，完整 CLI 需用户未提供的 LLM 凭据）。**全程未安装任何东西。**
-- `goal-ledger.md`（E1/E2 PASS，E3–E5 待验证；授权档；四停止门均未触发）。
+- **E1–E5 全 PASS；停止门①（达成）已触发。** 账本 `goal-ledger.md` v1.3。
+- `f-research-v1` 的 `pipeline-state.json` 证明 P0–P21 依序全 `passed`（含 `reopen P0` 的 v2 契约 back-edge），`pipeline_state.py --complete` EXIT=0。
+- **成稿**：`auto-paper/20261113-210557/<TCAR 标题>/f-research-v1-run-20261113-211758-tcar/paper/main.tex` 与 `paper/main.pdf`（14 页）。六节结构、18 条经核验引用、4 张图、2 张表、GenAI 声明、摘要 238 词（≤250）。干净目录重编译文本与验收版完全一致。
+- **实验**：3 条公开流 × 5 seeds = 15 次测试，11 个方法/消融，T/γ/窗口扫描，配对 bootstrap + BH 校正。主结果：M0 agreement 0.9990/0.9949/0.9969，MRR 保持 ≥0.9988，`ε_k` 在所有流严格最低，触发率 0.197/0.129/0.049。`d_three_streams=true`。
+- **诚实负结果已写进稿件**：离散记忆主导绝对 MRR（EdgeBank 0.947 vs 教师 0.304）、agreement 饱和、MOOC/Enron 效应量仅 20.9%/3.7%、相对降幅非单调、测试 ID 非盲、无神经形态能耗实测。
+- **9 次修正循环 C1–C9 全部留痕**：`correction-loop-state.md`、`correction-ledger.md`、`guidance-v2-amendment.md`。v1 契约与校验记录保留未改；v2 通过 strict 校验。
+- 目标期刊 Neurocomputing：官方硬性限制已核实并满足（摘要/关键词/highlights/引用/GenAI 声明）。
 
 ## Remaining
 
-- **P3–P21 全部未开始**；无真实实验指标、无稿件、无 TeX/PDF。
-- P3 绑定前置：训练非平凡轻量教师 + 状态衰减/归一化 + 重查 clipping rate；教师必须在 validation 胜过 B1/B2，否则退回 P2。
-- 之后依次：P3A、P4 全矩阵与六消融、P5 强结果锁、P5A、P6–P21 写作/图表/引用/编译/交付。
-- P12/P14 结构化 DOI/arXiv/标题查重；P20 官方作者指南硬性限制（当前 unknown）。
-- E3/E4/E5 未 PASS，**目标尚未达成**。
+- 用户验收与决定是否投稿；对应邮箱、基金、CRediT 角色未提供，记为 unresolved，未编造。
+- Figure 1 使用本地矢量示意图（图像生成需额外积分，未在授权清单内）；如用户授权可重做并重编译。
+- AutoResearchClaw CLI 未运行（需用户未提供的 LLM 凭据），写作阶段按本地源码契约等价执行并如实标注。
+- 新颖性置信度中等，未做 Scopus/IEEE 全库查重；正式投稿前建议补做。
+- 本仓库未合并 `main`、未发布 Release、未投稿。
 
 ## Live jobs
 
-无。未启动任何长作业、无远程任务、无后台进程。
+无。所有后台作业已结束，无远程任务、无后台进程。
 
 ## Resume
 
-1. 工作目录 `/Users/xhf/code/phd-project/phd-gnn2snn-dynamic-graph`（git 根），分支 `agent/lite-gnn2snn-dynamic/20261113-wb-lead`。
-2. 依次读 `collaboration/PROTOCOL.md`、`PROJECT.md`、`TASK.md`、`goal-ledger.md`、本文件；再读 `auto-paper/20261113-210557/<TCAR 标题>/guidance.md`、`evaluation-protocol.md`、`ccfa-startup-packet/strong-result-feasibility-contract.md`，以及 `f-research-v1-run-20261113-211758-tcar/pipeline-state.md`、`audits/P2-environment-check.md`、`audits/ccfa-pre-experiment-action-ledger.md`、`experiment-traceability.md`。
-3. 下一条命令：**P3 baseline-first**。在现有 run root 内实现并训练非平凡轻量 CTDG 教师（状态归一化），跑 B0/B1/B2/C0 并写入 `results/p3_*` 与 `experiment-traceability.md`；教师胜过 B1/B2 后才放行 C1–C4 与 M0。跑代码用 `/Users/xhf/miniconda3/bin/python`，数据路径用 `CTDG_FROZEN_STREAM`。
-4. 停止条件：`goal-ledger.md` 第 8 节任一停止门触发；或 E1–E5 全 PASS 后由整合者验收。任何阶段未通过不得跳到写作或交付；`pipeline_state.py --complete` 必须返回 PASS 才能宣称 P21。
-5. 续接者另建自己的 `agent/<task_id>/<agent_id>` 分支与 HANDOFF，保留本分支记录，不覆盖已有检查点。
+1. 读 `goal-ledger.md`、`collaboration/PROJECT.md`、本文件，再看 run root 的 `pipeline-state.md`、`audits/final-audit-note.md`、`deliverables/manifest.json`。
+2. 若需修改稿件：编辑 `paper/main.tex` → 在 `paper/` 下 `pdflatex` → `bibtex` → `pdflatex` ×2 → 重新跑 `_probe/finalize_artifacts.py`、`_probe/build_final_state.py` 与 `pipeline_state.py --complete`，再发新检查点（旧检查点不回写）。
+3. 停止条件：停止门①已触发；用户叫停为最高优先级。
+4. 续接者另建自己的 `agent/<task_id>/<agent_id>` 分支与 HANDOFF，不覆盖已有检查点。
