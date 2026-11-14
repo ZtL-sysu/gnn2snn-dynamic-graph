@@ -2,9 +2,9 @@
 
 轻量级 **GNN→SNN 转换 + 动态图** 研究的公开协作仓库。目标期刊：**Neurocomputing**（Elsevier，中科院二区，订阅/混合制）。
 
-## 状态（2026-11-13）
+## 状态（2026-11-14，contract v3）
 
-`IN PROGRESS` — 基础设施与协议已建立；guidance 构建与实验流水线尚未完成。请以
+`DELIVERED — 待用户验收`。v3 全链已完成：真 GNN 动态图算子 `A_k` + 用户 `gnn2snn` 的 DCGS 差分转换族独立重实现、5 流 × 5 seeds × 11 方法/消融、顶会实验矩阵、30 页 `elsarticle` 六节稿件、43 条经核验引用。原始全五流显著性判据在 LastFM 上未通过（BH q=0.40），已按 C16 收窄 claim 并在摘要/结果/讨论/结论强制披露，未下调任何数值目标。请以
 `collaboration/PROJECT.md`、`goal-ledger.md` 和 `collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/HANDOFF.md`
 为真实状态入口，不要以本文件推断科学结论。
 
@@ -31,4 +31,4 @@
 
 ## 复现环境
 
-代码统一使用本机 Conda：`/Users/xhf/miniconda3/bin/python`（Python 3.14.6，torch 2.13.0，MPS 可用）。
+实验在单台 Apple M1（8 核 / 16 GiB / MPS，无 CUDA）上完成，Python 3.14.6 + torch 2.13.0 + NumPy，全部 CPU 侧小矩阵运算；论文表格与图由 v3 run root 的 `scripts/fill_values.py`、`scripts/make_figures_v3.py` 从 `results/` 生成，PDF 由 `paper/main.tex` 经 `pdflatex → bibtex → pdflatex ×2` 编译。

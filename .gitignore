@@ -21,6 +21,15 @@ __pycache__/
 *.pyc
 .DS_Store
 
+# LaTeX build intermediates (deliverables are main.tex / main.bib / main.pdf)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.spl
+
 # Credentials / local identity
 .env
 *token*.json
