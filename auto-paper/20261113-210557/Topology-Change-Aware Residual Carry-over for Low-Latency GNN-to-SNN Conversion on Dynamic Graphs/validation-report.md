@@ -42,3 +42,15 @@ EXIT=0
 ## Handoff
 
 `ccfa-startup-packet/startup-decision.md` = `proceed`. This `guidance.md` is the authoritative contract for `f-research-v1` P0. All local process files and deliverables of that run must stay inside a `f-research-v1-run-*` root inside this folder.
+
+---
+
+# v4 validation record (2026-11-14, agent 20261114-topvenue)
+
+Command: `validate_guidance.py guidance-v4.md --strict --packet ccfa-startup-packet-v4`
+
+Output: `Guidance structure is valid.` EXIT=0
+
+Checked per the validator's own rules: eight required sections with non-thin bodies; figure/table section present; required terms present; canonical six-section outline with no prohibited top-level section; strict placeholder scan clean after two notation repairs (norm products reworded to avoid the pipe-adjacency pattern); packet completeness (seven artifacts non-empty); `feasibility-contract.json` schema_version 1, decision proceed, four claims with all nineteen substantive fields, valid metric directions, HTTP(S) dataset URLs, positive finite budgets with integer seeds/search_trials; all seven artifacts SHA-256 hash-bound and matching on disk.
+
+Limits unchanged from the v3 record: structure, ordering and hash binding only; scientific judgment remains with the gates; no experiment run; planned claims distinct from observed findings; the C-1 decision rule is frozen in guidance-v4-amendment.md before any 10-seed inspection.

@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "decision": "proceed",
+  "contract_version": "v4",
+  "created_utc": "2026-11-14T13:10:00+00:00",
+  "resource_envelope": {
+    "machine": "Apple M1 8-core 16 GiB MPS no CUDA",
+    "additional_runtime_hours": 6,
+    "total_runs": 80,
+    "max_parameters": 100000,
+    "remote_compute": "none authorized"
+  },
+  "claims": [
+    {
+      "id": "CL1",
+      "claim": "Ten-seed pre-registered replication: the paired difference epsilon_C2 - epsilon_M0 is positive with paired 95% BCa CI excluding zero after BH correction on all five streams at seeds 41-50; iff true the all-five-stream significance claim is restored, otherwise the C16 four-stream narrowing stands with updated disclosure.",
+      "mechanism": "Gated static-base re-anchoring suppresses the topology term L_A*||Delta A_k||*||s_{k-1}|| of the event-axis error recursion.",
+      "assumptions": "Frozen pipeline and query identities; new seeds change only random initializations; paired within-seed design; identical evaluation window.",
+      "falsifying_ablation": "A2 (remove residual carry-over) closes the epsilon gap to C2, isolating the carried-residual component.",
+      "dataset_url": "https://zenodo.org/records/7213796",
+      "split_protocol": "chronological 70/15/15 with SHA-256 frozen query identities; validation-only selection; test read once",
+      "primary_metric": "mean per-event teacher-to-SNN state error epsilon_k",
+      "minimum": "paired point estimate positive on at least 4 of 5 streams at 10 seeds",
+      "expected_strong": "locked decision rule satisfied on all five streams (d_replication_10seed: true)",
+      "failure": "paired point estimate non-positive on any stream at 10 seeds, or the decision rule cannot be executed as written",
+      "simple_baseline": "B0 frozen ANN teacher (oracle fidelity upper bound)",
+      "strong_baseline": "C2 CRPI-style global carry-over conversion control",
+      "matched_control": "A1 re-anchor-every-event oracle at 100% recomputation cost",
+      "implementation_path": "v4 engine extends gnn_campaign.py with seeds 46-50; 5 additional teacher trains (16 s each, measured)",
+      "prototype_check": "seed 46 end-to-end smoke in the v4 run root reproduces v3 5-seed numbers within numerical tolerance",
+      "calibration_evidence": "v3 per-seed means and variances in results/aggregated.json; Du 2025 power argument for 8-10 paired seeds on sub-1% effects",
+      "test_isolation": "locked rule evaluated once on test queries; no operating-point tuning after inspection",
+      "stop_return_condition": "if seed 46 smoke cannot reproduce v3 numbers, return to P2 before any 10-seed claim",
+      "metric_direction": "lower",
+      "runtime_hours": 3.5,
+      "memory_gb": 16,
+      "seeds": 10,
+      "search_trials": 24
+    },
+    {
+      "id": "CL2",
+      "claim": "Theory package: T1 per-event coder error identity, T2 spectral-norm network bound with explicit topology term, T3 steady-state bound with rho<1 sufficient condition; signature validation V-1 violation rate at most 5% with constants estimated on validation only, V-3 topology slope positive, V-4 scaling consistent with 1/(1-rho).",
+      "mechanism": "Error identity plus spectral recursion over residual GCN layers isolates the operator-change term absent from 2024-26 top-venue bounds; solving the event recursion under rho<1 gives the steady-state trade.",
+      "assumptions": "A1-A9 retained plus bounded pre-activations, row-normalised A_k, frozen event order; T3 stated without concentration if the sub-Gaussian eta_k assumption is dropped",
+      "falsifying_ablation": "V-3 synthetic edge insert/delete sweep: topology-term slope must be positive and match L_A*||s|| within an order of magnitude",
+      "dataset_url": "https://zenodo.org/records/7213796",
+      "split_protocol": "chronological 70/15/15 with SHA-256 frozen query identities; validation-only selection; test read once",
+      "primary_metric": "V-1 violation rate of the event-axis bound",
+      "minimum": "theorems stated with enumerated assumptions; V-1 computed and reported regardless of level",
+      "expected_strong": "violation rate at most 5 percent, topology slope CI excluding zero, V-4 direction consistent with 1/(1-rho)",
+      "failure": "violation rate above 20 percent, or V-6 falsifies the T1 identity",
+      "simple_baseline": "v3 recursion with proposition (self-baseline, retained as derivation lineage)",
+      "strong_baseline": "ISC CVPR 2025 spectral-norm bound as structural template (literature-positioned)",
+      "matched_control": "A3 frozen static base (toplogy term unmitigated) as the V-3 contrast arm",
+      "implementation_path": "analysis scripts over v4 per-event traces extending results/bound-check instrumentation",
+      "prototype_check": "V-6 single-site identity check runs and confirms T1 exactly before paper drafting",
+      "calibration_evidence": "constants from validation histograms: L_A from measured norms, c from T-sweep intercept, eta_bar from coder residual trace",
+      "test_isolation": "one locked evaluation of the violation rate on the test window",
+      "stop_return_condition": "if V-6 falsifies T1, T1 is removed and the theory package reopens at the mechanism stage",
+      "metric_direction": "lower",
+      "runtime_hours": 1.5,
+      "memory_gb": 16,
+      "seeds": 10,
+      "search_trials": 24
+    },
+    {
+      "id": "CL3",
+      "claim": "Efficiency and statistics transparency: full op-count energy table with cited constants (E_MAC 4.6 pJ, E_AC 0.9 pJ, Horowitz 2014 45 nm), three-level firing-rate stratification, TCAR overhead at most 2 percent of per-event converted ops, paired Cohen d and probability of improvement and per-seed scatter on every headline comparison.",
+      "mechanism": "Attribution and measurement upgrade over the same traces; no new mechanism.",
+      "assumptions": "op counts follow the documented per-event complexity; constants carry their published process node and are not measurements",
+      "falsifying_ablation": "scripted re-derivation of any table cell from raw traces must reproduce the cell",
+      "dataset_url": "https://zenodo.org/records/7213796",
+      "split_protocol": "chronological 70/15/15 with SHA-256 frozen query identities; validation-only selection; test read once",
+      "primary_metric": "energy per event proxy (relative, op-count based)",
+      "minimum": "table present, constants cited, Cohen d reported on main rows",
+      "expected_strong": "overhead at most 2 percent with measured value reported; every headline row carries d and PoI",
+      "failure": "overhead above 5 percent at the selected operating point",
+      "simple_baseline": "v3 SynOps row retained as sub-row",
+      "strong_baseline": "SGNNBench energy formula as convention reference (literature-positioned)",
+      "matched_control": "C2 at matched event budget for energy-per-fidelity parity",
+      "implementation_path": "analysis scripts over v4 traces; no retraining",
+      "prototype_check": "one method energy row recomputed by hand matches the script",
+      "calibration_evidence": "v3 cost rows and trigger rates 3.8-9.8 percent",
+      "test_isolation": "not applicable (accounting over logged traces)",
+      "stop_return_condition": "if op counts cannot be derived from traces, replace the energy table with a complexity-analysis table and disclose",
+      "metric_direction": "lower",
+      "runtime_hours": 0.5,
+      "memory_gb": 16,
+      "seeds": 10,
+      "search_trials": 24
+    },
+    {
+      "id": "CL4",
+      "claim": "MPEF-style multi-threshold control C5-MT implemented faithfully on the full 10-seed grid; M0 retains strictly lowest mean epsilon_k among conversion controls with the margin over C5-MT reported per stream.",
+      "mechanism": "Multi-level spikes raise per-step expressiveness; inter-event error feedback reuses residual potential (MPEF adapted to graph layers on the same calibrated teacher).",
+      "assumptions": "same calibration pipeline; thresholds from the same label-free 512-bin histogram with n=4 levels",
+      "falsifying_ablation": "C5-MT itself is the discriminating control; its victory narrows the dominance claim to single-threshold differential controls",
+      "dataset_url": "https://zenodo.org/records/7213796",
+      "split_protocol": "chronological 70/15/15 with SHA-256 frozen query identities; validation-only selection; test read once",
+      "primary_metric": "mean per-event state error epsilon_k",
+      "minimum": "C5-MT runs on at least 1 stream x 3 seeds with per-seed artifacts even under the demotion fallback",
+      "expected_strong": "full 5-stream 10-seed grid; M0 strictly lowest; paired test vs C5-MT reported",
+      "failure": "C5-MT strictly lower than M0 on at least 3 streams triggers the pre-authorized scope narrowing",
+      "simple_baseline": "C1 DCGS without carry-over",
+      "strong_baseline": "C2 CRPI-style control",
+      "matched_control": "M0 with n=1 (single-threshold) at identical event accounting",
+      "implementation_path": "new decode path in the v4 engine; contained change reusing calibration and evaluation harness",
+      "prototype_check": "C5-MT smoke on Wikipedia seed 41 with finite thresholds before grid release",
+      "calibration_evidence": "histogram thresholds already produced by the v3 pipeline",
+      "test_isolation": "single locked grid evaluation",
+      "stop_return_condition": "if faithful adaptation exceeds 90 minutes of implementation or fails smoke twice, execute the pre-authorized demotion to literature-positioned with failed-attempt evidence",
+      "metric_direction": "lower",
+      "runtime_hours": 1.0,
+      "memory_gb": 16,
+      "seeds": 10,
+      "search_trials": 24
+    }
+  ],
+  "evidence": [
+    {
+      "path": "startup-stage-plan.md",
+      "sha256": "e60881d9d5ae8eb0aca17574b17c5afa7a9da86fd3fe19894e2c0ef6c1568f3e",
+      "bytes": 2668
+    },
+    {
+      "path": "idea-cards.md",
+      "sha256": "1f1ba7ccd933395373cba95006b27f3f6eab9e8d69b5e48fb078111f8834a557",
+      "bytes": 4903
+    },
+    {
+      "path": "prior-art-opportunity-map.md",
+      "sha256": "7ede9191fc8a1d7d9773b62aa4563c555dd7e34a298487919eb715712fd2b6ac",
+      "bytes": 3709
+    },
+    {
+      "path": "idea-red-team-review.md",
+      "sha256": "0a0d266ad783a419e6416737721768888a17291e6365761be900aac92c01e9e6",
+      "bytes": 3701
+    },
+    {
+      "path": "claim-evidence-matrix.md",
+      "sha256": "8b63e7f8f771049c0760f25ffb7e864a6f0335411a014ee4a88fb24c80aeeceb",
+      "bytes": 4417
+    },
+    {
+      "path": "strong-result-feasibility-contract.md",
+      "sha256": "80681bb8375fd0d715573c86f4fa0c720e59bfed086acc2cf4cc1268f58284ef",
+      "bytes": 8036
+    },
+    {
+      "path": "startup-decision.md",
+      "sha256": "9ef910110c94684abaff0027ee5ddef961f0d8fa580370cf39c4b9dcbdebb6af",
+      "bytes": 1535
+    }
+  ]
+}
