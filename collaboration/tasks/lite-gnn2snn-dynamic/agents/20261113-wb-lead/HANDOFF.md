@@ -5,9 +5,9 @@
 - Work status: `completed` — scientific pipeline delivered; **user acceptance and submission still pending**
 - Protocol: `collaboration/PROTOCOL.md` v1（SHA-256 见首个检查点 `manifest.json`）
 - Effective contract: `guidance-v3.md` + `ccfa-startup-packet-v3/`；v1/v2 保持原样作为证据
-- Latest checkpoint: `checkpoints/20261114T092521Z-v3-final/`（**以此为准**）
-- Superseded: `checkpoints/20261114T092323Z-v3-final/` 的 manifest 生成于一次被 `git diff --cached --check` 中止的推送尝试，hash 清单与最终交付树不一致；按协议检查点不可回写，故保留为历史记录并新建最终检查点，不再以其 hash 清单为准。
-- Sync: `main` = `75aee0ef95f57f6c8a12285e596aac3b3998c9ba`（本 agent 分支不合并 main）；历史检查点 `96afc01…`(init)、`3fca914…`(guidance)、`a727681…`(P0–P2)、`1f4a548…`(v2 final)、`12319c0…`(v3 首次推送，含被废弃检查点)
+- **Latest checkpoint: `checkpoints/20261114T092711Z-v3-final/`（以此为准；其 24-artifact 清单对当前 HEAD 校验通过）**
+- Historical / superseded: `20261114T092323Z-v3-final/` 的 manifest 生成于一次被 `git diff --cached --check` 中止的推送尝试；`20261114T092521Z-v3-final/` 的清单对其所在提交 `27f1c39` 24/24 精确匹配，但此后追加了 LOG，故对当前 HEAD 不再匹配。按协议检查点不可回写，两者均保留为历史记录，不以其清单为准。
+- Sync: `main` = `75aee0ef95f57f6c8a12285e596aac3b3998c9ba`（本 agent 分支不合并 main）；历史检查点 `96afc01…`(init)、`3fca914…`(guidance)、`a727681…`(P0–P2)、`1f4a548…`(v2 final)、`12319c0…`、`27f1c39…`、`ac609c4…`(根目录文档同步)。最终远端 SHA 以 `git ls-remote` 为准。
 
 ## Current state (v3)
 
