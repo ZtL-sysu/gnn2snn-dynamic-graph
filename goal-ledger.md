@@ -80,6 +80,7 @@
 | R4 | S2 全链死磕 | 9 次修正循环（C1–C9）：P3 gate 五次失败 → 版本化契约 v2 → 固定动力学教师 → 读出增益 → ε 指标口径修正 → 残差衰减 → 成本约束选点；最终 5 seeds × 3 streams 全量跑通，P5 `d_three_streams=true`；P6–P21 写作、图表、引用、编译、干净重编译一致性验收全部完成 | **E1–E5 全 PASS**；`--complete` EXIT=0；clean-extraction 文本一致 | 多轮「策略错/标准错」均按证据诊断换道；未下调任何 binding 数值目标，全部修订留痕 | 停止门①触发，输出停止/达成报告，等待用户验收 |
 
 | R5 | S3 v3 全链重做 | 用户 15:16 指令：真 GNN + gnn2snn DCGS 转换 + 顶会实验矩阵 + ≥21 页 + ≥40 引用；v3 契约 strict 通过、第二个 `reopen P0`、25 次真实测试、真 `A_k` 与 DCGS 引擎、43 条核验引用、30 页 PDF | **E1–E3、E5–E8 PASS；E4 附条件 PASS（C16）** | 前版硬伤「无 GNN」与「实验单薄」由真 GNN 与顶会矩阵修复；所有旧证据保留 | 停止门①继续保持触发，等待用户验收 |
+| R6 | S4 顶会加深（v4 周期） | 用户新指令（2026-11-14）：调研近 2 年顶会同类研究的叙事/实验设计/执行 → 蒸馏「顶会学习模式」通用流程 → 升级 `~/.codex/skills/f-guidance-builder-v1` → 按升级后契约调 `f-research-v1` 开展更深实验与论文写作 → `research-github-sync` 同步本仓库。新 agent `20261114-topvenue`，分支 `agent/lite-gnn2snn-dynamic/20261114-topvenue`（基于 wb-lead HEAD 切出）；4 个并行顶会调研子代理已启动 | 待验证（v4 契约与实验尚未开始） | — | 顶会学习 → v4 契约 → f-research-v1 新 run root → 同步 |
 
 > 失败日志只追加不改写。卡死检测：同策略连败 3 次强制换道。
 
@@ -110,3 +111,13 @@
 | 目标迭代记录 | 无（标准锁定后未修改） |
 | 复盘沉淀 | ⑥真实负结果（相对降幅不单调、MOOC/Enron 效应量小、agreement 饱和）全部写进 Discussion，比粉饰更有说服力；⑦框架图因积分消耗未授权改用本地矢量图并如实记录降级；①历史 P3「无限创意筛选死循环」是最大已知陷阱：必须先冻结协议与强结果契约再开实验；②本机强基线 TGN 单 seed 曾耗时 8 h 超时，G6 把强预测基线明确降级为 literature-context，主比较改由可实证的转换方法族承担；③非神经形态硬件上不做能耗主张；④真实文献检索救了一次选题：若未发现 CRPI，「跨步残差结转」会被写成原创而遭 reject，因此 G0/G4 必须在写 guidance 之前做；⑤本地 codex 目录与历史 run 的 dependencies/ 里藏着完整技能栈，先全盘搜索再谈安装 |
 | 归档状态 | 检查点已归档；待用户验收 |
+
+## 10 周期 v4：顶会加深（2026-11-14 R6 起）
+
+| 项 | 内容 |
+|----|------|
+| v4 目标陈述 | 学习近 2 年（2024–2026）顶会同类研究（GNN→SNN 转换 / 脉冲图网络 / 动态图）的叙事与实验方法，蒸馏通用「顶会学习模式」，升级 `f-guidance-builder-v1`，据此版本化 v4 契约并以 `f-research-v1` 新 run root 加深实验与论文，全部产物经 `research-github-sync` 同步本仓库 |
+| 与 v3 的关系 | v3 契约与 25 次运行保留为证据不动；v4 通过版本化契约（`guidance-v4.md` + `ccfa-startup-packet-v4/`）按 correction-loop「reopen P0」路线重开，未受影响且已核验的 v3 证据按规则复用 |
+| 候选加深靶点（待顶会调研定优先级） | ① LastFM 边界案例的预注册新证据（加 seeds）；② 闭式误差定理 + bound tightness 验证实验；③ 叙事机制化重写（Figure 1 故事 + Discussion 升维）；④ 当代统计/效率标准件（effect size、分层 firing rate、op-count 能量公式）；⑤ 新分析行（spike 稀疏性 × 拓扑变化分层等） |
+| 已知约束（沿袭） | 本机 M1/16GB/MPS 无 CUDA；不实际投稿；不合并 main/force push；不做神经形态能耗实测；不上传 >50 MiB；不动 v3 既有文件 |
+| 执行者 | agent `20261114-topvenue`（本周期 lead）；v3 lead `20261113-wb-lead` 的文件不覆盖 |

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_id": "lite-gnn2snn-dynamic",
+  "agent_id": "20261114-topvenue",
+  "created_at_utc": "2026-11-14T12:35:51.373314+00:00",
+  "status": "in_progress",
+  "input_git_head": "509c4ed2d9f515866bc4909fba77098ede046345",
+  "protocol": {
+    "path": "collaboration/PROTOCOL.md",
+    "sha256": "2257d1240c9e8620e98cb662366b5c937acd26c6f02777e85978421e0b941f16",
+    "bytes": 3562
+  },
+  "artifacts": [
+    {
+      "path": "goal-ledger.md",
+      "sha256": "122ccb42a6502f6ef800aa8ab4311f8e14c8066aa9f3442dff2b622d39f39aa6",
+      "bytes": 16941
+    },
+    {
+      "path": "collaboration/PROTOCOL.md",
+      "sha256": "2257d1240c9e8620e98cb662366b5c937acd26c6f02777e85978421e0b941f16",
+      "bytes": 3562
+    },
+    {
+      "path": "collaboration/PROJECT.md",
+      "sha256": "5f215d2d5dc3c35ac0d27622bbf845afb45bc4152736639ec39163d0fa3f5c2c",
+      "bytes": 6076
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/TASK.md",
+      "sha256": "2352dcb221110aa5398ec4eb2a06b9ce53c37d095eb930179f555ea4b6a57758",
+      "bytes": 3035
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/agents/20261114-topvenue/HANDOFF.md",
+      "sha256": "1b306dd3d9acd9dfb39f49ee376e1ee1cd102c94f0b658e74b1a166dd791318f",
+      "bytes": 2115
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/agents/20261114-topvenue/LOG.md",
+      "sha256": "0b52dcae7711376e5d693fb9919ae2a32fd107e6d02c363c18fddea7ba6bb666",
+      "bytes": 643
+    },
+    {
+      "path": "collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/HANDOFF.md",
+      "sha256": "09b5398dd5cab0cf1806752c359ef8fb23e26d62a68db72c1f981967e437738c",
+      "bytes": 6517
+    }
+  ]
+}
