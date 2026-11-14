@@ -1,0 +1,517 @@
+{
+  "wikipedia": {
+    "gamma": 0.5,
+    "tau": 0.4,
+    "T": 4,
+    "percentile": 0.999,
+    "validation_agreement": 1.0,
+    "validation_trigger_rate": 0.14466666666666667,
+    "cost_band": "5%-20% of events, pre-registered on validation",
+    "trigger_definition": "delta_v(k) > gamma OR ||Delta A_k|| > tau (C14)",
+    "candidates": [
+      {
+        "gamma": 0.5,
+        "tau": 0.2,
+        "agreement": 1.0,
+        "epsilon": 0.003835909260204062,
+        "trigger": 0.9793333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.28,
+        "agreement": 1.0,
+        "epsilon": 0.003836007916290934,
+        "trigger": 0.978
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.32,
+        "agreement": 1.0,
+        "epsilon": 0.003836007916290934,
+        "trigger": 0.978
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.35,
+        "agreement": 1.0,
+        "epsilon": 0.003836007916290934,
+        "trigger": 0.978
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.37,
+        "agreement": 1.0,
+        "epsilon": 0.003921835031127557,
+        "trigger": 0.21133333333333335
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.4,
+        "agreement": 1.0,
+        "epsilon": 0.00394230353506282,
+        "trigger": 0.14466666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.42,
+        "agreement": 1.0,
+        "epsilon": 0.003960839616678034,
+        "trigger": 0.13
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.45,
+        "agreement": 1.0,
+        "epsilon": 0.003965994631017869,
+        "trigger": 0.11333333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.48,
+        "agreement": 1.0,
+        "epsilon": 0.003960517034555475,
+        "trigger": 0.11
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.5,
+        "agreement": 1.0,
+        "epsilon": 0.003949800545272107,
+        "trigger": 0.098
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.6,
+        "agreement": 1.0,
+        "epsilon": 0.003946606527315453,
+        "trigger": 0.074
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.8,
+        "agreement": 1.0,
+        "epsilon": 0.003965132257668301,
+        "trigger": 0.051333333333333335
+      },
+      {
+        "gamma": 0.5,
+        "tau": 1000000000.0,
+        "agreement": 1.0,
+        "epsilon": 0.0039485811962901305,
+        "trigger": 0.034666666666666665
+      }
+    ]
+  },
+  "mooc": {
+    "gamma": 0.5,
+    "tau": 0.4,
+    "T": 4,
+    "percentile": 0.999,
+    "validation_agreement": 1.0,
+    "validation_trigger_rate": 0.108,
+    "cost_band": "5%-20% of events, pre-registered on validation",
+    "trigger_definition": "delta_v(k) > gamma OR ||Delta A_k|| > tau (C14)",
+    "candidates": [
+      {
+        "gamma": 0.5,
+        "tau": 0.2,
+        "agreement": 1.0,
+        "epsilon": 0.004453561597270891,
+        "trigger": 0.8153333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.28,
+        "agreement": 1.0,
+        "epsilon": 0.00444418857471707,
+        "trigger": 0.7893333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.32,
+        "agreement": 1.0,
+        "epsilon": 0.004444126844018077,
+        "trigger": 0.784
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.35,
+        "agreement": 1.0,
+        "epsilon": 0.004444404925142104,
+        "trigger": 0.7813333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.37,
+        "agreement": 1.0,
+        "epsilon": 0.004484019943668196,
+        "trigger": 0.24466666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.4,
+        "agreement": 1.0,
+        "epsilon": 0.004473848421980316,
+        "trigger": 0.108
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.42,
+        "agreement": 1.0,
+        "epsilon": 0.0044869087331462654,
+        "trigger": 0.06533333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.45,
+        "agreement": 1.0,
+        "epsilon": 0.004496186642519509,
+        "trigger": 0.04
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.48,
+        "agreement": 1.0,
+        "epsilon": 0.004504566816380248,
+        "trigger": 0.028
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.5,
+        "agreement": 1.0,
+        "epsilon": 0.0045037771768402304,
+        "trigger": 0.022
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.6,
+        "agreement": 1.0,
+        "epsilon": 0.00465744826104492,
+        "trigger": 0.009333333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.8,
+        "agreement": 1.0,
+        "epsilon": 0.004612460251819963,
+        "trigger": 0.006
+      },
+      {
+        "gamma": 0.5,
+        "tau": 1000000000.0,
+        "agreement": 1.0,
+        "epsilon": 0.004612460251819963,
+        "trigger": 0.006
+      }
+    ]
+  },
+  "enron": {
+    "gamma": 0.5,
+    "tau": 0.37,
+    "T": 4,
+    "percentile": 0.999,
+    "validation_agreement": 1.0,
+    "validation_trigger_rate": 0.17733333333333334,
+    "cost_band": "5%-20% of events, pre-registered on validation",
+    "trigger_definition": "delta_v(k) > gamma OR ||Delta A_k|| > tau (C14)",
+    "candidates": [
+      {
+        "gamma": 0.5,
+        "tau": 0.2,
+        "agreement": 1.0,
+        "epsilon": 0.0034597474991266306,
+        "trigger": 0.446
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.28,
+        "agreement": 1.0,
+        "epsilon": 0.003499609293842999,
+        "trigger": 0.35133333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.32,
+        "agreement": 1.0,
+        "epsilon": 0.003569197680451907,
+        "trigger": 0.31
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.35,
+        "agreement": 1.0,
+        "epsilon": 0.003572321355071229,
+        "trigger": 0.29133333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.37,
+        "agreement": 1.0,
+        "epsilon": 0.0036989473830908535,
+        "trigger": 0.17733333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.4,
+        "agreement": 1.0,
+        "epsilon": 0.003961570671798351,
+        "trigger": 0.12266666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.42,
+        "agreement": 1.0,
+        "epsilon": 0.003968413497592943,
+        "trigger": 0.10133333333333333
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.45,
+        "agreement": 1.0,
+        "epsilon": 0.004070421777510395,
+        "trigger": 0.07933333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.48,
+        "agreement": 1.0,
+        "epsilon": 0.004038291723933071,
+        "trigger": 0.06666666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.5,
+        "agreement": 1.0,
+        "epsilon": 0.004105054109900569,
+        "trigger": 0.056666666666666664
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.6,
+        "agreement": 1.0,
+        "epsilon": 0.004508396879731057,
+        "trigger": 0.018666666666666668
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.8,
+        "agreement": 1.0,
+        "epsilon": 0.004865225317150665,
+        "trigger": 0.006
+      },
+      {
+        "gamma": 0.5,
+        "tau": 1000000000.0,
+        "agreement": 1.0,
+        "epsilon": 0.00474948349831781,
+        "trigger": 0.004
+      }
+    ]
+  },
+  "reddit": {
+    "gamma": 0.5,
+    "tau": 0.45,
+    "T": 4,
+    "percentile": 0.999,
+    "validation_agreement": 1.0,
+    "validation_trigger_rate": 0.15333333333333332,
+    "cost_band": "5%-20% of events, pre-registered on validation",
+    "trigger_definition": "delta_v(k) > gamma OR ||Delta A_k|| > tau (C14)",
+    "candidates": [
+      {
+        "gamma": 0.5,
+        "tau": 0.2,
+        "agreement": 1.0,
+        "epsilon": 0.0026581442180710533,
+        "trigger": 0.994
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.28,
+        "agreement": 1.0,
+        "epsilon": 0.0026581442180710533,
+        "trigger": 0.994
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.32,
+        "agreement": 1.0,
+        "epsilon": 0.0026581442180710533,
+        "trigger": 0.994
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.35,
+        "agreement": 1.0,
+        "epsilon": 0.0026581442180710533,
+        "trigger": 0.994
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.37,
+        "agreement": 1.0,
+        "epsilon": 0.002899324127472937,
+        "trigger": 0.42733333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.4,
+        "agreement": 1.0,
+        "epsilon": 0.002934676842375969,
+        "trigger": 0.30266666666666664
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.42,
+        "agreement": 1.0,
+        "epsilon": 0.002946647420603161,
+        "trigger": 0.23066666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.45,
+        "agreement": 1.0,
+        "epsilon": 0.0029762768153256424,
+        "trigger": 0.15333333333333332
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.48,
+        "agreement": 1.0,
+        "epsilon": 0.0029886051149417957,
+        "trigger": 0.096
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.5,
+        "agreement": 1.0,
+        "epsilon": 0.0029969369323613743,
+        "trigger": 0.07666666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.6,
+        "agreement": 1.0,
+        "epsilon": 0.002999317376408726,
+        "trigger": 0.02266666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.8,
+        "agreement": 1.0,
+        "epsilon": 0.0030017483399715273,
+        "trigger": 0.0026666666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 1000000000.0,
+        "agreement": 1.0,
+        "epsilon": 0.0030017483399715273,
+        "trigger": 0.0026666666666666666
+      }
+    ]
+  },
+  "lastfm": {
+    "gamma": 0.5,
+    "tau": 0.37,
+    "T": 4,
+    "percentile": 0.999,
+    "validation_agreement": 1.0,
+    "validation_trigger_rate": 0.10733333333333334,
+    "cost_band": "5%-20% of events, pre-registered on validation",
+    "trigger_definition": "delta_v(k) > gamma OR ||Delta A_k|| > tau (C14)",
+    "candidates": [
+      {
+        "gamma": 0.5,
+        "tau": 0.2,
+        "agreement": 1.0,
+        "epsilon": 0.003708447812668358,
+        "trigger": 0.9413333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.28,
+        "agreement": 1.0,
+        "epsilon": 0.003708496239269152,
+        "trigger": 0.9406666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.32,
+        "agreement": 1.0,
+        "epsilon": 0.003708496239269152,
+        "trigger": 0.9406666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.35,
+        "agreement": 1.0,
+        "epsilon": 0.003708496239269152,
+        "trigger": 0.9406666666666667
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.37,
+        "agreement": 1.0,
+        "epsilon": 0.0036493306287253896,
+        "trigger": 0.10733333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.4,
+        "agreement": 1.0,
+        "epsilon": 0.003606439136279126,
+        "trigger": 0.038
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.42,
+        "agreement": 1.0,
+        "epsilon": 0.003609006742481142,
+        "trigger": 0.024
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.45,
+        "agreement": 1.0,
+        "epsilon": 0.003598578030321126,
+        "trigger": 0.016666666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.48,
+        "agreement": 1.0,
+        "epsilon": 0.0035770431817509236,
+        "trigger": 0.010666666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.5,
+        "agreement": 1.0,
+        "epsilon": 0.0035725917275995014,
+        "trigger": 0.009333333333333334
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.6,
+        "agreement": 1.0,
+        "epsilon": 0.003680395090719685,
+        "trigger": 0.0026666666666666666
+      },
+      {
+        "gamma": 0.5,
+        "tau": 0.8,
+        "agreement": 1.0,
+        "epsilon": 0.0036518319710933914,
+        "trigger": 0.002
+      },
+      {
+        "gamma": 0.5,
+        "tau": 1000000000.0,
+        "agreement": 1.0,
+        "epsilon": 0.0036518319710933914,
+        "trigger": 0.002
+      }
+    ]
+  }
+}

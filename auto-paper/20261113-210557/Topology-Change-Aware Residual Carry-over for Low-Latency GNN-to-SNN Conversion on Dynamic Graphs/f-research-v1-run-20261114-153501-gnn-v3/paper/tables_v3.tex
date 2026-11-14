@@ -1,0 +1,235 @@
+% Generated from real results; do not edit by hand.
+\begin{table}[t]
+\centering
+\small
+\caption{Five public streams used in this study (sizes, catalogs, frozen split identifiers).}
+\label{tab:data}
+\begin{tabular}{lcccc}
+\toprule
+Stream & Events & Catalog & Val / test queries & Split \\
+\midrule
+Wikipedia & 157,474 & 1,000 & 1,024 / 4,096 & 70/15/15 \\
+MOOC & 411,749 & 97 & 1,024 / 4,096 & 70/15/15 \\
+Enron & 125,235 & 184 & 1,024 / 4,096 & 70/15/15 \\
+Reddit & 672,447 & 984 & 1,024 / 4,096 & 70/15/15 \\
+LastFM & 1,293,103 & 1,000 & 1,024 / 4,096 & 70/15/15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Wikipedia main comparison over controls and ablations (five seeds).}
+\label{tab:main}
+\begin{tabular}{lccccc}
+\toprule
+Method & Agreement & Retention & $\varepsilon_k$ & Events & Trigger \\
+\midrule
+C0 & 0.9984 & 1.0004 & 0.0136 & 4.792 & 0.000 \\
+C1 & 0.9999 & 1.0002 & 0.0049 & 37.179 & 0.000 \\
+C2 & 0.9999 & 1.0002 & 0.0049 & 37.179 & 0.000 \\
+C3 & 0.9998 & 1.0000 & 0.0058 & 5.939 & 0.000 \\
+C4 & 0.9984 & 1.0007 & 0.0132 & 4.941 & 0.000 \\
+M0 & 0.9998 & 1.0012 & 0.0046 & 37.562 & 0.165 \\
+A1 & 0.9997 & 1.0010 & 0.0041 & 39.089 & 1.000 \\
+A2 & 0.9998 & 1.0002 & 0.0046 & 37.189 & 0.165 \\
+A3 & 0.9998 & 1.0002 & 0.0046 & 37.189 & 0.165 \\
+A5 & 0.9997 & 1.0002 & 0.0046 & 37.149 & 0.000 \\
+D1 & 0.9998 & 1.0000 & 0.0058 & 5.939 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Five-stream replication.}
+\label{tab:streams}
+\begin{tabular}{lcccccc}
+\toprule
+Stream & Agreement & Retention & $\varepsilon_{M0}$ & $\varepsilon_{C2}$ & Reduction & Trigger \\
+\midrule
+Wikipedia & 0.9998 & 1.0012 & 0.0046 & 0.0049 & 6.8\% & 0.165 \\
+Mooc & 1.0000 & 1.0000 & 0.0040 & 0.0040 & 1.3\% & 0.072 \\
+Enron & 1.0000 & 1.0000 & 0.0046 & 0.0053 & 14.2\% & 0.103 \\
+Reddit & 1.0000 & 1.0000 & 0.0037 & 0.0038 & 2.1\% & 0.127 \\
+Lastfm & 1.0000 & 1.0000 & 0.0041 & 0.0041 & 0.3\% & 0.096 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Spike activity and SynOps proxies.}
+\label{tab:spikes}
+\begin{tabular}{lccc}
+\toprule
+Method & Events/event & Firing rate & SynOps/event \\
+\midrule
+C0 & 4.792 & 0.07487 & 230.01 \\
+C1 & 37.179 & 0.58091 & 1784.57 \\
+C2 & 37.179 & 0.58091 & 1784.57 \\
+C3 & 5.939 & 0.09280 & 285.07 \\
+C4 & 4.941 & 0.07720 & 237.15 \\
+M0 & 37.562 & 0.58691 & 1802.99 \\
+A1 & 39.089 & 0.61076 & 1876.26 \\
+A2 & 37.189 & 0.58108 & 1785.07 \\
+A3 & 37.189 & 0.58108 & 1785.07 \\
+A5 & 37.149 & 0.58045 & 1783.14 \\
+D1 & 5.939 & 0.09280 & 285.07 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Conversion-error decomposition (per event).}
+\label{tab:decomp}
+\begin{tabular}{lccc}
+\toprule
+Method & Clipping & Quantisation & Residual \\
+\midrule
+C0 & 0.00018 & 0.00000 & 0.00000 \\
+C1 & 0.00019 & 0.05361 & 0.01714 \\
+C2 & 0.00019 & 0.05361 & 0.01714 \\
+C3 & 0.00019 & 0.00000 & 0.00000 \\
+C4 & 0.00018 & 0.00000 & 0.00000 \\
+M0 & 0.00032 & 0.05335 & 0.01707 \\
+A1 & 0.00068 & 0.05222 & 0.01678 \\
+A2 & 0.00020 & 0.05368 & 0.01717 \\
+A3 & 0.00020 & 0.05368 & 0.01717 \\
+A5 & 0.00020 & 0.05361 & 0.01715 \\
+D1 & 0.00019 & 0.00000 & 0.00000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Mechanism ablations.}
+\label{tab:ablate}
+\begin{tabular}{lccc}
+\toprule
+Variant & Agreement & $\varepsilon_k$ & Trigger \\
+\midrule
+M0 (full) & 0.9998 & 0.0046 & 0.165 \\
+A1 & 0.9997 & 0.0041 & 1.000 \\
+A2 & 0.9998 & 0.0046 & 0.165 \\
+A3 & 0.9998 & 0.0046 & 0.165 \\
+A5 & 0.9997 & 0.0046 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Timestep curve on Wikipedia.}
+\label{tab:tcurve}
+\begin{tabular}{lccc}
+\toprule
+$T$ & Agreement & $\varepsilon_k$ & Events/event \\
+\midrule
+1 & 1.0000 & 0.0087 & 15.613 \\
+2 & 1.0000 & 0.0059 & 27.412 \\
+4 & 1.0000 & 0.0041 & 40.184 \\
+8 & 1.0000 & 0.0037 & 45.097 \\
+16 & 1.0000 & 0.0037 & 45.162 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Architecture ablations on Wikipedia.}
+\label{tab:arch}
+\begin{tabular}{lccc}
+\toprule
+Depth $L$ & Aggregator & Agreement & $\varepsilon_k$ \\
+\midrule
+1 & mean & 1.0000 & 0.0045 \\
+2 & mean & 1.0000 & 0.0039 \\
+3 & mean & 1.0000 & 0.0041 \\
+3 & mean & 1.0000 & 0.0041 \\
+3 & max & 1.0000 & 0.0041 \\
+3 & gated & 1.0000 & 0.0039 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Calibration ablations on Wikipedia.}
+\label{tab:calib}
+\begin{tabular}{lcc}
+\toprule
+Percentile & Agreement & $\varepsilon_k$ \\
+\midrule
+0.900 & 1.0000 & 0.0043 \\
+0.950 & 1.0000 & 0.0042 \\
+0.990 & 1.0000 & 0.0042 \\
+0.999 & 1.0000 & 0.0041 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Robustness on Wikipedia.}
+\label{tab:robust}
+\begin{tabular}{lcc}
+\toprule
+Perturbation & Agreement & $\varepsilon_k$ \\
+\midrule
+edge dropout 0.05 & 1.0000 & 0.0041 \\
+edge dropout 0.10 & 1.0000 & 0.0041 \\
+edge dropout 0.20 & 1.0000 & 0.0041 \\
+noise & 1.0000 & 0.0117 \\
+dt perturb & 1.0000 & 0.0041 \\
+no aggregation & 1.0000 & 0.0041 \\
+no aggregation & 1.0000 & 0.0038 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Bound verification: state error by measured $\|\Delta A_k\|$.}
+\label{tab:bound}
+\begin{tabular}{lccc}
+\toprule
+Bin & $n$ & $\varepsilon_{C2}$ & $\varepsilon_{M0}$ \\
+\midrule
+$\Delta A{=}0$ & 835 & 0.0047 & 0.0043 \\
+$(0,0.15]$ & 3280 & 0.0052 & 0.0046 \\
+$(0.15,0.4]$ & 18155 & 0.0044 & 0.0042 \\
+$>0.4$ & 2730 & 0.0037 & 0.0034 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Paired bootstrap and Benjamini--Hochberg correction.}
+\label{tab:stats}
+\begin{tabular}{lccc}
+\toprule
+Stream & Mean diff & 95\% CI & BH $q$ \\
+\midrule
+Wikipedia & 0.00035 & [0.00032,0.00037] & $3.9\times10^{-157}$ \\
+Mooc & 0.00006 & [0.00004,0.00007] & $9.5\times10^{-17}$ \\
+Enron & 0.00076 & [0.00073,0.00079] & $<10^{-300}$ \\
+Reddit & 0.00008 & [0.00006,0.00009] & $3.7\times10^{-28}$ \\
+Lastfm & 0.00001 & [-0.00001,0.00002] & $0.40$ \\
+\bottomrule
+\end{tabular}
+\end{table}

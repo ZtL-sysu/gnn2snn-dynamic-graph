@@ -1,0 +1,20 @@
+{
+  "pdf_pages": 30,
+  "page_requirement": 21,
+  "page_pass": true,
+  "abstract_word_count": 249,
+  "abstract_limit": 250,
+  "abstract_pass": true,
+  "keywords_count": 7,
+  "keywords_pass": true,
+  "highlights_count": 4,
+  "highlights_max_chars": 74,
+  "highlights_pass": true,
+  "reference_count": 43,
+  "reference_requirement": 40,
+  "reference_pass": true,
+  "unresolved_PENDING_tokens": 0,
+  "PENDING_pass": true,
+  "genai_declaration_present": true,
+  "undefined_citations": 0
+}

@@ -27,8 +27,10 @@
 | `guidance-pipeline-state.md` | 已生成；`CCFA-startup → G0…G8 → validation → handoff` 依序全 passed，`pipeline_state.py --complete` EXIT=0 |
 | `f-research-v1` 的 `pipeline-state.json` | 已生成于 `f-research-v1-run-20261113-211758-tcar/`；**P0–P21 依序全 passed**（含 v2 契约 `reopen P0` back-edge）；`--complete` EXIT=0 |
 | 协作协议 | `collaboration/PROTOCOL.md` v1 |
-| 生效科研契约 | `guidance-v2.md` + `ccfa-startup-packet-v2/`（strict 校验通过）；修订理由见 `guidance-v2-amendment.md` |
-| 最终成稿 | `f-research-v1-run-20261113-211758-tcar/paper/main.tex` 与 `main.pdf`（14 页，Neurocomputing 预印格式） |
+| **生效科研契约** | `guidance-v3.md` + `ccfa-startup-packet-v3/`（`validate_guidance.py --strict --packet` PASS）；修订理由 C10–C16 见 `guidance-v3-amendment.md`。v1/v2 契约与 run root 保留为证据 |
+| v3 `f-research-v1` | `f-research-v1-run-20261114-153501-gnn-v3/pipeline-state.json`：26 阶段 passed、第二次 `reopen P0` back-edge、`--complete` EXIT=0 |
+| **最终成稿（v3）** | `f-research-v1-run-20261114-153501-gnn-v3/paper/main.tex` 与 `main.pdf`（30 页，Neurocomputing `elsarticle` 预印格式）；v2 的 14 页稿仅为历史证据，不可投稿 |
+| 已披露负结果 | 原始全五流 `expected_strong` 判据 `d_replication=false`（LastFM BH q=0.40）；按 C16 收窄 claim 至四条流并强制披露；A5 消融在四条流上无显著图算子效应 |
 
 ## 真实状态入口
 
@@ -36,7 +38,7 @@
 2. `collaboration/tasks/lite-gnn2snn-dynamic/agents/20261113-wb-lead/HANDOFF.md`
 3. `auto-paper/<timestamp>/<paper-title>/guidance-pipeline-state.md` 与 run root 的 `pipeline-state.json`
 
-**当前状态：科研流水线已走完，成稿已交付，等待用户验收与投稿决定。** 15 次真实测试运行、全部审计与交付清单位于上述 run root。所有状态均由可核验产物支撑。
+**当前状态：v3 科研流水线已走完，30 页成稿已交付，等待用户验收与投稿决定。** 25 次真实测试运行（5 流 × 5 seeds）、12 表 7 图、43 条核验引用、全部审计与交付清单位于 v3 run root。停止门①为「附条件触发」：原始全五流显著性判据未通过并已披露，E4 记为附条件 PASS。所有状态均由可核验产物支撑。
 
 ## 历史材料定位
 
@@ -57,5 +59,6 @@
 
 ## 未知项
 
-- 目标期刊的现行官方作者指南硬性限制：待 P20 从 Elsevier 官方页面核实后写入 `submission-constraints.md`；当前不虚构页数/字数限制。
-- 最终选题与 `expected_strong` 数值：待 G0–G8 与 CCFA startup 的证据核查后锁定。
+- 目标期刊官方硬性限制已核实并写入 v3 run root 的 `audits/submission-constraints.md`（摘要 ≤250 词、1–7 关键词、3–5 highlights 各 ≤85 字符、GenAI 声明置于参考文献前；官方无页数上限，≥21 页为用户要求）。
+- `expected_strong` 数值已锁定且从未下调；未通过项按 C16 收窄 claim 并记录，不静默改写。
+- 通讯邮箱、基金、CRediT 角色未提供，记为 unresolved，未编造。

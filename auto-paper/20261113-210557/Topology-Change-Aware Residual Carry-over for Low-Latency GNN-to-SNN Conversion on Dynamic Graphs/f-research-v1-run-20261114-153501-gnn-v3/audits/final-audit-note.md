@@ -1,0 +1,9 @@
+# Final Audit Note (contract v3, P21)
+
+Delivered: `paper/main.tex`, `paper/main.pdf` (>=21 pages), `paper/references.bib` (43 verified entries), `paper/tables_v3.tex`, `paper/highlights.txt`, seven vector figures, `results/` (25 test runs, per-event bound traces, auxiliary sweeps, frozen identities, statistics), `audits/` (all gate, numeric, integrity, citation, metadata, figure audits), `writing/` (stage 16--20 equivalents), `guidance-v3-amendment.md`, `correction-loop-state.md`, `correction-ledger.md`, `experiment-traceability.md`, `pipeline-state.md`, `pipeline-state.json`, `deliverables/manifest.json`.
+
+Consistency: PDF recompiled from the exact delivered TeX; no stale duplicate; BibTeX resolved all citations with no undefined references; every manuscript number traces to raw artifacts; source-to-PDF clean-extraction comparison recorded in `audits/source-pdf-consistency.md`. Path containment verified by the delivery manifest.
+
+Unresolved, not fabricated: corresponding email, funding, CRediT roles; GPT-generated Figure 1 (credit cost not authorised, local fallback recorded); AutoResearchClaw CLI execution (credentials not supplied, local equivalent recorded); full Scopus/IEEE novelty sweep; user acceptance and submission decision.
+
+Negative results disclosed: discrete-memory dominance of absolute MRR, agreement saturation, stream-dependent effect sizes, non-monotone relative dose-response, non-blind test identifiers, no neuromorphic energy measurement, coverage-capped teacher training, reservoir-style fixed message weights, the LastFM non-significant paired difference (BH q=0.40, original `d_replication` verdict left false), and the A5 ablation showing no meaningful graph-operator effect on four of five streams. This delivery is a complete first draft, not an acceptance or a submission.

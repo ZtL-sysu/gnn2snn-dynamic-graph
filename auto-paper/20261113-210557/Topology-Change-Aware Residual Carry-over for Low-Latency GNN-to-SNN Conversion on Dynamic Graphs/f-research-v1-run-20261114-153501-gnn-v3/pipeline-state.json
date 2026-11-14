@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "pipeline": "f-research-v1",
+  "contract_version": "v3",
+  "contract": [
+    {
+      "path": "pipeline-state.md",
+      "sha256": "5a47be15d9ddb210ae04646c64315383656c49c9c4ff6610380ed81108689958"
+    },
+    {
+      "path": "experiment-traceability.md",
+      "sha256": "9462e5c0a84e651a676bc123bcd6baaf92c9417472c41d38d89b8db0bf4d0c9f"
+    },
+    {
+      "path": "audits/path-containment-manifest.md",
+      "sha256": "c1edcd665742ec1e1a5c8992462601110aac891d9d2e121f96489a49fdd10ff4"
+    },
+    {
+      "path": "audits/P1-guidance-validation.md",
+      "sha256": "57d66b0b005119e201c99f8815759774ad14b960fe5cd7524cdbed02a19f54de"
+    },
+    {
+      "path": "audits/strong-result-feasibility-lock.md",
+      "sha256": "1f5b10132a4df00f35e06d251500d2227cde8bb1406c4e79784462bb9a128c71"
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-review.md",
+      "sha256": "5614c43015b92946a701dda02ec64bc6ff042cdafadfba693c090e7155a87d67"
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-integrity.md",
+      "sha256": "993984e2d29c8546edad9a2bc4f264359f5fe98d7cd06a63d1e69bf53821cbce"
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-action-ledger.md",
+      "sha256": "33cfa7ea5096032d15367f5e5de53a72fa649d12950f750edaadd6433764c54f"
+    },
+    {
+      "path": "audits/P2-environment-check.md",
+      "sha256": "851bfa139c32b53a39771174c79d6d6b075312610c846e5f67e5e1294f08deba"
+    },
+    {
+      "path": "audits/P3A-baseline-evidence-review.md",
+      "sha256": "013427c6f9031ff89db177e8c751be94f5c2013cba886afa4e6bfb18570cce1e"
+    },
+    {
+      "path": "audits/P5-strong-result-lock.md",
+      "sha256": "06cbc596b6903eeb1f53498b5b3bd5901a54afd61e7266c643a67f5587358653"
+    },
+    {
+      "path": "audits/ccfa-pre-draft-scientific-review.md",
+      "sha256": "979a976b6db0bcf6ee08d6ac7b3e057c78472620a7d6c0ab0fbaf850ff038619"
+    },
+    {
+      "path": "audits/ccfa-pre-draft-integrity-audit.md",
+      "sha256": "5181d88c8df306f167fccdbe6d6c6dff4fa67ce9a6998c68d9709b2f13cbe29b"
+    },
+    {
+      "path": "audits/reference-dedup-audit.md",
+      "sha256": "5e58d95d7423756812970d82321b5f4051084909fb6847f0af4e492a7ded4207"
+    },
+    {
+      "path": "audits/submission-constraints.md",
+      "sha256": "6c3b151c07f45e6346d7e4218862035b40a3f4f426fe82a419376c962d197476"
+    },
+    {
+      "path": "audits/manuscript-metadata.md",
+      "sha256": "059a85c1160276e61dec4ddac2d75ab30135c48c0addf352bc757035d238fedb"
+    },
+    {
+      "path": "audits/final-metadata-counts.json",
+      "sha256": "0964a65dd28f49fa1fba19c88983e6a344c997341627ed046fe2f2f83135d257"
+    },
+    {
+      "path": "audits/paper-guidance-audit.md",
+      "sha256": "91ff57b44b67250cb12b7d0bafbd8df861d770573448ff17a155c80964e7a1ec"
+    },
+    {
+      "path": "audits/figure-table-audit.md",
+      "sha256": "a212e58955122a05cb4862a755e7d6a5b6a2d852d42a2b5899c3ffde7ba0bf25"
+    },
+    {
+      "path": "audits/final-audit-note.md",
+      "sha256": "d4dbec58d4799c2052c250ca4931e0e0151e4786596997443f0d7a3b4849c8d8"
+    },
+    {
+      "path": "audits/source-pdf-consistency.md",
+      "sha256": "29c2c92f63abddbcbed98703188b2079fbf2eb7016044323841d113322420cb4"
+    },
+    {
+      "path": "audits/metrics.csv",
+      "sha256": "ff4e482ca116249be84642baff9be4f2febd6a9f77aa03a93e966a05815ea01a"
+    },
+    {
+      "path": "correction-loop-state.md",
+      "sha256": "f12587d651709bff9927c3e806e0c91f2eec6aec91e76284dbac0dbaeacb1461"
+    },
+    {
+      "path": "correction-ledger.md",
+      "sha256": "b35329059a381b8ff050a9eeb755235516ffc5577662ace53d7eba3de93c81f9"
+    },
+    {
+      "path": "audits/v3-goal-lock.md",
+      "sha256": "08c71c812fa29f433c479327ec5d332298f72ba1911e2c8df4fe2146822505d5"
+    },
+    {
+      "path": "audits/P8-figure-fallback.md",
+      "sha256": "dcf1b3d314d0c9dd9eb78ae9b2b6ff75e77dbf20f596fd6ecb079c2d84bd8270"
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "d722d1cd927fccb210ef336b5c3bf0d7df8051f8587bd79183385a19187adf4f"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "e3e63c2ce6ff2d518a96649df9ae8b826dfed81b66735626c66dc5ceb594bd63"
+    },
+    {
+      "path": "paper/tables_v3.tex",
+      "sha256": "9655e1e7126d7b8a17913519cd9580500d7e3c948aab94d968dc06a5c977ce16"
+    },
+    {
+      "path": "paper/v3_values.tex",
+      "sha256": "2e6e237ca89abc8d80a14d6f84212610682c9d64d66149a766d4dd3bf7cf0ece"
+    },
+    {
+      "path": "paper/highlights.txt",
+      "sha256": "4c6b5dd65e8f9d5a094ecc9291d5180d54a618a92b569dc3d6f1e116418dbf3c"
+    },
+    {
+      "path": "paper/main.pdf",
+      "sha256": "cdff6885de32dcd2789d37423185b9bb6b44a44cbf82d885c4aa85b487e34204"
+    },
+    {
+      "path": "paper/figures/fig1_framework.pdf",
+      "sha256": "f837e39cd2c039d8a1984a3389194e2a51572edff2f0ad58159d48d9fd2e0bc0"
+    },
+    {
+      "path": "paper/figures/fig2_tcurve.pdf",
+      "sha256": "32b738c51f24521b5093579591a2dd1c6a9b35456965437ca24d76481f02798c"
+    },
+    {
+      "path": "paper/figures/fig3_main.pdf",
+      "sha256": "b9a429ad92e69e65851082cf93e6956c2e511f6eb0670ef2da1a2f5614a0b897"
+    },
+    {
+      "path": "paper/figures/fig4_error.pdf",
+      "sha256": "7a34dd086fc50e2ace93c28906f5e56a599eae60651d38531addc5c312d3e91f"
+    },
+    {
+      "path": "paper/figures/fig5_streams.pdf",
+      "sha256": "5902b76f464b647dccf81d2c31aba6dbb41397088d1f2da84198aa406b4941b3"
+    },
+    {
+      "path": "paper/figures/fig6_dose.pdf",
+      "sha256": "002c321badd50627dbc50efb1ebe535a73625a80eef9550357838a87cc213be9"
+    },
+    {
+      "path": "paper/figures/fig7_pareto.pdf",
+      "sha256": "f2841bb5adf28f575b5cc47535f8c5b61e602b63c7ed53d9c2ca92445158dd19"
+    },
+    {
+      "path": "results/aggregated.json",
+      "sha256": "648ea29ae383215125a7bb67ff04c4b6cb66b9ff9b728bdb44f2a9210645a6b3"
+    },
+    {
+      "path": "results/statistics/final-analysis-v3.json",
+      "sha256": "3088aadcef5dee783a1b91efda2bc32186458a87013ed198950cd60a2019baa7"
+    },
+    {
+      "path": "results/p4_auxiliary/sweeps_v3.json",
+      "sha256": "01949c1b2ccc9e545091fedef0657d8d257dadca4bc4e6ccb6c6eda1995d6408"
+    },
+    {
+      "path": "results/p3_baselines/validation_mrr_v3.json",
+      "sha256": "44f875a6f6a9a3d93d9519dbf50424a33e004c78fbc04a6806f8be1aa21fe272"
+    },
+    {
+      "path": "results/p3_data/stream-summary.json",
+      "sha256": "549e198c4b5ea53b65c80d768a8e4b934489963acff51719c6894d50e80e0db1"
+    },
+    {
+      "path": "deliverables/manifest.json",
+      "sha256": "1a567de296e6c89dc2fbf6644cfc2cb7303963cbb1892a2f344f649da1d8d86c"
+    },
+    {
+      "path": "scripts/gnn_campaign.py",
+      "sha256": "ef8c5b603e4adfd485e3c9045040a17f5050e89e27ec08ea4ff4cece79f48772"
+    },
+    {
+      "path": "scripts/analyze_v3.py",
+      "sha256": "4c09f9ed66a6478958efaa363650b59a12517e40ee7a6254c7aa3b82bde874d3"
+    },
+    {
+      "path": "scripts/fill_values.py",
+      "sha256": "648c9688ee88ccb2562b5dc988a0c1a6f290d09bffe10b84dd5546ce37f6162a"
+    },
+    {
+      "path": "scripts/make_figures_v3.py",
+      "sha256": "483ee33d531390c9e83d4d4604641d0e01eea483bbd16d232152bd83438fbf58"
+    },
+    {
+      "path": "scripts/baselines_v3.py",
+      "sha256": "fab0b58d1a6fa3f7805c3a396a4975ef62159b3c7cc233386d4feb407cbb4b5c"
+    },
+    {
+      "path": "scripts/rerun_v3_main.py",
+      "sha256": "97636e32bf6d3c7fc5e15c3a4e43e2a2d8c23919beed40c96e4a8428e2cd75b3"
+    }
+  ],
+  "history": [
+    {
+      "action": "pass",
+      "stage": "P0"
+    },
+    {
+      "action": "pass",
+      "stage": "P1"
+    },
+    {
+      "action": "pass",
+      "stage": "P1A"
+    },
+    {
+      "action": "pass",
+      "stage": "P1B"
+    },
+    {
+      "action": "pass",
+      "stage": "P2"
+    },
+    {
+      "action": "reopen",
+      "stage": "P0",
+      "reason": "contract v3 (user directive 2026-11-14 15:16): genuine GNN with the user's gnn2snn DCGS conversion family, top-venue experiment matrix, >=21 pages and >=40 verified references; v1/v2 contracts, packets and run roots preserved as evidence"
+    },
+    {
+      "action": "pass",
+      "stage": "P0"
+    },
+    {
+      "action": "pass",
+      "stage": "P1"
+    },
+    {
+      "action": "pass",
+      "stage": "P1A"
+    },
+    {
+      "action": "pass",
+      "stage": "P1B"
+    },
+    {
+      "action": "pass",
+      "stage": "P2"
+    },
+    {
+      "action": "pass",
+      "stage": "P3"
+    },
+    {
+      "action": "pass",
+      "stage": "P3A"
+    },
+    {
+      "action": "pass",
+      "stage": "P4"
+    },
+    {
+      "action": "pass",
+      "stage": "P5"
+    },
+    {
+      "action": "pass",
+      "stage": "P5A"
+    },
+    {
+      "action": "pass",
+      "stage": "P6"
+    },
+    {
+      "action": "pass",
+      "stage": "P7"
+    },
+    {
+      "action": "pass",
+      "stage": "P8"
+    },
+    {
+      "action": "pass",
+      "stage": "P9"
+    },
+    {
+      "action": "pass",
+      "stage": "P10"
+    },
+    {
+      "action": "pass",
+      "stage": "P11"
+    },
+    {
+      "action": "pass",
+      "stage": "P12"
+    },
+    {
+      "action": "pass",
+      "stage": "P13"
+    },
+    {
+      "action": "pass",
+      "stage": "P14"
+    },
+    {
+      "action": "pass",
+      "stage": "P15"
+    },
+    {
+      "action": "pass",
+      "stage": "P16"
+    },
+    {
+      "action": "pass",
+      "stage": "P17"
+    },
+    {
+      "action": "pass",
+      "stage": "P18"
+    },
+    {
+      "action": "pass",
+      "stage": "P19"
+    },
+    {
+      "action": "pass",
+      "stage": "P20"
+    },
+    {
+      "action": "pass",
+      "stage": "P21"
+    }
+  ],
+  "stages": [
+    {
+      "id": "P0",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/path-containment-manifest.md",
+          "sha256": "c1edcd665742ec1e1a5c8992462601110aac891d9d2e121f96489a49fdd10ff4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/path-containment-manifest.md",
+          "sha256": "c1edcd665742ec1e1a5c8992462601110aac891d9d2e121f96489a49fdd10ff4"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/P1-guidance-validation.md",
+          "sha256": "57d66b0b005119e201c99f8815759774ad14b960fe5cd7524cdbed02a19f54de"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P1-guidance-validation.md",
+          "sha256": "57d66b0b005119e201c99f8815759774ad14b960fe5cd7524cdbed02a19f54de"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1A",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/strong-result-feasibility-lock.md",
+          "sha256": "1f5b10132a4df00f35e06d251500d2227cde8bb1406c4e79784462bb9a128c71"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/strong-result-feasibility-lock.md",
+          "sha256": "1f5b10132a4df00f35e06d251500d2227cde8bb1406c4e79784462bb9a128c71"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1B",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/ccfa-pre-experiment-review.md",
+          "sha256": "5614c43015b92946a701dda02ec64bc6ff042cdafadfba693c090e7155a87d67"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/ccfa-pre-experiment-review.md",
+          "sha256": "5614c43015b92946a701dda02ec64bc6ff042cdafadfba693c090e7155a87d67"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P2",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/P2-environment-check.md",
+          "sha256": "851bfa139c32b53a39771174c79d6d6b075312610c846e5f67e5e1294f08deba"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P2-environment-check.md",
+          "sha256": "851bfa139c32b53a39771174c79d6d6b075312610c846e5f67e5e1294f08deba"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P3",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "results/p3_baselines/validation_mrr_v3.json",
+          "sha256": "44f875a6f6a9a3d93d9519dbf50424a33e004c78fbc04a6806f8be1aa21fe272"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/p3_baselines/validation_mrr_v3.json",
+          "sha256": "44f875a6f6a9a3d93d9519dbf50424a33e004c78fbc04a6806f8be1aa21fe272"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P3A",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/P3A-baseline-evidence-review.md",
+          "sha256": "013427c6f9031ff89db177e8c751be94f5c2013cba886afa4e6bfb18570cce1e"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P3A-baseline-evidence-review.md",
+          "sha256": "013427c6f9031ff89db177e8c751be94f5c2013cba886afa4e6bfb18570cce1e"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P4",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "results/aggregated.json",
+          "sha256": "648ea29ae383215125a7bb67ff04c4b6cb66b9ff9b728bdb44f2a9210645a6b3"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/aggregated.json",
+          "sha256": "648ea29ae383215125a7bb67ff04c4b6cb66b9ff9b728bdb44f2a9210645a6b3"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P5",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/P5-strong-result-lock.md",
+          "sha256": "06cbc596b6903eeb1f53498b5b3bd5901a54afd61e7266c643a67f5587358653"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P5-strong-result-lock.md",
+          "sha256": "06cbc596b6903eeb1f53498b5b3bd5901a54afd61e7266c643a67f5587358653"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P5A",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/ccfa-pre-draft-scientific-review.md",
+          "sha256": "979a976b6db0bcf6ee08d6ac7b3e057c78472620a7d6c0ab0fbaf850ff038619"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/ccfa-pre-draft-scientific-review.md",
+          "sha256": "979a976b6db0bcf6ee08d6ac7b3e057c78472620a7d6c0ab0fbaf850ff038619"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P6",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/PAPER_OUTLINE.md",
+          "sha256": "112467c9c2582b815593cb16d8752335aad9063c8962b5314d7a938953e1f6d9"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/PAPER_OUTLINE.md",
+          "sha256": "112467c9c2582b815593cb16d8752335aad9063c8962b5314d7a938953e1f6d9"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P7",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/PAPER_DRAFT.md",
+          "sha256": "c70a0e174f6b7645d0c65214c27d7f72f59cc1f5b79050a62f0bfa794ee22353"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/PAPER_DRAFT.md",
+          "sha256": "c70a0e174f6b7645d0c65214c27d7f72f59cc1f5b79050a62f0bfa794ee22353"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P8",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/figure-table-audit.md",
+          "sha256": "a212e58955122a05cb4862a755e7d6a5b6a2d852d42a2b5899c3ffde7ba0bf25"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/figure-table-audit.md",
+          "sha256": "a212e58955122a05cb4862a755e7d6a5b6a2d852d42a2b5899c3ffde7ba0bf25"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P9",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/PEER_REVIEW.md",
+          "sha256": "7d80577c0efbe9d5fc9ef3a2e198985440f187347c8e2bce23ca6efc782f377d"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/PEER_REVIEW.md",
+          "sha256": "7d80577c0efbe9d5fc9ef3a2e198985440f187347c8e2bce23ca6efc782f377d"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P10",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/PAPER_REVISION.md",
+          "sha256": "9f102ef22608b4f3e3328f06f34395f3f89c80188e3a13ebe463eda096e0e38d"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/PAPER_REVISION.md",
+          "sha256": "9f102ef22608b4f3e3328f06f34395f3f89c80188e3a13ebe463eda096e0e38d"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P11",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/QUALITY_GATE.md",
+          "sha256": "b5c75d3b17477eb3238e2002361dbfc9ff313181c40bf5803b96dc0bf2323451"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/QUALITY_GATE.md",
+          "sha256": "b5c75d3b17477eb3238e2002361dbfc9ff313181c40bf5803b96dc0bf2323451"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P12",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/reference-dedup-audit.md",
+          "sha256": "5e58d95d7423756812970d82321b5f4051084909fb6847f0af4e492a7ded4207"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/reference-dedup-audit.md",
+          "sha256": "5e58d95d7423756812970d82321b5f4051084909fb6847f0af4e492a7ded4207"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P13",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "d722d1cd927fccb210ef336b5c3bf0d7df8051f8587bd79183385a19187adf4f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "d722d1cd927fccb210ef336b5c3bf0d7df8051f8587bd79183385a19187adf4f"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P14",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/reference-dedup-audit.md",
+          "sha256": "5e58d95d7423756812970d82321b5f4051084909fb6847f0af4e492a7ded4207"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/reference-dedup-audit.md",
+          "sha256": "5e58d95d7423756812970d82321b5f4051084909fb6847f0af4e492a7ded4207"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P15",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "cdff6885de32dcd2789d37423185b9bb6b44a44cbf82d885c4aa85b487e34204"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "cdff6885de32dcd2789d37423185b9bb6b44a44cbf82d885c4aa85b487e34204"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P16",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/final-metadata-counts.json",
+          "sha256": "0964a65dd28f49fa1fba19c88983e6a344c997341627ed046fe2f2f83135d257"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/final-metadata-counts.json",
+          "sha256": "0964a65dd28f49fa1fba19c88983e6a344c997341627ed046fe2f2f83135d257"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P17",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/paper-guidance-audit.md",
+          "sha256": "91ff57b44b67250cb12b7d0bafbd8df861d770573448ff17a155c80964e7a1ec"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/paper-guidance-audit.md",
+          "sha256": "91ff57b44b67250cb12b7d0bafbd8df861d770573448ff17a155c80964e7a1ec"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P18",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/figure-table-audit.md",
+          "sha256": "a212e58955122a05cb4862a755e7d6a5b6a2d852d42a2b5899c3ffde7ba0bf25"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/figure-table-audit.md",
+          "sha256": "a212e58955122a05cb4862a755e7d6a5b6a2d852d42a2b5899c3ffde7ba0bf25"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P19",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "writing/FINAL_POLISH.md",
+          "sha256": "54089da1ceba845bcf6e059572b57535236c564ea874c9dc5a4d335631ee4f7d"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "writing/FINAL_POLISH.md",
+          "sha256": "54089da1ceba845bcf6e059572b57535236c564ea874c9dc5a4d335631ee4f7d"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P20",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "audits/submission-constraints.md",
+          "sha256": "6c3b151c07f45e6346d7e4218862035b40a3f4f426fe82a419376c962d197476"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/submission-constraints.md",
+          "sha256": "6c3b151c07f45e6346d7e4218862035b40a3f4f426fe82a419376c962d197476"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P21",
+      "status": "passed",
+      "contract_version": "v3",
+      "inputs": [
+        {
+          "path": "deliverables/manifest.json",
+          "sha256": "1a567de296e6c89dc2fbf6644cfc2cb7303963cbb1892a2f344f649da1d8d86c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "deliverables/manifest.json",
+          "sha256": "1a567de296e6c89dc2fbf6644cfc2cb7303963cbb1892a2f344f649da1d8d86c"
+        }
+      ],
+      "gate_verdict": "pass"
+    }
+  ]
+}

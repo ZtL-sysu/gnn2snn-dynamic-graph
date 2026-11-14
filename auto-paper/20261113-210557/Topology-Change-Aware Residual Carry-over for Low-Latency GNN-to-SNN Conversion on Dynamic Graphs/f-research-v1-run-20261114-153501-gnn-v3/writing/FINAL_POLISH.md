@@ -1,0 +1,3 @@
+# P19 Final Polish (contract v3)
+
+Diagnosed defects: (i) unescaped text-mode underscores in `MTH_diff` / `edge_index` / `ml_enron.csv` caused a fatal LaTeX error; fixed with `\_`. (ii) one unverified citation key `jiang2023sliprelu` remained after the bibliography was rebuilt from verified metadata; replaced with the verified `jiang2024universal`. (iii) an early telescoping-lemma proof contained a spurious expansion; replaced with the direct identity. All fixes are local and preserve facts, equations, numbers, citation keys, terminology and the formal register. No humanizer-style paraphrase was applied to correct technical prose. Final whole-paper check passes.

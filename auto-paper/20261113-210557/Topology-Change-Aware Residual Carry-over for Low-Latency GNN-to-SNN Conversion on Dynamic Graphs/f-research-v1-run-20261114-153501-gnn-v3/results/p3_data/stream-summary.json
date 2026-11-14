@@ -1,0 +1,35 @@
+{
+  "streams": {
+    "wikipedia": {
+      "n_events": 157474,
+      "catalog": 1000,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "mooc": {
+      "n_events": 411749,
+      "catalog": 97,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "reddit": {
+      "n_events": 672447,
+      "catalog": 984,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "lastfm": {
+      "n_events": 1293103,
+      "catalog": 1000,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    },
+    "enron": {
+      "n_events": 125235,
+      "catalog": 184,
+      "val_query_n": 1024,
+      "test_query_n": 4096
+    }
+  },
+  "generated": "2026-11-14T16:10:15+0800"
+}

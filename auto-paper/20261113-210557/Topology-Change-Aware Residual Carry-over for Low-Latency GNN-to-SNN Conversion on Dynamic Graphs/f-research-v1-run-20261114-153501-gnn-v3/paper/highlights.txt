@@ -1,0 +1,4 @@
+A genuine dynamic-graph GNN converted with signed differential DCGS coding
+A cross-snapshot graph-operator increment bounds conversion error
+TCAR gates static-base re-anchoring by measured topology change
+Five streams, five seeds, spike statistics and error decomposition

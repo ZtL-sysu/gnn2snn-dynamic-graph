@@ -1,0 +1,6 @@
+{
+  "status": "real",
+  "n_runs": 25,
+  "source": "results/aggregated.json and results/p4_auxiliary/sweeps_v3.json",
+  "fig1": "local vector schematic (recorded fallback from GPT image generation; credit cost not authorised)"
+}

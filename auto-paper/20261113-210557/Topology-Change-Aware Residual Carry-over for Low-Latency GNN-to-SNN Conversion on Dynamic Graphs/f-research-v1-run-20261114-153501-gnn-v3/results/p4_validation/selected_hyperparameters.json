@@ -1,0 +1,7 @@
+{
+  "wikipedia": {
+    "gamma": 0.5,
+    "T": 4,
+    "percentile": 0.999
+  }
+}
