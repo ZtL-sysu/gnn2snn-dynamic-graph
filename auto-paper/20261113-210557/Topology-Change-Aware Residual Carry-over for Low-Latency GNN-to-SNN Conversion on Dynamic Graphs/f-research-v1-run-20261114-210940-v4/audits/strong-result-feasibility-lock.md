@@ -1,0 +1,12 @@
+# P1A Strong-Result Feasibility Lock (contract v4)
+
+Date: 2026-11-14. Source: `../ccfa-startup-packet-v4/strong-result-feasibility-contract.md` + `feasibility-contract.json` (4 claims, all nineteen substantive fields present, decision `proceed`). Each claim checked for mechanism, falsifying ablation, baseline path, calibrated targets, implementation readiness, budget, and stop-and-return condition.
+
+| Claim | Mechanism present | Falsifying ablation | Baseline path | Targets calibrated | Code/adaptation path | Prototype milestone | Budget (seeds/hours) | Stop-and-return | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| CL1 ten-seed replication | gated re-anchoring suppresses topology term | A2 closes gap to C2 | B0 simple, C2 strong, A1 matched oracle | v3 per-seed means + variances; Du 2025 power argument for 8–10 seeds | v4 engine extends gnn_campaign.py; 5 teacher trains measured 16 s each | seed-46 smoke reproducing v3 numbers within tolerance | 10 / 3.5 | smoke outside tolerance returns to P2 | pass |
+| CL2 theory package | error identity + spectral recursion + steady state | V-3 slope non-positive; V-6 falsifies T1 | ISC structural template (literature) | constants from validation histograms (pre-registered estimation rule) | analysis scripts over instrumented traces | V-6 single-site identity check before drafting | 10 / 1.5 | V-6 failure removes T1, reopens mechanism | pass |
+| CL3 transparency | attribution upgrade (no mechanism claim) | scripted cell re-derivation must reproduce | v3 SynOps row; SGNNBench convention | Horowitz 2014 constants; v3 trigger rates 3.8–9.8% support overhead ≤ 2% | analysis scripts; no retraining | one hand-recomputed energy row | 10 / 0.5 | cannot derive op counts → complexity-table fallback | pass |
+| CL4 C5-MT control | multi-level spikes + inter-event error feedback | C5-MT itself; victory narrows claim (pre-authorized) | C1 simple, C2 strong, M0 n=1 matched | same label-free histogram, n = 4 levels | contained decode-path change in v4 engine | Wikipedia s41 smoke with finite thresholds | 10 / 1.0 | >90 min implementation or two smoke failures → recorded demotion | pass |
+
+Lock verdict: **all four claims pass**; no binding target lacks a mechanism-supported, compute-bounded path. The C-1 decision rule is frozen in `../guidance-v4-amendment.md` and may not be edited after the first 10-seed inspection. Total additional runtime budget 6.5 h within the 12 h envelope; no remote compute; no new datasets.

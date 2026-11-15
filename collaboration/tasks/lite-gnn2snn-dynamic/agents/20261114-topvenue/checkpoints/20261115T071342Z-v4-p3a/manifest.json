@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "task_id": "lite-gnn2snn-dynamic",
+  "agent_id": "20261114-topvenue",
+  "created_at": "2026-11-15T07:13:42Z",
+  "stage": "v4 P3A passed; main matrix (50 runs) running in background",
+  "artifacts": [
+    {
+      "path": "pipeline-state.json",
+      "sha256": "d6b818890648f79eeaf6883ae725dbbb0714e9f93413da6f4b1cdb42d210caf1",
+      "bytes": 12422
+    },
+    {
+      "path": "scripts/gnn_campaign_v4.py",
+      "sha256": "42aa5f2d20aa1f9686040d67c1005010cf9b44076fe661054f3a07c7333e8971",
+      "bytes": 36245
+    },
+    {
+      "path": "scripts/rerun_v4_main.py",
+      "sha256": "bd800b7ab5937a983ee5872ce9276cd820ed97ab17f4f2e5e230658359ab9947",
+      "bytes": 31662
+    },
+    {
+      "path": "scripts/analyze_v4.py",
+      "sha256": "47a2945e9b88ec22e0042373648ad51e2ea66580576b4394ad9aa7b7e5475704",
+      "bytes": 20567
+    },
+    {
+      "path": "scripts/mark_stage.py",
+      "sha256": "121e66d3783fa1cfdfe5314396517d0d2eea2d3a370798fd9d60b4912ce0642c",
+      "bytes": 2189
+    },
+    {
+      "path": "scripts/bind_contract.py",
+      "sha256": "314feae7bdd7bd30d6c10cbcd335736f92d1cd5e012730f64c0bb814672da354",
+      "bytes": 1133
+    },
+    {
+      "path": "protocols/P2-protocol.md",
+      "sha256": "e39f5c4e75b5877672b2916f8d27818b9b13a93b0f5b0ad9ad76200992f89dfd",
+      "bytes": 1672
+    },
+    {
+      "path": "protocols/bound-constants-protocol.md",
+      "sha256": "81a578b8d4f0b767c83ed2f504dd6fcfba7c5282d2d6bbdb66d1347601fb84ba",
+      "bytes": 3984
+    },
+    {
+      "path": "audits/P2-environment-check.md",
+      "sha256": "962c7d1777220d0ea317ab8b0f4192fdfccc3b203684fc1e467b9564b44c03ba",
+      "bytes": 359
+    },
+    {
+      "path": "audits/reproduction-check.json",
+      "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd",
+      "bytes": 52767
+    },
+    {
+      "path": "audits/v3-evidence-hashes.json",
+      "sha256": "fc31dceb30a8f44a7fadd8acfe50aea731d88fcaf88dc4fc2a9b0ed3acd3895c",
+      "bytes": 1191
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-review.md",
+      "sha256": "22e7d24e1faaddd57dd6bc3e62e4a74b2401f0cfb394787b38de1496e0702e9b",
+      "bytes": 3435
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-integrity.md",
+      "sha256": "04a59fbe91a6f9371231ebfb7309e9d4f597289dddbb4f6a1beb9d9a138e82e4",
+      "bytes": 1612
+    },
+    {
+      "path": "audits/ccfa-pre-experiment-action-ledger.md",
+      "sha256": "2a5796eb73df10b1677e551ef1bc31eef30b63a5329c8058ff2124fe35f33a7f",
+      "bytes": 1459
+    },
+    {
+      "path": "audits/P1-guidance-validation.md",
+      "sha256": "88d3c97e1384606d413bd537e715e8b034c5ad620f24499b34623fa373624d30",
+      "bytes": 46
+    },
+    {
+      "path": "audits/strong-result-feasibility-lock.md",
+      "sha256": "38b8cd4dd3905698390b9d5c581cc3db4f7bc39ebc999b0d41c309ede83b44f7",
+      "bytes": 2498
+    },
+    {
+      "path": "audits/path-containment-manifest.md",
+      "sha256": "c40cff477174a1f28be7971dcdb37152d1aef3ed03af9d728766b7f82ea1d40c",
+      "bytes": 999
+    },
+    {
+      "path": "inputs/frozen-identities.json",
+      "sha256": "cd4ca39a9bc17908fc1e0fee0765b139989a2dbbabe32912f2269a5d8a755436",
+      "bytes": 941
+    },
+    {
+      "path": "results/smoke/smoke_result.json",
+      "sha256": "34fab1538d169facd5807eea7f03062ca28bc2afecd3ac021fae5207726332c8",
+      "bytes": 1966
+    },
+    {
+      "path": "results/theory/bound_constants.json",
+      "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4",
+      "bytes": 3184
+    },
+    {
+      "path": "results/theory/theory_arms.json",
+      "sha256": "0a4d6f7c8106d94e1d8499715818b4fc55f651a704246c2d9fcbfcff3fc8912b",
+      "bytes": 268411
+    },
+    {
+      "path": "results/theory/theory_protocol_note.json",
+      "sha256": "59b9da3e8ea933842ad0ac531e6f925d88fb0f2c478809fef330378b59939640",
+      "bytes": 808
+    },
+    {
+      "path": "results/theory/v6_toy.json",
+      "sha256": "a338dc22755569deb113beefc9b262a16cfa902ba6339729cd13c18bd0a6ddd2",
+      "bytes": 1089
+    },
+    {
+      "path": "results/p3_teachers/teachers_v4.npy",
+      "sha256": "5846e09e8d2501b31904a53acc212df9ab87bab137eb9b901d9bd79b1c2c45a1",
+      "bytes": 27810083
+    }
+  ]
+}

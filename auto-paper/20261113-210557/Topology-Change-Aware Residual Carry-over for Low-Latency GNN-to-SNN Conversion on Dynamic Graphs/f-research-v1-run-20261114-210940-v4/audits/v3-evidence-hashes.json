@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-11-15T08:34:57+0800",
+  "purpose": "A2: v3 evidence byte-identity manifest; v4 P21 re-checks these hashes before delivery",
+  "v3_run_root": "/Users/xhf/code/phd-project/phd-gnn2snn-dynamic-graph/auto-paper/20261113-210557/Topology-Change-Aware Residual Carry-over for Low-Latency GNN-to-SNN Conversion on Dynamic Graphs/f-research-v1-run-20261114-153501-gnn-v3",
+  "files": {
+    "results/aggregated.json": {
+      "sha256": "648ea29ae383215125a7bb67ff04c4b6cb66b9ff9b728bdb44f2a9210645a6b3",
+      "bytes": 181664
+    },
+    "results/p4_validation/gamma_selection_v3.json": {
+      "sha256": "920be1739903d72f17ef3067dc23b6f35793d4391dd07d0fb429c137fd6663c8",
+      "bytes": 12156
+    },
+    "results/p4_auxiliary/sweeps_v3.json": {
+      "sha256": "01949c1b2ccc9e545091fedef0657d8d257dadca4bc4e6ccb6c6eda1995d6408",
+      "bytes": 163064
+    },
+    "results/p3_teachers/teachers_v3.npy": {
+      "sha256": "55d7f71a8dd76200f1dd85df5eb23e41184ddc63c86018efd6ee6981b22461ae",
+      "bytes": 764799
+    },
+    "results/p3_data/stream-summary.json": {
+      "sha256": "549e198c4b5ea53b65c80d768a8e4b934489963acff51719c6894d50e80e0db1",
+      "bytes": 692
+    }
+  }
+}

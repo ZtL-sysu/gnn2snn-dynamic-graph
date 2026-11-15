@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-14T13:35:00+00:00",
+  "source": "Zenodo 10.5281/zenodo.7213796 (CC BY 4.0); enron derived from ml_enron.csv with fixed seed 20261114 (lineage per v3 run)",
+  "frozen_at": "P2 contract v4",
+  "files": {
+    "wikipedia-events.npz": {
+      "sha256": "4851f7bb3c21074d3444885abdf285a941c802a48794e52a592eb44faa737365",
+      "bytes": 1253310
+    },
+    "mooc-events.npz": {
+      "sha256": "739bea635f55ab1509a64439c71e6599990498a259f9d9468b0914049c3e3c65",
+      "bytes": 2821369
+    },
+    "reddit-events.npz": {
+      "sha256": "cf6241560c42a763616fb03c18be6a089164800e97d30a2b0f23f375936346cf",
+      "bytes": 7266991
+    },
+    "lastfm-events.npz": {
+      "sha256": "38ebd46df6f5b400c053542fc44d5bafcfbc143a9c62d210ef99f9a98215f3fc",
+      "bytes": 10938846
+    },
+    "enron-derived.npz": {
+      "sha256": "5074f36bbb295a4c5d010bda81c5de926c5a94e22afc00b943cee628a479a064",
+      "bytes": 188736
+    }
+  }
+}

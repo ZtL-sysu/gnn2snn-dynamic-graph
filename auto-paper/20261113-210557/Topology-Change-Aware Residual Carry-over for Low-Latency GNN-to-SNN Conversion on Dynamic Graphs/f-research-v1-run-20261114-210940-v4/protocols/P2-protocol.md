@@ -1,0 +1,8 @@
+# P2 Environment and Protocol (contract v4)
+
+- Python `/Users/xhf/miniconda3/bin/python` (3.14.6), numpy 2.x, torch 2.13.0 with MPS available, no CUDA. Environment probe recorded in `audits/P2-environment-check.md`.
+- Frozen inputs: five streams copied into `inputs/` with SHA-256 identities in `inputs/frozen-identities.json`; hashes match the v3 frozen identities byte-for-byte (wikipedia `4851f7bb…`, mooc `739bea63…`, reddit `cf624156…`, lastfm `38ebd46d…`, enron-derived `5074f36b…`), so the v3-reproduction precondition of CL1 is well-posed.
+- Environment variables: `CTDG_STREAM_DIR` points at `inputs/` (the four frozen npz files); the v4 engine resolves `enron-derived.npz` from `inputs/` directly (derivation lineage preserved from v3; the Zenodo zip remains the cited source). `V4_QUICK` and `V4_WINDOW` provide smoke scaling.
+- Engine: `scripts/gnn_campaign_v4.py` extends the v3 campaign with (i) seeds 41–50, (ii) method C5-MT, (iii) per-layer and per-window firing-rate instrumentation, (iv) op-count and latency instrumentation with declared protocol, (v) theory-validation arms (alpha sweep, residual scaling, synthetic edge ratios, single-site toy). v3 method behavior for retained methods is unchanged; the v3 5-seed numbers must be reproducible within numerical tolerance (seed-46 full-window precondition run before the grid).
+- Protocol phases: `train` (graph state + calibration + readout for all stream x seed pairs), `main` (5 streams x 10 seeds x 12 method columns), `theory` (V-arms), `analyze` (transparency + stratification), `all`.
+- No remote compute, no installation, no credential. The v3 run root is read-only for v4 tooling.

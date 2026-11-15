@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "pipeline": "f-research-v1",
+  "contract_version": "v4",
+  "contract": [
+    {
+      "path": "pipeline-state.md",
+      "sha256": "8588d0c4c5628ac2561a031fc842b3b872b106b3f9f6d5cbef52a5cf2cc85218"
+    },
+    {
+      "path": "audits/path-containment-manifest.md",
+      "sha256": "c40cff477174a1f28be7971dcdb37152d1aef3ed03af9d728766b7f82ea1d40c"
+    },
+    {
+      "path": "audits/P1-guidance-validation.md",
+      "sha256": "88d3c97e1384606d413bd537e715e8b034c5ad620f24499b34623fa373624d30"
+    },
+    {
+      "path": "scripts/gnn_campaign_v4.py",
+      "sha256": "42aa5f2d20aa1f9686040d67c1005010cf9b44076fe661054f3a07c7333e8971"
+    },
+    {
+      "path": "scripts/rerun_v4_main.py",
+      "sha256": "bd800b7ab5937a983ee5872ce9276cd820ed97ab17f4f2e5e230658359ab9947"
+    },
+    {
+      "path": "scripts/analyze_v4.py",
+      "sha256": "af99a64a32041400beda1ca4deb769255c5f4a36da195b1d5bca2f4352dbbe65"
+    },
+    {
+      "path": "protocols/bound-constants-protocol.md",
+      "sha256": "81a578b8d4f0b767c83ed2f504dd6fcfba7c5282d2d6bbdb66d1347601fb84ba"
+    },
+    {
+      "path": "audits/v3-evidence-hashes.json",
+      "sha256": "fc31dceb30a8f44a7fadd8acfe50aea731d88fcaf88dc4fc2a9b0ed3acd3895c"
+    },
+    {
+      "path": "results/theory/bound_constants.json",
+      "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4"
+    },
+    {
+      "path": "audits/reproduction-check.json",
+      "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd"
+    },
+    {
+      "path": "pipeline-state.json",
+      "sha256": "06625c29712bb12a6df46db0cfa7dc8079b0f62f406567e9ea97f38f20c1f26a"
+    },
+    {
+      "path": "results/theory/v6_toy.json",
+      "sha256": "a338dc22755569deb113beefc9b262a16cfa902ba6339729cd13c18bd0a6ddd2"
+    }
+  ],
+  "history": [
+    {
+      "action": "pass",
+      "stage": "P0"
+    },
+    {
+      "action": "pass",
+      "stage": "P1"
+    },
+    {
+      "action": "pass",
+      "stage": "P1A"
+    },
+    {
+      "action": "pass",
+      "stage": "P1B"
+    },
+    {
+      "action": "pass",
+      "stage": "P2"
+    },
+    {
+      "action": "pass",
+      "stage": "P3"
+    },
+    {
+      "action": "pass",
+      "stage": "P3A"
+    }
+  ],
+  "stages": [
+    {
+      "id": "P0",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/path-containment-manifest.md",
+          "sha256": "c40cff477174a1f28be7971dcdb37152d1aef3ed03af9d728766b7f82ea1d40c"
+        },
+        {
+          "path": "pipeline-state.md",
+          "sha256": "8588d0c4c5628ac2561a031fc842b3b872b106b3f9f6d5cbef52a5cf2cc85218"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/path-containment-manifest.md",
+          "sha256": "c40cff477174a1f28be7971dcdb37152d1aef3ed03af9d728766b7f82ea1d40c"
+        },
+        {
+          "path": "pipeline-state.md",
+          "sha256": "8588d0c4c5628ac2561a031fc842b3b872b106b3f9f6d5cbef52a5cf2cc85218"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P1-guidance-validation.md",
+          "sha256": "88d3c97e1384606d413bd537e715e8b034c5ad620f24499b34623fa373624d30"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P1-guidance-validation.md",
+          "sha256": "88d3c97e1384606d413bd537e715e8b034c5ad620f24499b34623fa373624d30"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1A",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/strong-result-feasibility-lock.md",
+          "sha256": "38b8cd4dd3905698390b9d5c581cc3db4f7bc39ebc999b0d41c309ede83b44f7"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/strong-result-feasibility-lock.md",
+          "sha256": "38b8cd4dd3905698390b9d5c581cc3db4f7bc39ebc999b0d41c309ede83b44f7"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P1B",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/ccfa-pre-experiment-review.md",
+          "sha256": "22e7d24e1faaddd57dd6bc3e62e4a74b2401f0cfb394787b38de1496e0702e9b"
+        },
+        {
+          "path": "audits/ccfa-pre-experiment-integrity.md",
+          "sha256": "04a59fbe91a6f9371231ebfb7309e9d4f597289dddbb4f6a1beb9d9a138e82e4"
+        },
+        {
+          "path": "audits/ccfa-pre-experiment-action-ledger.md",
+          "sha256": "2a5796eb73df10b1677e551ef1bc31eef30b63a5329c8058ff2124fe35f33a7f"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/ccfa-pre-experiment-review.md",
+          "sha256": "22e7d24e1faaddd57dd6bc3e62e4a74b2401f0cfb394787b38de1496e0702e9b"
+        },
+        {
+          "path": "audits/ccfa-pre-experiment-integrity.md",
+          "sha256": "04a59fbe91a6f9371231ebfb7309e9d4f597289dddbb4f6a1beb9d9a138e82e4"
+        },
+        {
+          "path": "audits/ccfa-pre-experiment-action-ledger.md",
+          "sha256": "2a5796eb73df10b1677e551ef1bc31eef30b63a5329c8058ff2124fe35f33a7f"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P2",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P2-environment-check.md",
+          "sha256": "962c7d1777220d0ea317ab8b0f4192fdfccc3b203684fc1e467b9564b44c03ba"
+        },
+        {
+          "path": "protocols/P2-protocol.md",
+          "sha256": "e39f5c4e75b5877672b2916f8d27818b9b13a93b0f5b0ad9ad76200992f89dfd"
+        },
+        {
+          "path": "results/smoke/smoke_result.json",
+          "sha256": "34fab1538d169facd5807eea7f03062ca28bc2afecd3ac021fae5207726332c8"
+        },
+        {
+          "path": "inputs/frozen-identities.json",
+          "sha256": "cd4ca39a9bc17908fc1e0fee0765b139989a2dbbabe32912f2269a5d8a755436"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P2-environment-check.md",
+          "sha256": "962c7d1777220d0ea317ab8b0f4192fdfccc3b203684fc1e467b9564b44c03ba"
+        },
+        {
+          "path": "protocols/P2-protocol.md",
+          "sha256": "e39f5c4e75b5877672b2916f8d27818b9b13a93b0f5b0ad9ad76200992f89dfd"
+        },
+        {
+          "path": "results/smoke/smoke_result.json",
+          "sha256": "34fab1538d169facd5807eea7f03062ca28bc2afecd3ac021fae5207726332c8"
+        },
+        {
+          "path": "inputs/frozen-identities.json",
+          "sha256": "cd4ca39a9bc17908fc1e0fee0765b139989a2dbbabe32912f2269a5d8a755436"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P3",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "results/p3_teachers/teachers_v4.npy",
+          "sha256": "5846e09e8d2501b31904a53acc212df9ab87bab137eb9b901d9bd79b1c2c45a1"
+        },
+        {
+          "path": "audits/reproduction-check.json",
+          "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd"
+        },
+        {
+          "path": "results/smoke/smoke_result.json",
+          "sha256": "34fab1538d169facd5807eea7f03062ca28bc2afecd3ac021fae5207726332c8"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/p3_teachers/teachers_v4.npy",
+          "sha256": "5846e09e8d2501b31904a53acc212df9ab87bab137eb9b901d9bd79b1c2c45a1"
+        },
+        {
+          "path": "audits/reproduction-check.json",
+          "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd"
+        },
+        {
+          "path": "results/smoke/smoke_result.json",
+          "sha256": "34fab1538d169facd5807eea7f03062ca28bc2afecd3ac021fae5207726332c8"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P3A",
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "results/theory/bound_constants.json",
+          "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4"
+        },
+        {
+          "path": "results/theory/theory_arms.json",
+          "sha256": "0a4d6f7c8106d94e1d8499715818b4fc55f651a704246c2d9fcbfcff3fc8912b"
+        },
+        {
+          "path": "results/theory/v6_toy.json",
+          "sha256": "a338dc22755569deb113beefc9b262a16cfa902ba6339729cd13c18bd0a6ddd2"
+        },
+        {
+          "path": "protocols/bound-constants-protocol.md",
+          "sha256": "81a578b8d4f0b767c83ed2f504dd6fcfba7c5282d2d6bbdb66d1347601fb84ba"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/theory/bound_constants.json",
+          "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4"
+        },
+        {
+          "path": "results/theory/theory_arms.json",
+          "sha256": "0a4d6f7c8106d94e1d8499715818b4fc55f651a704246c2d9fcbfcff3fc8912b"
+        },
+        {
+          "path": "results/theory/v6_toy.json",
+          "sha256": "a338dc22755569deb113beefc9b262a16cfa902ba6339729cd13c18bd0a6ddd2"
+        },
+        {
+          "path": "protocols/bound-constants-protocol.md",
+          "sha256": "81a578b8d4f0b767c83ed2f504dd6fcfba7c5282d2d6bbdb66d1347601fb84ba"
+        }
+      ],
+      "gate_verdict": "pass"
+    },
+    {
+      "id": "P4",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P5",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P5A",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P6",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P7",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P8",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P9",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P10",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P11",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P12",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P13",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P14",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P15",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P16",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P17",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P18",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P19",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P20",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    },
+    {
+      "id": "P21",
+      "status": "pending",
+      "contract_version": "v1",
+      "inputs": [],
+      "evidence": [],
+      "gate_verdict": "pending"
+    }
+  ]
+}

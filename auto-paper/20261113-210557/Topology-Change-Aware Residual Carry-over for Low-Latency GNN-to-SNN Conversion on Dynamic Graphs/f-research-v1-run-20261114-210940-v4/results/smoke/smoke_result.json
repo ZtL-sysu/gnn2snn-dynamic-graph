@@ -1,0 +1,103 @@
+{
+  "verdict": "PASS",
+  "elapsed_s": 1.7,
+  "window": 800,
+  "checks": [
+    {
+      "method": "C0",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 4.800833333333333
+    },
+    {
+      "method": "C1",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 39.71791666666667
+    },
+    {
+      "method": "C2",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 39.71791666666667
+    },
+    {
+      "method": "C3",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 5.619166666666667
+    },
+    {
+      "method": "C4",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 4.932083333333333
+    },
+    {
+      "method": "C5MT",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 6.152916666666667
+    },
+    {
+      "method": "M0",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 40.14333333333333
+    },
+    {
+      "method": "A1",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 44.06166666666667
+    },
+    {
+      "method": "A2",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 39.979166666666664
+    },
+    {
+      "method": "A3",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 39.655833333333334
+    },
+    {
+      "method": "A5",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 39.65875
+    },
+    {
+      "method": "D1",
+      "present": true,
+      "finite": true,
+      "agreement": 1.0,
+      "graded_events": 5.619166666666667
+    }
+  ],
+  "bound_feature_rows": {
+    "C1": 800,
+    "C2": 800,
+    "M0": 800
+  },
+  "epsbin_edges": [
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1
+  ]
+}

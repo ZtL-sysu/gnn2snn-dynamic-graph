@@ -1,0 +1,14 @@
+{
+  "note": "all v4 theory arms on validation queries (val_q), wikipedia s41, window 3000 unless stated; test window untouched by arms",
+  "arms": {
+    "alpha_carry": "C-8/V-5 carry-over sweep, methods C1/C2/M0",
+    "alpha_state": "V-4 rho sweep, methods C1/C2/M0",
+    "edge_insert": "V-3 synthetic topology-change dose, methods C1/C2/M0",
+    "T_sweep": "V-2 latency-fidelity dose-response, methods C1/C2/M0",
+    "robust_noise": "C-9 input-noise 5-level sweep, methods C1/C2/M0",
+    "robust_dt": "C-9 time-jitter 5-level sweep, methods C1/C2/M0",
+    "robust_drop": "C-9 edge-dropout 5-level sweep, methods C1/C2/M0",
+    "bound_curve": "C-2 illustration: per-event measured-vs-bound features with locked constants, validation window 1500, all streams"
+  },
+  "generated": "2026-11-15T09:29:40+0800"
+}

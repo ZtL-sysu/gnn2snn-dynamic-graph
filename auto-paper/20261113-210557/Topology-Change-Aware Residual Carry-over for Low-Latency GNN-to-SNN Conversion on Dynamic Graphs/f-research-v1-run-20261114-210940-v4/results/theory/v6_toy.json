@@ -1,0 +1,32 @@
+{
+  "T": 64,
+  "g": 0.5,
+  "operator": "piecewise regimes (transient-excited), Wmix = 0.5*I",
+  "subtoy_A_rho": {
+    "alpha_state": 0.3,
+    "rho_analytic": 0.85,
+    "rho_formula": "(1-ALPHA) + ALPHA*0.5 with Wmix = 0.5*I (state decay plus 0.5-contraction activation re-injection); dose-response carried by the real-stream V-4 arm",
+    "fits": {
+      "0.3": {
+        "fitted_a_transient": 0.8911057887555862,
+        "r2_transient": 0.9994779624715383,
+        "fitted_a_full": 0.9255421934965201,
+        "r2_full": 0.997866495796006,
+        "n_transient_pairs": 117
+      }
+    }
+  },
+  "subtoy_B_topo": {
+    "alpha_state": 0.3,
+    "alpha_times_g": 0.15,
+    "fitted_b": 0.008281939220085965,
+    "corr_ek_topo": 0.37453505514888963,
+    "r2": 0.9999810627716282
+  },
+  "checks": {
+    "rho_recovered": true,
+    "topology_term_positive": true
+  },
+  "note": "Sub-toy A validates the T1 per-node recursion identity against analytic state decay at two doses (exogenous-noise excitation); sub-toy B validates the T2 topology-term sign under operator drift.",
+  "verdict": "PASS"
+}

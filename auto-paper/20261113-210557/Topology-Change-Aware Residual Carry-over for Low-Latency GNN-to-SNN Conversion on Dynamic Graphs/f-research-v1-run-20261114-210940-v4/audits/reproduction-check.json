@@ -1,0 +1,2328 @@
+{
+  "criteria": {
+    "G1_agreement_mrr_exact": {
+      "failed": []
+    },
+    "G2_epsilon_rel_tol": {
+      "tol": 0.02,
+      "max_rel_diff": 0.00925743245379929,
+      "failed": []
+    },
+    "G3_seed46_fences": {
+      "hard_failed": [],
+      "soft_excursions": [
+        {
+          "field": "lastfm.M0.mean_epsilon",
+          "rel_deviation": 0.16038996218494803
+        },
+        {
+          "field": "lastfm.A2.mean_epsilon",
+          "rel_deviation": 0.11738939035498666
+        },
+        {
+          "field": "lastfm.A3.mean_epsilon",
+          "rel_deviation": 0.11784612322056685
+        },
+        {
+          "field": "lastfm.A5.mean_epsilon",
+          "rel_deviation": 0.13229793438233473
+        }
+      ],
+      "soft_per_stream": {
+        "lastfm": 4
+      },
+      "soft_violation_over_2_per_stream": {}
+    }
+  },
+  "max_rel_eps_diff": 0.00925743245379929,
+  "n_compared": 165,
+  "verdict": "PASS",
+  "rows": [
+    {
+      "stream": "wikipedia",
+      "method": "C0",
+      "field": "agreement",
+      "v4": 0.9982668977469671,
+      "v3": 0.9982668977469671,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C0",
+      "field": "mean_epsilon",
+      "v4": 0.010672691132234468,
+      "v3": 0.010672691132234468,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C0",
+      "field": "mrr",
+      "v4": 0.2187872419176356,
+      "v3": 0.2187872419176356,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C1",
+      "field": "mean_epsilon",
+      "v4": 0.004631256081885658,
+      "v3": 0.004631256081885658,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C1",
+      "field": "mrr",
+      "v4": 0.21782549317360778,
+      "v3": 0.21782549317360778,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C2",
+      "field": "mean_epsilon",
+      "v4": 0.004631256081885658,
+      "v3": 0.004631256081885658,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C2",
+      "field": "mrr",
+      "v4": 0.21782549317360778,
+      "v3": 0.21782549317360778,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C3",
+      "field": "mean_epsilon",
+      "v4": 0.00511344839650119,
+      "v3": 0.00511344839650119,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C3",
+      "field": "mrr",
+      "v4": 0.21782440388666438,
+      "v3": 0.21782440388666438,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C4",
+      "field": "agreement",
+      "v4": 0.9982668977469671,
+      "v3": 0.9982668977469671,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C4",
+      "field": "mean_epsilon",
+      "v4": 0.010354089092557842,
+      "v3": 0.010354089092557842,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "C4",
+      "field": "mrr",
+      "v4": 0.21878721586254787,
+      "v3": 0.21878721586254787,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "M0",
+      "field": "agreement",
+      "v4": 0.9994222992489891,
+      "v3": 0.9994222992489891,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "M0",
+      "field": "mean_epsilon",
+      "v4": 0.004650902137055528,
+      "v3": 0.0046497443965170535,
+      "diff": 1.1577405384741862e-06
+    },
+    {
+      "stream": "wikipedia",
+      "method": "M0",
+      "field": "mrr",
+      "v4": 0.2189771218021469,
+      "v3": 0.21897711990963453,
+      "diff": 1.892512369039423e-09
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A1",
+      "field": "agreement",
+      "v4": 0.9994222992489891,
+      "v3": 0.9994222992489891,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A1",
+      "field": "mean_epsilon",
+      "v4": 0.004574344604404178,
+      "v3": 0.004576745795400347,
+      "diff": 2.4011909961693667e-06
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A1",
+      "field": "mrr",
+      "v4": 0.218977096713893,
+      "v3": 0.21897710588699962,
+      "diff": 9.173106607640591e-09
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A2",
+      "field": "agreement",
+      "v4": 0.9994222992489891,
+      "v3": 0.9994222992489891,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A2",
+      "field": "mean_epsilon",
+      "v4": 0.00461149008339271,
+      "v3": 0.004611880015884526,
+      "diff": 3.8993249181634715e-07
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A2",
+      "field": "mrr",
+      "v4": 0.2178253810249676,
+      "v3": 0.2178253787730917,
+      "diff": 2.251875907965939e-09
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A3",
+      "field": "agreement",
+      "v4": 0.9994222992489891,
+      "v3": 0.9994222992489891,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A3",
+      "field": "mean_epsilon",
+      "v4": 0.004611880015884526,
+      "v3": 0.004611880015884526,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A3",
+      "field": "mrr",
+      "v4": 0.2178253787730917,
+      "v3": 0.2178253787730917,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A5",
+      "field": "agreement",
+      "v4": 0.998844598497978,
+      "v3": 0.998844598497978,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A5",
+      "field": "mean_epsilon",
+      "v4": 0.004646802084264346,
+      "v3": 0.004646802084264346,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "A5",
+      "field": "mrr",
+      "v4": 0.2178254091093272,
+      "v3": 0.2178254091093272,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "D1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "D1",
+      "field": "mean_epsilon",
+      "v4": 0.00511344839650119,
+      "v3": 0.00511344839650119,
+      "diff": 0.0
+    },
+    {
+      "stream": "wikipedia",
+      "method": "D1",
+      "field": "mrr",
+      "v4": 0.21782440388666438,
+      "v3": 0.21782440388666438,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C0",
+      "field": "mean_epsilon",
+      "v4": 0.009289441964623984,
+      "v3": 0.009289441964623984,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C0",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C1",
+      "field": "mean_epsilon",
+      "v4": 0.004897755683085416,
+      "v3": 0.004897755683085416,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C1",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C2",
+      "field": "mean_epsilon",
+      "v4": 0.004897755683085416,
+      "v3": 0.004897755683085416,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C2",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C3",
+      "field": "mean_epsilon",
+      "v4": 0.0035026955442910546,
+      "v3": 0.0035026955442910546,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C3",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C4",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C4",
+      "field": "mean_epsilon",
+      "v4": 0.009057906440051737,
+      "v3": 0.009057906440051737,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "C4",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "M0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "M0",
+      "field": "mean_epsilon",
+      "v4": 0.004839499027747661,
+      "v3": 0.004838986066076904,
+      "diff": 5.129616707563039e-07
+    },
+    {
+      "stream": "mooc",
+      "method": "M0",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A1",
+      "field": "mean_epsilon",
+      "v4": 0.00462483536322834,
+      "v3": 0.004619016042875592,
+      "diff": 5.819320352747591e-06
+    },
+    {
+      "stream": "mooc",
+      "method": "A1",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A2",
+      "field": "mean_epsilon",
+      "v4": 0.004820975273405202,
+      "v3": 0.0048206263646949086,
+      "diff": 3.489087102934857e-07
+    },
+    {
+      "stream": "mooc",
+      "method": "A2",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A3",
+      "field": "mean_epsilon",
+      "v4": 0.0048206263646949086,
+      "v3": 0.0048206263646949086,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A3",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A5",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A5",
+      "field": "mean_epsilon",
+      "v4": 0.004698406923876609,
+      "v3": 0.004698406923876609,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "A5",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "D1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "D1",
+      "field": "mean_epsilon",
+      "v4": 0.0035026955442910546,
+      "v3": 0.0035026955442910546,
+      "diff": 0.0
+    },
+    {
+      "stream": "mooc",
+      "method": "D1",
+      "field": "mrr",
+      "v4": 0.17891054472763615,
+      "v3": 0.17891054472763615,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C0",
+      "field": "mean_epsilon",
+      "v4": 0.008857427750481293,
+      "v3": 0.008857427750481293,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C0",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C1",
+      "field": "mean_epsilon",
+      "v4": 0.004949244595668279,
+      "v3": 0.004949244595668279,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C1",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C2",
+      "field": "mean_epsilon",
+      "v4": 0.004949244595668279,
+      "v3": 0.004949244595668279,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C2",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C3",
+      "field": "mean_epsilon",
+      "v4": 0.00442149800863117,
+      "v3": 0.00442149800863117,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C3",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C4",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C4",
+      "field": "mean_epsilon",
+      "v4": 0.008638697724416852,
+      "v3": 0.008638697724416852,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "C4",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "M0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "M0",
+      "field": "mean_epsilon",
+      "v4": 0.0038431981225090566,
+      "v3": 0.003844715699367225,
+      "diff": 1.5175768581683624e-06
+    },
+    {
+      "stream": "enron",
+      "method": "M0",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A1",
+      "field": "mean_epsilon",
+      "v4": 0.00352302104618866,
+      "v3": 0.00352476880804752,
+      "diff": 1.7477618588601466e-06
+    },
+    {
+      "stream": "enron",
+      "method": "A1",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A2",
+      "field": "mean_epsilon",
+      "v4": 0.005170283085503616,
+      "v3": 0.005169984209211543,
+      "diff": 2.988762920728971e-07
+    },
+    {
+      "stream": "enron",
+      "method": "A2",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A3",
+      "field": "mean_epsilon",
+      "v4": 0.005169984209211543,
+      "v3": 0.005169984209211543,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A3",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A5",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A5",
+      "field": "mean_epsilon",
+      "v4": 0.005155316868063528,
+      "v3": 0.005155316868063528,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "A5",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "D1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "D1",
+      "field": "mean_epsilon",
+      "v4": 0.00442149800863117,
+      "v3": 0.00442149800863117,
+      "diff": 0.0
+    },
+    {
+      "stream": "enron",
+      "method": "D1",
+      "field": "mrr",
+      "v4": 0.3107909762572799,
+      "v3": 0.3107909762572799,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C0",
+      "field": "mean_epsilon",
+      "v4": 0.015446629907167516,
+      "v3": 0.015446629907167516,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C0",
+      "field": "mrr",
+      "v4": 0.7471726935465933,
+      "v3": 0.7471726935465933,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C1",
+      "field": "mean_epsilon",
+      "v4": 0.004436645917245187,
+      "v3": 0.004436645917245187,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C1",
+      "field": "mrr",
+      "v4": 0.7471733083343276,
+      "v3": 0.7471733083343276,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C2",
+      "field": "mean_epsilon",
+      "v4": 0.004436645917245187,
+      "v3": 0.004436645917245187,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C2",
+      "field": "mrr",
+      "v4": 0.7471733083343276,
+      "v3": 0.7471733083343276,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C3",
+      "field": "mean_epsilon",
+      "v4": 0.006293577099929098,
+      "v3": 0.006293577099929098,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C3",
+      "field": "mrr",
+      "v4": 0.747172998830611,
+      "v3": 0.747172998830611,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C4",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C4",
+      "field": "mean_epsilon",
+      "v4": 0.01472303157732822,
+      "v3": 0.01472303157732822,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "C4",
+      "field": "mrr",
+      "v4": 0.7471726040352012,
+      "v3": 0.7471726040352012,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "M0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "M0",
+      "field": "mean_epsilon",
+      "v4": 0.004110618396638893,
+      "v3": 0.004107931967335753,
+      "diff": 2.68642930313992e-06
+    },
+    {
+      "stream": "reddit",
+      "method": "M0",
+      "field": "mrr",
+      "v4": 0.7471732026852641,
+      "v3": 0.7471732026852641,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A1",
+      "field": "mean_epsilon",
+      "v4": 0.0035415549246477895,
+      "v3": 0.0035090699466411024,
+      "diff": 3.248497800668708e-05
+    },
+    {
+      "stream": "reddit",
+      "method": "A1",
+      "field": "mrr",
+      "v4": 0.7471732329113097,
+      "v3": 0.7471732722166676,
+      "diff": 3.930535796836665e-08
+    },
+    {
+      "stream": "reddit",
+      "method": "A2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A2",
+      "field": "mean_epsilon",
+      "v4": 0.0041667750140768475,
+      "v3": 0.004165568182151765,
+      "diff": 1.2068319250827658e-06
+    },
+    {
+      "stream": "reddit",
+      "method": "A2",
+      "field": "mrr",
+      "v4": 0.747173235857117,
+      "v3": 0.747173235857117,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A3",
+      "field": "mean_epsilon",
+      "v4": 0.004165568182151765,
+      "v3": 0.004165568182151765,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A3",
+      "field": "mrr",
+      "v4": 0.747173235857117,
+      "v3": 0.747173235857117,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A5",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A5",
+      "field": "mean_epsilon",
+      "v4": 0.004139385714905802,
+      "v3": 0.004139385714905802,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "A5",
+      "field": "mrr",
+      "v4": 0.7471733024474535,
+      "v3": 0.7471733024474535,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "D1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "D1",
+      "field": "mean_epsilon",
+      "v4": 0.006293577099929098,
+      "v3": 0.006293577099929098,
+      "diff": 0.0
+    },
+    {
+      "stream": "reddit",
+      "method": "D1",
+      "field": "mrr",
+      "v4": 0.747172998830611,
+      "v3": 0.747172998830611,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C0",
+      "field": "mean_epsilon",
+      "v4": 0.0121352693478344,
+      "v3": 0.0121352693478344,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C0",
+      "field": "mrr",
+      "v4": 0.22611266270957817,
+      "v3": 0.22611266270957817,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C1",
+      "field": "mean_epsilon",
+      "v4": 0.004389737921371125,
+      "v3": 0.004389737921371125,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C1",
+      "field": "mrr",
+      "v4": 0.2261122850194985,
+      "v3": 0.2261122850194985,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C2",
+      "field": "mean_epsilon",
+      "v4": 0.004389737921371125,
+      "v3": 0.004389737921371125,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C2",
+      "field": "mrr",
+      "v4": 0.2261122850194985,
+      "v3": 0.2261122850194985,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C3",
+      "field": "mean_epsilon",
+      "v4": 0.004501682643342064,
+      "v3": 0.004501682643342064,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C3",
+      "field": "mrr",
+      "v4": 0.22611173677002228,
+      "v3": 0.22611173677002228,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C4",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C4",
+      "field": "mean_epsilon",
+      "v4": 0.011745722194295377,
+      "v3": 0.011745722194295377,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "C4",
+      "field": "mrr",
+      "v4": 0.22611265889824708,
+      "v3": 0.22611265889824708,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "M0",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "M0",
+      "field": "mean_epsilon",
+      "v4": 0.004125379969831556,
+      "v3": 0.00412489066128619,
+      "diff": 4.893085453665583e-07
+    },
+    {
+      "stream": "lastfm",
+      "method": "M0",
+      "field": "mrr",
+      "v4": 0.22611256765454793,
+      "v3": 0.22611258907446574,
+      "diff": 2.141991781168251e-08
+    },
+    {
+      "stream": "lastfm",
+      "method": "A1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A1",
+      "field": "mean_epsilon",
+      "v4": 0.004242490228114184,
+      "v3": 0.004240818557306193,
+      "diff": 1.671670807990716e-06
+    },
+    {
+      "stream": "lastfm",
+      "method": "A1",
+      "field": "mrr",
+      "v4": 0.22611243769814163,
+      "v3": 0.22611251613476444,
+      "diff": 7.84366228079314e-08
+    },
+    {
+      "stream": "lastfm",
+      "method": "A2",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A2",
+      "field": "mean_epsilon",
+      "v4": 0.004045424295845442,
+      "v3": 0.004045143223123159,
+      "diff": 2.8107272228260205e-07
+    },
+    {
+      "stream": "lastfm",
+      "method": "A2",
+      "field": "mrr",
+      "v4": 0.22611247288977887,
+      "v3": 0.22611249430969668,
+      "diff": 2.141991781168251e-08
+    },
+    {
+      "stream": "lastfm",
+      "method": "A3",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A3",
+      "field": "mean_epsilon",
+      "v4": 0.004045143223123159,
+      "v3": 0.004045143223123159,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A3",
+      "field": "mrr",
+      "v4": 0.22611249430969668,
+      "v3": 0.22611249430969668,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A5",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A5",
+      "field": "mean_epsilon",
+      "v4": 0.004085855828330386,
+      "v3": 0.004085855828330386,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "A5",
+      "field": "mrr",
+      "v4": 0.22611243374814763,
+      "v3": 0.22611243374814763,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "D1",
+      "field": "agreement",
+      "v4": 1.0,
+      "v3": 1.0,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "D1",
+      "field": "mean_epsilon",
+      "v4": 0.004501682643342064,
+      "v3": 0.004501682643342064,
+      "diff": 0.0
+    },
+    {
+      "stream": "lastfm",
+      "method": "D1",
+      "field": "mrr",
+      "v4": 0.22611173677002228,
+      "v3": 0.22611173677002228,
+      "diff": 0.0
+    }
+  ],
+  "seed46_range_check": {
+    "n_outside": 4,
+    "outside": [],
+    "detail": {
+      "wikipedia": {
+        "stream": "wikipedia",
+        "fields": {
+          "C0.agreement": {
+            "v3_range": [
+              0.9953783939919122,
+              1.0
+            ],
+            "s46": 0.9971114962449451,
+            "inside": true
+          },
+          "C0.mean_epsilon": {
+            "v3_fence": [
+              0.002514780321565926,
+              0.025247836284281216
+            ],
+            "s46": 0.010793689462490147,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C1.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C1.mean_epsilon": {
+            "v3_fence": [
+              0.004057399508357047,
+              0.005603328983020038
+            ],
+            "s46": 0.004048760232614586,
+            "inside": true,
+            "rel_deviation": 0.0015418112640969803
+          },
+          "C2.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C2.mean_epsilon": {
+            "v3_fence": [
+              0.004057399508357047,
+              0.005603328983020038
+            ],
+            "s46": 0.004048760232614586,
+            "inside": true,
+            "rel_deviation": 0.0015418112640969803
+          },
+          "C3.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C3.mean_epsilon": {
+            "v3_fence": [
+              0.002442208349670547,
+              0.009565515141218929
+            ],
+            "s46": 0.005161187950934982,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C4.agreement": {
+            "v3_range": [
+              0.9959560947429231,
+              1.0
+            ],
+            "s46": 0.9971114962449451,
+            "inside": true
+          },
+          "C4.mean_epsilon": {
+            "v3_fence": [
+              0.002749537287309067,
+              0.024089050157909516
+            ],
+            "s46": 0.01051044304635725,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "M0.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "M0.mean_epsilon": {
+            "v3_fence": [
+              0.003261555889985174,
+              0.006027021118640551
+            ],
+            "s46": 0.0034062398107897024,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A1.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A1.mean_epsilon": {
+            "v3_fence": [
+              0.0023255874884431254,
+              0.00592744077957468
+            ],
+            "s46": 0.003104516666883137,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A2.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A2.mean_epsilon": {
+            "v3_fence": [
+              0.003353246612200746,
+              0.006032497161865467
+            ],
+            "s46": 0.003376028691220563,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A3.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A3.mean_epsilon": {
+            "v3_fence": [
+              0.003353246612200746,
+              0.006032497161865467
+            ],
+            "s46": 0.003375726932263933,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A5.agreement": {
+            "v3_range": [
+              0.998844598497978,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A5.mean_epsilon": {
+            "v3_fence": [
+              0.0032564959087001614,
+              0.006049751732690494
+            ],
+            "s46": 0.003366517678118544,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "D1.agreement": {
+            "v3_range": [
+              0.9994222992489891,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "D1.mean_epsilon": {
+            "v3_fence": [
+              0.002442208349670547,
+              0.009565515141218929
+            ],
+            "s46": 0.005161187950934982,
+            "inside": true,
+            "rel_deviation": 0.0
+          }
+        }
+      },
+      "mooc": {
+        "stream": "mooc",
+        "fields": {
+          "C0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C0.mean_epsilon": {
+            "v3_fence": [
+              0.0032142438360780942,
+              0.019414772178867133
+            ],
+            "s46": 0.009772060676838737,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C1.mean_epsilon": {
+            "v3_fence": [
+              0.0009105603329575382,
+              0.007290072893162142
+            ],
+            "s46": 0.003940354214678518,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C2.mean_epsilon": {
+            "v3_fence": [
+              0.0009105603329575382,
+              0.007290072893162142
+            ],
+            "s46": 0.003940354214678518,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C3.mean_epsilon": {
+            "v3_fence": [
+              0.001233962811020319,
+              0.007283916766408947
+            ],
+            "s46": 0.003572391782142222,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C4.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C4.mean_epsilon": {
+            "v3_fence": [
+              0.0031036155712266906,
+              0.01898172455476015
+            ],
+            "s46": 0.009528679218504112,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "M0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "M0.mean_epsilon": {
+            "v3_fence": [
+              0.0018207787131774241,
+              0.006372003436263185
+            ],
+            "s46": 0.004069725076342002,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A1.mean_epsilon": {
+            "v3_fence": [
+              0.0027170387586491406,
+              0.0042822034648765115
+            ],
+            "s46": 0.004115829321194905,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A2.mean_epsilon": {
+            "v3_fence": [
+              0.0016699099360208485,
+              0.006711056221899344
+            ],
+            "s46": 0.0040336497643962506,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A3.mean_epsilon": {
+            "v3_fence": [
+              0.0016699099360208485,
+              0.006711056221899344
+            ],
+            "s46": 0.004033617864025291,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A5.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A5.mean_epsilon": {
+            "v3_fence": [
+              0.0014745449000271042,
+              0.006632724138186313
+            ],
+            "s46": 0.0039440369969175664,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "D1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "D1.mean_epsilon": {
+            "v3_fence": [
+              0.001233962811020319,
+              0.007283916766408947
+            ],
+            "s46": 0.003572391782142222,
+            "inside": true,
+            "rel_deviation": 0.0
+          }
+        }
+      },
+      "enron": {
+        "stream": "enron",
+        "fields": {
+          "C0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C0.mean_epsilon": {
+            "v3_fence": [
+              0.010369657856103732,
+              0.0159655534714635
+            ],
+            "s46": 0.016241478732496033,
+            "inside": true,
+            "rel_deviation": 0.017282536526260443
+          },
+          "C1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C1.mean_epsilon": {
+            "v3_fence": [
+              0.00463670503908652,
+              0.006011128399212612
+            ],
+            "s46": 0.005429857657069806,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C2.mean_epsilon": {
+            "v3_fence": [
+              0.00463670503908652,
+              0.006011128399212612
+            ],
+            "s46": 0.005429857657069806,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C3.mean_epsilon": {
+            "v3_fence": [
+              0.003727361570933135,
+              0.008143651895580115
+            ],
+            "s46": 0.006870673237775918,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C4.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C4.mean_epsilon": {
+            "v3_fence": [
+              0.010362534805637551,
+              0.015063022670912323
+            ],
+            "s46": 0.01567338765632594,
+            "inside": true,
+            "rel_deviation": 0.04052075063209393
+          },
+          "M0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "M0.mean_epsilon": {
+            "v3_fence": [
+              0.003524983529304154,
+              0.005551805109460839
+            ],
+            "s46": 0.004994824303570204,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A1.mean_epsilon": {
+            "v3_fence": [
+              0.0035691869278409285,
+              0.00446618677621882
+            ],
+            "s46": 0.0045706205017631875,
+            "inside": true,
+            "rel_deviation": 0.023383197071033347
+          },
+          "A2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A2.mean_epsilon": {
+            "v3_fence": [
+              0.0047223920002637905,
+              0.005438539534580194
+            ],
+            "s46": 0.005040529037755914,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A3.mean_epsilon": {
+            "v3_fence": [
+              0.0047223920002637905,
+              0.005438539534580194
+            ],
+            "s46": 0.005040513408742845,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A5.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A5.mean_epsilon": {
+            "v3_fence": [
+              0.0047873429900879266,
+              0.00537610119484889
+            ],
+            "s46": 0.005095656317949761,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "D1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "D1.mean_epsilon": {
+            "v3_fence": [
+              0.003727361570933135,
+              0.008143651895580115
+            ],
+            "s46": 0.006870673237775918,
+            "inside": true,
+            "rel_deviation": 0.0
+          }
+        }
+      },
+      "reddit": {
+        "stream": "reddit",
+        "fields": {
+          "C0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C0.mean_epsilon": {
+            "v3_fence": [
+              -0.0020798013103951237,
+              0.024460624692094278
+            ],
+            "s46": 0.010823316065059043,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C1.mean_epsilon": {
+            "v3_fence": [
+              0.0031013087184226604,
+              0.004506658459134633
+            ],
+            "s46": 0.00357305351421237,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C2.mean_epsilon": {
+            "v3_fence": [
+              0.0031013087184226604,
+              0.004506658459134633
+            ],
+            "s46": 0.00357305351421237,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C3.mean_epsilon": {
+            "v3_fence": [
+              -0.00017267792995262444,
+              0.01017333011785813
+            ],
+            "s46": 0.005001331785623915,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C4.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C4.mean_epsilon": {
+            "v3_fence": [
+              -0.0018028655884845647,
+              0.023413032086048044
+            ],
+            "s46": 0.010407946920150426,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "M0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "M0.mean_epsilon": {
+            "v3_fence": [
+              0.0031494861262908675,
+              0.004169364291947568
+            ],
+            "s46": 0.0035314277548575772,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A1.mean_epsilon": {
+            "v3_fence": [
+              0.002976643911973224,
+              0.0038285255674418294
+            ],
+            "s46": 0.003495211024291348,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A2.mean_epsilon": {
+            "v3_fence": [
+              0.0033474408954614772,
+              0.004003271913831123
+            ],
+            "s46": 0.003504520283697639,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A3.mean_epsilon": {
+            "v3_fence": [
+              0.0033474408954614772,
+              0.004003271913831123
+            ],
+            "s46": 0.003503931621427182,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A5.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A5.mean_epsilon": {
+            "v3_fence": [
+              0.003320972798927687,
+              0.0040336773416725915
+            ],
+            "s46": 0.0034908842333010396,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "D1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "D1.mean_epsilon": {
+            "v3_fence": [
+              -0.00017267792995262444,
+              0.01017333011785813
+            ],
+            "s46": 0.005001331785623915,
+            "inside": true,
+            "rel_deviation": 0.0
+          }
+        }
+      },
+      "lastfm": {
+        "stream": "lastfm",
+        "fields": {
+          "C0.agreement": {
+            "v3_range": [
+              0.9952380952380953,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C0.mean_epsilon": {
+            "v3_fence": [
+              0.0032178347792825683,
+              0.026997660295420788
+            ],
+            "s46": 0.010631817322521237,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C1.mean_epsilon": {
+            "v3_fence": [
+              0.002882267900829902,
+              0.005337040260381763
+            ],
+            "s46": 0.002769948030129308,
+            "inside": true,
+            "rel_deviation": 0.021045348211886975
+          },
+          "C2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C2.mean_epsilon": {
+            "v3_fence": [
+              0.002882267900829902,
+              0.005337040260381763
+            ],
+            "s46": 0.002769948030129308,
+            "inside": true,
+            "rel_deviation": 0.021045348211886975
+          },
+          "C3.agreement": {
+            "v3_range": [
+              0.9952380952380953,
+              1.0
+            ],
+            "s46": 0.9952380952380953,
+            "inside": true
+          },
+          "C3.mean_epsilon": {
+            "v3_fence": [
+              0.002591438563680276,
+              0.007256826099893079
+            ],
+            "s46": 0.0038642606038774827,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "C4.agreement": {
+            "v3_range": [
+              0.9952380952380953,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "C4.mean_epsilon": {
+            "v3_fence": [
+              0.0032532792645390152,
+              0.025899793743889312
+            ],
+            "s46": 0.0103342221512401,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "M0.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "M0.mean_epsilon": {
+            "v3_fence": [
+              0.0035014137486665277,
+              0.004633829675937886
+            ],
+            "s46": 0.0027581939821713602,
+            "inside": false,
+            "rel_deviation": 0.16038996218494803
+          },
+          "A1.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A1.mean_epsilon": {
+            "v3_fence": [
+              0.0025266855464200493,
+              0.005269298363837879
+            ],
+            "s46": 0.0028740490658499766,
+            "inside": true,
+            "rel_deviation": 0.0
+          },
+          "A2.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A2.mean_epsilon": {
+            "v3_fence": [
+              0.0032542213393695414,
+              0.005106276352805434
+            ],
+            "s46": 0.0026547986713296268,
+            "inside": false,
+            "rel_deviation": 0.11738939035498666
+          },
+          "A3.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A3.mean_epsilon": {
+            "v3_fence": [
+              0.0032542213393695414,
+              0.005106276352805434
+            ],
+            "s46": 0.0026524664670985656,
+            "inside": false,
+            "rel_deviation": 0.11784612322056685
+          },
+          "A5.agreement": {
+            "v3_range": [
+              1.0,
+              1.0
+            ],
+            "s46": 1.0,
+            "inside": true
+          },
+          "A5.mean_epsilon": {
+            "v3_fence": [
+              0.0032931076363427567,
+              0.004930619520763867
+            ],
+            "s46": 0.00264079685852048,
+            "inside": false,
+            "rel_deviation": 0.13229793438233473
+          },
+          "D1.agreement": {
+            "v3_range": [
+              0.9952380952380953,
+              1.0
+            ],
+            "s46": 0.9952380952380953,
+            "inside": true
+          },
+          "D1.mean_epsilon": {
+            "v3_fence": [
+              0.002591438563680276,
+              0.007256826099893079
+            ],
+            "s46": 0.0038642606038774827,
+            "inside": true,
+            "rel_deviation": 0.0
+          }
+        }
+      }
+    }
+  }
+}
