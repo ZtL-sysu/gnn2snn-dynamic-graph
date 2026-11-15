@@ -1,0 +1,146 @@
+{
+ "schema_version": 1,
+ "task_id": "lite-gnn2snn-dynamic",
+ "agent_id": "20261114-topvenue",
+ "created_at": "20261115T132840Z",
+ "stage": "v4 COMPLETE: P0-P21 all passed; C-1 verdict FALSE (Wikipedia-only significance); disclosed defect D1 (dcgs_encode ignores carry; C2===C1); 40pp paper, 0 errors; branch HEAD 50e82af714566f5b312b151ef9b983a5daefb25d",
+ "branch": "agent/lite-gnn2snn-dynamic/20261114-topvenue",
+ "head": "50e82af714566f5b312b151ef9b983a5daefb25d",
+ "artifacts": [
+  {
+   "path": "run-root/pipeline-state.json",
+   "sha256": "88091c64708e6012fc7eabf30da36f5adafaa61c1ea7e7a7f3adabbffef67635",
+   "bytes": 23714
+  },
+  {
+   "path": "run-root/pipeline-state.md",
+   "sha256": "255c8d2fbd50bd3e2574427b19e6ec7295d7f71863a2d0f4f655969ab04353a8",
+   "bytes": 3221
+  },
+  {
+   "path": "run-root/paper/main.tex",
+   "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e",
+   "bytes": 72425
+  },
+  {
+   "path": "run-root/paper/main.pdf",
+   "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5",
+   "bytes": 734882
+  },
+  {
+   "path": "run-root/paper/references.bib",
+   "sha256": "c962acb62568d03d4f18f19a25e39a8f983020707f133139206a1a1ecc483e23",
+   "bytes": 17100
+  },
+  {
+   "path": "run-root/paper/highlights.txt",
+   "sha256": "3b8d31cd6fb9f6b531213b52fbfde85f76f097417a5d5234e1677f82b6fd2a20",
+   "bytes": 421
+  },
+  {
+   "path": "run-root/paper/submission-constraints.md",
+   "sha256": "fe1eabf0565fb3b0301b59501986de1b157e38c42ee7333d7ac2bcd970313db4",
+   "bytes": 1923
+  },
+  {
+   "path": "run-root/paper/manuscript-metadata.md",
+   "sha256": "eb8b529e1c42bc91c3bf8804ee05eed5e771d6dd949c2cbdbe8f66d1c31ffcdb",
+   "bytes": 2533
+  },
+  {
+   "path": "run-root/results/aggregated.json",
+   "sha256": "b5710d363034f915945dfe687e195a54dce0d872817e0ae186c2b6b626394415",
+   "bytes": 1294792
+  },
+  {
+   "path": "run-root/results/final-analysis-v4.json",
+   "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c",
+   "bytes": 72757
+  },
+  {
+   "path": "run-root/results/latency/latency_probe.json",
+   "sha256": "044b31f345f932626134595d2d27ae6baf636707ef22fef3e9c42b400d2bfdd6",
+   "bytes": 1615
+  },
+  {
+   "path": "run-root/audits/P5A-locked-analysis.md",
+   "sha256": "2ea7fc86febd1738da379087c7c390a13742bd044bdee3b67990581786972f6c",
+   "bytes": 3416
+  },
+  {
+   "path": "run-root/audits/P9-peer-review.md",
+   "sha256": "4ea618a9fd65ebeababba5ee5c731647dea361acddfc42e159617cff4b098f96",
+   "bytes": 4453
+  },
+  {
+   "path": "run-root/audits/P10-revision-log.md",
+   "sha256": "d96c43ded4237a92ca75c5d2f87cdcf0afc2fd193589bea7ce676f5c6b3460c1",
+   "bytes": 2658
+  },
+  {
+   "path": "run-root/audits/P11-quality-gate.md",
+   "sha256": "94c8a4be3080a44fa5236958d4c72cb668a8767406882febe2b83e758ea85ecb",
+   "bytes": 1570
+  },
+  {
+   "path": "run-root/audits/P12-reference-dedup-audit.md",
+   "sha256": "0bc65f94e875cd6ffd0f6793ce4ea6172aa72a393d83c1afc9b3d0109548e359",
+   "bytes": 1992
+  },
+  {
+   "path": "run-root/audits/P14-citation-verify.md",
+   "sha256": "a81763b3ea3abd7f3c3cdab21b08861f4c18d404b494f8a727f8d7f9023f04d6",
+   "bytes": 1892
+  },
+  {
+   "path": "run-root/audits/P17-paper-guidance-audit.md",
+   "sha256": "d39f0d038386292fcedd7c85406b92c6fd74c36ca93e65904ca5de9fe11dd5be",
+   "bytes": 4457
+  },
+  {
+   "path": "run-root/audits/P18-figure-table-insertion-audit.md",
+   "sha256": "de968d2e00624f29347ff38915c7bbbee2db76fe76e204c4192499a832acef2d",
+   "bytes": 3653
+  },
+  {
+   "path": "run-root/audits/P19-professionalism-scan.md",
+   "sha256": "8b79892024951454b5a2ce29faa9019acb250280c0d1bf91f104859de6e39b04",
+   "bytes": 2733
+  },
+  {
+   "path": "run-root/audits/P21-delivery-verification.md",
+   "sha256": "0ad1347f5421820521ea0443753f2d132cc8ee3ac74f62ae6513ca3a83903171",
+   "bytes": 2674
+  },
+  {
+   "path": "run-root/audits/P21-delivery-manifest.json",
+   "sha256": "9d99bdc041bf3f1d730fbe4c989ee864a6bf17def40acbfa1702f47544a855b1",
+   "bytes": 8098
+  },
+  {
+   "path": "run-root/scripts/gnn_campaign_v4.py",
+   "sha256": "9fc95ec269f4398854092c1ab6c3e8ab576a9429760a964e0b38e3c25d7f2aa7",
+   "bytes": 36564
+  },
+  {
+   "path": "run-root/scripts/analyze_v4.py",
+   "sha256": "df803da9a054fab7cddd7fd129927973d0dc2864c9db2e64b9a0db35ff606879",
+   "bytes": 20921
+  },
+  {
+   "path": "repo-root/goal-ledger.md",
+   "sha256": "e1ec0e2e008f36fbc7cd27bdcef23f8755b6cbabdd48ea877d306283462a7104",
+   "bytes": 18132
+  },
+  {
+   "path": "repo-root/collaboration/tasks/lite-gnn2snn-dynamic/agents/20261114-topvenue/HANDOFF.md",
+   "sha256": "28b7af2e7b95e625f1da93936eb044438c798ef71c802f9dd2ca95438f5492d4",
+   "bytes": 4390
+  },
+  {
+   "path": "repo-root/collaboration/tasks/lite-gnn2snn-dynamic/agents/20261114-topvenue/LOG.md",
+   "sha256": "db873198667466b3fff863dc72058447cab968dfcac77d84fd871c78f270106b",
+   "bytes": 5770
+  }
+ ]
+}
