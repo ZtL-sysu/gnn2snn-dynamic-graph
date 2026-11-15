@@ -88,6 +88,74 @@
     {
       "action": "pass",
       "stage": "P5"
+    },
+    {
+      "action": "pass",
+      "stage": "P5A"
+    },
+    {
+      "action": "pass",
+      "stage": "P6"
+    },
+    {
+      "action": "pass",
+      "stage": "P7"
+    },
+    {
+      "action": "pass",
+      "stage": "P8"
+    },
+    {
+      "action": "pass",
+      "stage": "P9"
+    },
+    {
+      "action": "pass",
+      "stage": "P10"
+    },
+    {
+      "action": "pass",
+      "stage": "P11"
+    },
+    {
+      "action": "pass",
+      "stage": "P12"
+    },
+    {
+      "action": "pass",
+      "stage": "P13"
+    },
+    {
+      "action": "pass",
+      "stage": "P14"
+    },
+    {
+      "action": "pass",
+      "stage": "P15"
+    },
+    {
+      "action": "pass",
+      "stage": "P16"
+    },
+    {
+      "action": "pass",
+      "stage": "P17"
+    },
+    {
+      "action": "pass",
+      "stage": "P18"
+    },
+    {
+      "action": "pass",
+      "stage": "P19"
+    },
+    {
+      "action": "pass",
+      "stage": "P20"
+    },
+    {
+      "action": "pass",
+      "stage": "P21"
     }
   ],
   "stages": [
@@ -391,139 +459,365 @@
     },
     {
       "id": "P5A",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P5A-locked-analysis.md",
+          "sha256": "2ea7fc86febd1738da379087c7c390a13742bd044bdee3b67990581786972f6c"
+        },
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P5A-locked-analysis.md",
+          "sha256": "2ea7fc86febd1738da379087c7c390a13742bd044bdee3b67990581786972f6c"
+        },
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P6",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P7",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P8",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P18-figure-table-insertion-audit.md",
+          "sha256": "de968d2e00624f29347ff38915c7bbbee2db76fe76e204c4192499a832acef2d"
+        },
+        {
+          "path": "paper/figures/fig1_framework.pdf",
+          "sha256": "f837e39cd2c039d8a1984a3389194e2a51572edff2f0ad58159d48d9fd2e0bc0"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P18-figure-table-insertion-audit.md",
+          "sha256": "de968d2e00624f29347ff38915c7bbbee2db76fe76e204c4192499a832acef2d"
+        },
+        {
+          "path": "paper/figures/fig1_framework.pdf",
+          "sha256": "f837e39cd2c039d8a1984a3389194e2a51572edff2f0ad58159d48d9fd2e0bc0"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P9",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P9-peer-review.md",
+          "sha256": "4ea618a9fd65ebeababba5ee5c731647dea361acddfc42e159617cff4b098f96"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P9-peer-review.md",
+          "sha256": "4ea618a9fd65ebeababba5ee5c731647dea361acddfc42e159617cff4b098f96"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P10",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P10-revision-log.md",
+          "sha256": "d96c43ded4237a92ca75c5d2f87cdcf0afc2fd193589bea7ce676f5c6b3460c1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P10-revision-log.md",
+          "sha256": "d96c43ded4237a92ca75c5d2f87cdcf0afc2fd193589bea7ce676f5c6b3460c1"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P11",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P11-quality-gate.md",
+          "sha256": "94c8a4be3080a44fa5236958d4c72cb668a8767406882febe2b83e758ea85ecb"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P11-quality-gate.md",
+          "sha256": "94c8a4be3080a44fa5236958d4c72cb668a8767406882febe2b83e758ea85ecb"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P12",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P12-reference-dedup-audit.md",
+          "sha256": "0bc65f94e875cd6ffd0f6793ce4ea6172aa72a393d83c1afc9b3d0109548e359"
+        },
+        {
+          "path": "paper/references.bib",
+          "sha256": "c962acb62568d03d4f18f19a25e39a8f983020707f133139206a1a1ecc483e23"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P12-reference-dedup-audit.md",
+          "sha256": "0bc65f94e875cd6ffd0f6793ce4ea6172aa72a393d83c1afc9b3d0109548e359"
+        },
+        {
+          "path": "paper/references.bib",
+          "sha256": "c962acb62568d03d4f18f19a25e39a8f983020707f133139206a1a1ecc483e23"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P13",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        },
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.tex",
+          "sha256": "ada1a51dc9279c973eb6d1a88f66d488001056d14593afc39201861e2852c75e"
+        },
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P14",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P14-citation-verify.md",
+          "sha256": "a81763b3ea3abd7f3c3cdab21b08861f4c18d404b494f8a727f8d7f9023f04d6"
+        },
+        {
+          "path": "paper/references.bib",
+          "sha256": "c962acb62568d03d4f18f19a25e39a8f983020707f133139206a1a1ecc483e23"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P14-citation-verify.md",
+          "sha256": "a81763b3ea3abd7f3c3cdab21b08861f4c18d404b494f8a727f8d7f9023f04d6"
+        },
+        {
+          "path": "paper/references.bib",
+          "sha256": "c962acb62568d03d4f18f19a25e39a8f983020707f133139206a1a1ecc483e23"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P15",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P16",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/main.pdf",
+          "sha256": "a9f1a8a2b7c6c73c3fcdd2d6c98c8593dd58de6ed4aeaff909a7b9a67159fdf5"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P17",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P17-paper-guidance-audit.md",
+          "sha256": "d39f0d038386292fcedd7c85406b92c6fd74c36ca93e65904ca5de9fe11dd5be"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P17-paper-guidance-audit.md",
+          "sha256": "d39f0d038386292fcedd7c85406b92c6fd74c36ca93e65904ca5de9fe11dd5be"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P18",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P18-figure-table-insertion-audit.md",
+          "sha256": "de968d2e00624f29347ff38915c7bbbee2db76fe76e204c4192499a832acef2d"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P18-figure-table-insertion-audit.md",
+          "sha256": "de968d2e00624f29347ff38915c7bbbee2db76fe76e204c4192499a832acef2d"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P19",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P19-professionalism-scan.md",
+          "sha256": "8b79892024951454b5a2ce29faa9019acb250280c0d1bf91f104859de6e39b04"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P19-professionalism-scan.md",
+          "sha256": "8b79892024951454b5a2ce29faa9019acb250280c0d1bf91f104859de6e39b04"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P20",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "paper/submission-constraints.md",
+          "sha256": "fe1eabf0565fb3b0301b59501986de1b157e38c42ee7333d7ac2bcd970313db4"
+        },
+        {
+          "path": "paper/manuscript-metadata.md",
+          "sha256": "eb8b529e1c42bc91c3bf8804ee05eed5e771d6dd949c2cbdbe8f66d1c31ffcdb"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "paper/submission-constraints.md",
+          "sha256": "fe1eabf0565fb3b0301b59501986de1b157e38c42ee7333d7ac2bcd970313db4"
+        },
+        {
+          "path": "paper/manuscript-metadata.md",
+          "sha256": "eb8b529e1c42bc91c3bf8804ee05eed5e771d6dd949c2cbdbe8f66d1c31ffcdb"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P21",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "audits/P21-delivery-verification.md",
+          "sha256": "0ad1347f5421820521ea0443753f2d132cc8ee3ac74f62ae6513ca3a83903171"
+        },
+        {
+          "path": "audits/P21-delivery-manifest.json",
+          "sha256": "9d99bdc041bf3f1d730fbe4c989ee864a6bf17def40acbfa1702f47544a855b1"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "audits/P21-delivery-verification.md",
+          "sha256": "0ad1347f5421820521ea0443753f2d132cc8ee3ac74f62ae6513ca3a83903171"
+        },
+        {
+          "path": "audits/P21-delivery-manifest.json",
+          "sha256": "9d99bdc041bf3f1d730fbe4c989ee864a6bf17def40acbfa1702f47544a855b1"
+        }
+      ],
+      "gate_verdict": "pass"
     }
   ]
 }
