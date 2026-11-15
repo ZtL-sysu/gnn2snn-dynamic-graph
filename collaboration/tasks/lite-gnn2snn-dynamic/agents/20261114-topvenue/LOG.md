@@ -19,3 +19,15 @@
 - **V-6 玩具四轮设计修正**（全部记录在案）：分段常数算子塌缩到固定点线（slope≡1）→ 持续激励随机游走仍 slope=1（**单元 Wmix 使激活差=状态差精确抵消收缩**；稳态本就意味着 ek≈prev）→ 剂量 2 失败暴露**教师状态衰减固定 ALPHA=0.3** 与 SNN alpha_state 不匹配 → 终版：子玩具 A（Wmix=0.5I、α=0.3 教师匹配、瞬态对）rho 拟合 0.891 vs 解析 0.850 PASS；子玩具 B（Wmix=I 随机游走）拓扑项 b>0、corr 0.375 PASS。剂量响应证据由真实流 V-4 臂承担。
 - P3、P3A 标记 passed；**主矩阵 50 runs 后台运行中**（bbxmdidyn）；V-6 PASS 后 analyze_v4.py 就绪待跑。
 - 检查点：manifest 24 artifacts 全哈希绑定。
+
+## 2026-11-15 (UTC) — v4 执行与收口（续 03:10Z 之后）
+
+- 主矩阵 50 runs 完成 → 时延相（发现并修正单方法探针的 bound 方法集 bug，仅时延相、文档化在驱动 docstring）→ `analyze_v4.py` 锁定分析一次执行。
+- **C-1 verdict：FALSE**。Wikipedia +4.90e-04 (q=0.039, dz=1.27, PoI=1.000) 唯一显著；MOOC −5.05e-05 方向负；Enron/Reddit/LastFM 方向正不显著。前驱四流主张双倍功效不复制，claim 按锁定映射收窄。
+- E10 界 PASS（违例 ≤2.3% vs 5% 上限，tightness ≈0.5–0.62）；M0 在 wiki/enron/lastfm 12 方法排第 2（仅次于 A1 神谕）；下游剂量响应五流全平（负结果保留）；V-arms 5/8，V-4 方向失败（保留）。
+- 论文 v4 初稿（38pp，0 错误）→ 评审工作流 7 子代理全部 API 429 → 改主线内联双评审（`audits/P9-peer-review.md`）。
+- **P13 自评审发现 C2 ≡ C1 逐位一致（全 10 seeds diff=0.00e+00）** → 根因：`dcgs_encode(a,theta,T,bias,carry)` 的 `carry` 形参被接受但从未消费（`res = a - bias`），v3 引擎逐字节相同 → 披露为**缺陷 D1**，不写补丁（预注册纪律）。C-1 判决不受影响；机制证据收敛为门控+阈值两分量。全文 9 处修订（摘要/§2.3/§3.4/§3.6/§3.7/§4.2/§4.6/§4.8/新 limitation 9）。
+- 其余 P13 修复：six→seven controls；0.97→≥0.995 captions；T-curve 10–19%→4–19%（数据复算）；B1/B2 悬空句删除；`efron1987`/`benjamini1995` 补引用（50/50 全被引）。
+- Neurocomputing 硬约束复核：摘要 449→**248 词**；highlights 5 条全部 ≤85 字符；7 关键词；声明位置合规。fig1 框架图插入（D1 范围 caption）。
+- **P5A+P6..P21 全部 mark passed**（哈希绑定证据）；P21：干净提取编译复现 40pp 字节一致、无 /Users/ 路径入交付物、无密钥、v3 哈希 5/5 PASS。
+- 检查点 `7671e11` → `7e8b3b1` → `2260d1d`，均 push + ls-remote 核验。HANDOFF 终版已写。

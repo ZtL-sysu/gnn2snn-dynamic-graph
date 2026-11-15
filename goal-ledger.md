@@ -121,3 +121,14 @@
 | 候选加深靶点（待顶会调研定优先级） | ① LastFM 边界案例的预注册新证据（加 seeds）；② 闭式误差定理 + bound tightness 验证实验；③ 叙事机制化重写（Figure 1 故事 + Discussion 升维）；④ 当代统计/效率标准件（effect size、分层 firing rate、op-count 能量公式）；⑤ 新分析行（spike 稀疏性 × 拓扑变化分层等） |
 | 已知约束（沿袭） | 本机 M1/16GB/MPS 无 CUDA；不实际投稿；不合并 main/force push；不做神经形态能耗实测；不上传 >50 MiB；不动 v3 既有文件 |
 | 执行者 | agent `20261114-topvenue`（本周期 lead）；v3 lead `20261113-wb-lead` 的文件不覆盖 |
+
+## 11 周期 v4 收口（2026-11-15）
+
+| 项 | 内容 |
+|----|------|
+| 完成状态 | **v4 全链达成**：f-research-v1 流水线 P0–P21 全部 passed（哈希绑定证据）；40 页论文 0 错误；13 图 + 12 表；50 条核验文献全部被引；Neurocomputing 硬约束全过（摘要 248 词、highlights ≤85 字符） |
+| Verdict of record | `d_replication_10seed = FALSE`：双倍功效下前驱四流主张不复制；仅 Wikipedia 显著（q=0.039）；MOOC 方向负；claim 按锁定规则收窄，未下调任何数值目标 |
+| 披露缺陷 D1 | `dcgs_encode` 不消费 carry 形参（v3/v4 同构）→ C2 ≡ C1 逐位一致，V-5 为空控；C-1 判决不受影响；机制证据 = 门控基重锚 + 局部阈值再校准；引擎与证据逐字节不动 |
+| 负结果 | V-4 臂方向失败、下游剂量响应五流全平、TCAR 开销 2.748% > 2% 条、MOOC 方向负——全部在文 |
+| 下一步（验收后） | D1 修复 + 锁定协议重跑（新 run root，C-1 原文）；作者字段/投稿由用户执行 |
+| 分支状态 | `agent/lite-gnn2snn-dynamic/20261114-topvenue` HEAD `2260d1d` 已 push 并 ls-remote 核验；不合 main、不 force push |
