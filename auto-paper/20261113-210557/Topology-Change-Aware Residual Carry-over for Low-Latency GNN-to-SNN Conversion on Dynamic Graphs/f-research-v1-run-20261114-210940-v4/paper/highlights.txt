@@ -1,0 +1,5 @@
+* Per-snapshot conversion-error identity for cached static bases on dynamic graphs, with an explicit cross-snapshot topology increment R(A_k - A_{k-1}) H_{k-1} W.
+* Per-node event-axis error recursion with validation-estimated, pre-test-locked constants, verified once on test traces within a pre-registered 5% violation ceiling.
+* Pre-registered ten-seed decision rule (paired BCa, exact sign-flip, Benjamini-Hochberg), frozen before inspection and executed once: significant error reduction on one of five streams at doubled power, with non-replication of the predecessor four-stream claim disclosed.
+* Topology-change-aware recalibration gated on the measured operator change, at 2.7% of the ANN MAC reference energy by op-count convention and two orders of magnitude below that reference overall.
+* Controlled toy identification of the contraction coefficient against its analytic value (0.891 vs 0.850), alongside disclosed negative findings (failed state-decay arm, flat downstream dose-response, direction-negative MOOC stream).

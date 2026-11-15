@@ -28,6 +28,12 @@ result exists; findings: agreement and trigger rate are alignment-robust and
 match the v3 stored rows EXACTLY (0/55 deviations); MRR and mean_epsilon carry
 an alignment-dependent float offset of <=1e-7 / <=9.3e-3 relative respectively,
 un-reproducible across processes with identical code, config, and teacher):
+Correction 2026-11-15 (post-main-matrix, latency-phase-only): evaluate() now
+restricts internal bound_method traces to the ACTIVE method set, so the
+single-method latency probe does not reference traces that do not exist. For
+full-matrix runs the triple (C1,C2,M0) is unchanged and all 50 stored run
+artifacts are bit-identical to the pre-correction engine (dict construction
+only; no arithmetic touched). The latency probe produces timing only.
   G1a agreement of every retained method must EQUAL the v3 seed-41 row exactly
      (argmax decisions are alignment-robust: 0/55 deviations observed);
   G1b MRR within 1e-6 absolute of the v3 row (observed max 7.8e-8, one order

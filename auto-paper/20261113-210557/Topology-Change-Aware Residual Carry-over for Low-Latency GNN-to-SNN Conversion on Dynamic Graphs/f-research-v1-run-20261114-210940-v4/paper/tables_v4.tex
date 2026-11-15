@@ -1,0 +1,232 @@
+% Generated from real v4 results; do not edit by hand.
+\begin{table}[t]
+\centering
+\small
+\caption{Five public streams used in this study (sizes, catalogs, frozen split identifiers).}
+\label{tab:data}
+\begin{tabular}{lcccc}
+\toprule
+Stream & Events & Catalog & Val / test queries & Split \\
+\midrule
+Wikipedia & 157,474 & 1,000 & 1,024 / 4,096 & 70/15/15 \\
+MOOC & 411,749 & 97 & 1,024 / 4,096 & 70/15/15 \\
+Enron & 125,235 & 184 & 1,024 / 4,096 & 70/15/15 \\
+Reddit & 672,447 & 984 & 1,024 / 4,096 & 70/15/15 \\
+LastFM & 1,293,103 & 1,000 & 1,024 / 4,096 & 70/15/15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Main comparison on Wikipedia (10 seeds; mean over seeds). C5-MT is the multi-threshold control.}
+\label{tab:main}
+\begin{tabular}{lccccc}
+\toprule
+Method & Agreement & Retention & $\varepsilon_k$ & Events & Trigger \\
+\midrule
+C0 & 0.9984 & 1.0000 & 0.01413 & 4.611 & 0.000 \\
+C1 & 0.9997 & 0.9998 & 0.00514 & 38.121 & 0.000 \\
+C2 & 0.9997 & 0.9998 & 0.00514 & 38.121 & 0.000 \\
+C3 & 0.9997 & 0.9997 & 0.00620 & 5.663 & 0.000 \\
+C4 & 0.9984 & 1.0001 & 0.01367 & 4.748 & 0.000 \\
+C5MT & 0.9994 & 1.0000 & 0.00679 & 6.171 & 0.000 \\
+M0 & 0.9997 & 1.0003 & 0.00465 & 38.683 & 0.165 \\
+A1 & 0.9998 & 1.0005 & 0.00406 & 41.641 & 1.000 \\
+A2 & 0.9997 & 0.9998 & 0.00473 & 38.371 & 0.165 \\
+A3 & 0.9997 & 0.9998 & 0.00473 & 38.129 & 0.165 \\
+A5 & 0.9996 & 0.9998 & 0.00471 & 38.095 & 0.000 \\
+D1 & 0.9997 & 0.9997 & 0.00620 & 5.663 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Five-stream replication with locked-rule statistics (10 seeds per stream). Reduction is $\varepsilon$ improvement of M0 over C2; $q$ is BH-adjusted.}
+\label{tab:streams}
+\begin{tabular}{lcccccc}
+\toprule
+Stream & Agree (M0) & $\varepsilon_{M0}$ & $\varepsilon_{C2}$ & Red. & Trig. & BH $q$ \\
+\midrule
+Wikipedia & 0.9997 & 0.00465 & 0.00514 & 9.5\% & 0.165 & 0.03906 \\
+Mooc & 1.0000 & 0.00373 & 0.00368 & -1.4\% & 0.072 & 0.4453 \\
+Enron & 1.0000 & 0.00514 & 0.00553 & 7.2\% & 0.103 & 0.2376 \\
+Reddit & 1.0000 & 0.00351 & 0.00361 & 2.7\% & 0.127 & 0.2376 \\
+Lastfm & 0.9995 & 0.00418 & 0.00424 & 1.3\% & 0.096 & 0.4453 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Locked C-1 decision rule, executed once: paired per-seed $\varepsilon$ differences (C2$-$M0), BCa 4000, exact sign-flip, BH across streams.}
+\label{tab:stats}
+\begin{tabular}{lcccccc}
+\toprule
+Stream & Mean diff & 95\% CI & sign-flip $p$ & BH $q$ & $d_z$ & PoI \\
+\midrule
+Wikipedia & 0.00049 & [0.00028, 0.00075] & $0.007812$ & 0.03906 & 1.27 & 0.000 \\
+Mooc & -0.00005 & [-0.00017, 0.00007] & $0.4453$ & 0.4453 & -0.25 & 0.797 \\
+Enron & 0.00040 & [-0.00018, 0.00075] & $0.1133$ & 0.2376 & 0.53 & 0.052 \\
+Reddit & 0.00010 & [-0.00002, 0.00020] & $0.1426$ & 0.2376 & 0.50 & 0.050 \\
+Lastfm & 0.00006 & [-0.00006, 0.00018] & $0.4082$ & 0.4453 & 0.27 & 0.182 \\
+$d_{\mathrm{replication}}^{10\mathrm{seed}}$ & false &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Bound constants (validation-estimated, locked) and single locked test evaluation: violation rates per method (mean over 10 seeds; ceiling 5\%).}
+\label{tab:bound}
+\begin{tabular}{lcccccccc}
+\toprule
+Stream & $\hat\rho$ & $\hat L_A$ & $\hat c$ & $\hat\eta$ & $R^2$ & Viol C1 & Viol C2 & Viol M0 \\
+\midrule
+Wikipedia & 0.727 & 0.039 & 0.000 & 0.004 & 0.922 & 0.0014 & 0.0014 & 0.0020 \\
+Mooc & 0.668 & 0.012 & 0.000 & 0.004 & 0.896 & 0.0000 & 0.0000 & 0.0000 \\
+Enron & 0.784 & 0.016 & 0.000 & 0.003 & 0.908 & 0.0196 & 0.0196 & 0.0317 \\
+Reddit & 0.722 & 0.008 & 0.000 & 0.005 & 0.874 & 0.0011 & 0.0011 & 0.0014 \\
+Lastfm & 0.677 & 0.007 & 0.000 & 0.003 & 0.921 & 0.0002 & 0.0002 & 0.0004 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Theory validation arms (slopes; C2 / M0; validation windows).}
+\label{tab:varms}
+\begin{tabular}{lccc}
+\toprule
+Arm & Dose & Expected direction & Measured slope \\
+\midrule
+V-2 $T$ dose-response & $T\in\{1,2,4,8,16\}$ & fidelity $\uparrow$ with $T$ & 0.00000 / 0.00000 \\
+V-3 edge insertion & $p\in\{0,..,0.20\}$ & $\varepsilon$ $\uparrow$ with $p$ & 0.00038 / -0.00079 \\
+V-4 state decay & $\alpha_s\in\{0.1,..,0.7\}$ & $\varepsilon$ $\downarrow$ with $\alpha_s$ & 0.00203 / 0.00208 \\
+V-5 carry-over & $\alpha\in\{0,..,1\}$ & agreement $\uparrow$ with $\alpha$ & 0.00000 / 0.00000 \\
+V-6 controlled toy & Sec.~\ref{sec:bound} & $\rho$ recovered & 0.891 vs 0.85 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Robustness, five-level sweeps (validation): mean per-event state error $\varepsilon_k$ at the clean and strongest dose, with the max/clean ratio. Argmax agreement is saturated at 1.0 under every dose for both methods and is therefore not the informative view.}
+\label{tab:robust}
+\begin{tabular}{lcccc}
+\toprule
+Perturbation & Dose & Clean $\varepsilon$ & Max $\varepsilon$ & Ratio \\
+\midrule
+noise C2 & $\sigma{=}0.04$ & 5.05e-03 & 4.69e-02 & 9.2838 \\
+noise M0 & $\sigma{=}0.04$ & 4.27e-03 & 4.75e-02 & 11.1042 \\
+dt C2 & $\delta_t{=}0.4$ & 5.05e-03 & 5.05e-03 & 1.0006 \\
+dt M0 & $\delta_t{=}0.4$ & 4.27e-03 & 4.28e-03 & 1.0018 \\
+drop C2 & $p{=}0.20$ & 5.05e-03 & 5.05e-03 & 0.9999 \\
+drop M0 & $p{=}0.20$ & 4.27e-03 & 4.27e-03 & 1.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Op-count energy per event (pJ; Horowitz 2014 45nm constants, SGNNBench convention): ACs $\times$ 0.9\,pJ vs ANN MAC reference ($1536\times$ 4.6\,pJ); last column is the TCAR re-anchoring overhead share of the ANN reference.}
+\label{tab:energy}
+\begin{tabular}{lccccc}
+\toprule
+Stream & M0 & C2 & C5-MT & ANN ref & TCAR OH\% \\
+\midrule
+Wikipedia & 104.443 & 102.928 & 16.661 & 7065.600 & 2.748 \\
+Mooc & 106.731 & 105.903 & 17.249 & 7065.600 & 1.202 \\
+Enron & 114.062 & 110.189 & 16.361 & 7065.600 & 1.710 \\
+Reddit & 102.785 & 101.819 & 15.687 & 7065.600 & 2.108 \\
+Lastfm & 99.501 & 97.359 & 16.254 & 7065.600 & 1.607 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Per-event wall time (ms, mean of 3 reps; single-method isolation; includes the shared teacher forward, identical across methods).}
+\label{tab:latency}
+\begin{tabular}{lc}
+\toprule
+Method & ms/event \\
+\midrule
+C0 & PENDING \\
+C1 & PENDING \\
+C2 & PENDING \\
+C3 & PENDING \\
+C4 & PENDING \\
+C5MT & PENDING \\
+M0 & PENDING \\
+A1 & PENDING \\
+A2 & PENDING \\
+A3 & PENDING \\
+A5 & PENDING \\
+D1 & PENDING \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Timestep dose-response on the validation window: agreement (saturated) and mean per-event state error $\varepsilon_k$ for C2 and M0.}
+\label{tab:tcurve}
+\begin{tabular}{lcccc}
+\toprule
+$T$ & C2 agree & M0 agree & C2 $\varepsilon$ & M0 $\varepsilon$ \\
+\midrule
+1 & 1.0000 & 1.0000 & 9.40e-03 & 9.01e-03 \\
+2 & 1.0000 & 1.0000 & 6.68e-03 & 6.10e-03 \\
+4 & 1.0000 & 1.0000 & 5.05e-03 & 4.27e-03 \\
+8 & 1.0000 & 1.0000 & 4.70e-03 & 3.83e-03 \\
+16 & 1.0000 & 1.0000 & 4.69e-03 & 3.82e-03 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Inductive vs transductive agreement (10-seed mean). Inductive: at least one query endpoint first appears inside the evaluation window.}
+\label{tab:strata}
+\begin{tabular}{lccccc}
+\toprule
+Stream & M0 ind & M0 trd & C2 ind & C2 trd & C5MT ind \\
+\midrule
+Wikipedia & 1.0000 & 0.9997 & 1.0000 & 0.9997 & 1.0000 \\
+Mooc & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Enron & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Reddit & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Lastfm & PENDING & 0.9995 & PENDING & 0.9995 & PENDING \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption{Downstream validity dose-response: mean per-query MRR loss (ANN $-$ converted) by $\varepsilon$ bin (edges $10^{-5}..10^{-1}$; M0/C2 per cell).}
+\label{tab:downstream}
+\begin{tabular}{lcccccc}
+\toprule
+Stream & bin0 & bin1 & bin2 & bin3 & bin4 & bin5 \\
+\midrule
+Wikipedia & 0.0/0.0 & 0.0/0.0 & -1.27611206877193e-07/-1.358701213090389e-07 & -7.562300911020603e-05/4.1186564901109575e-05 & -2.2496944310153175e-07/-2.1716105552772036e-07 & 0.0/0.0 \\
+Mooc & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 \\
+Enron & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 & -4.2859884193607075e-05/1.1900670390636497e-06 & 0.0/0.0 & 0.0/0.0 \\
+Reddit & 0.0/0.0 & 0.0/0.0 & 0.0/0.0 & 1.1365426628717894e-07/1.1242822348103235e-07 & -7.885409271123814e-07/-8.186739921306979e-07 & 0.0/0.0 \\
+Lastfm & 0.0/0.0 & 0.0/0.0 & 0.0/6.508535293183846e-07 & -9.430502450475923e-07/-8.405007099530289e-07 & 0.0/0.0 & 0.0/0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

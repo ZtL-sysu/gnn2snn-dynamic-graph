@@ -336,7 +336,10 @@ def evaluate(st, M, A, NI, dA, delta, seed, cfg, query_ids, phase="test"):
     bc = cfg.get("bound_consts") or {}
     LA_hat = float(bc.get("LA", 0.0)); c_hat = float(bc.get("c", 0.0)); eta_hat = float(bc.get("eta", 0.0))
     rho_hat = 1.0 - alpha_state if alpha_state else (1.0 - ALPHA)
-    bound_methods = [m for m in ("C1", "C2", "M0") ]
+    # bound methods restricted to the ACTIVE method set, so single-method
+    # probes (e.g. the latency phase) do not touch traces that do not exist.
+    # For full-matrix runs this is identical to the previous fixed triple.
+    bound_methods = [m for m in ("C1", "C2", "M0") if m in METHODS]
     s_ann = M["state"].copy()
     methods = list(METHODS)
     states = {m: s_ann.copy() for m in methods}
@@ -585,7 +588,8 @@ def evaluate(st, M, A, NI, dA, delta, seed, cfg, query_ids, phase="test"):
     if phase == "test":
         wj(RESULTS / "bound-check" / f"{cfg['stream']}_s{seed}_trace.json",
            {"dA": dA[start:end:10].tolist(), "delta": delta[start:end:10].tolist(),
-            "epsilon_M0": eps_trace["M0"][::10], "epsilon_C2": eps_trace["C2"][::10],
+            "epsilon_M0": (eps_trace["M0"][::10] if "M0" in eps_trace else None),
+            "epsilon_C2": (eps_trace["C2"][::10] if "C2" in eps_trace else None),
             "rho": 1 - ALPHA, "T": T,
             "note": "real measured ||A_k-A_{k-1}||, not a proxy"})
     if log_bf:

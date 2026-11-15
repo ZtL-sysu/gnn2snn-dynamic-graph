@@ -269,7 +269,10 @@ def main():
             v_arm_verdicts[f"{k}_{meth}"] = {"slope": s, "expected": direction,
                                              "pass": (s < 0 if direction == "negative" else s > 0)}
     v_arm_verdicts["v6_toy"] = {"verdict": v6["verdict"], "checks": v6["checks"],
-                                "fitted_rho": v6["fitted_a"], "b_over_alpha_g": v6["b_over_alpha_g"]}
+                                "fitted_rho_transient": v6["subtoy_A_rho"]["fits"]["0.3"]["fitted_a_transient"],
+                                "rho_analytic": v6["subtoy_A_rho"]["rho_analytic"],
+                                "fitted_b": v6["subtoy_B_topo"]["fitted_b"],
+                                "corr_ek_topo": v6["subtoy_B_topo"]["corr_ek_topo"]}
     out["theory_validation"] = {"slopes": checks, "verdicts": v_arm_verdicts,
                                 "v6": v6}
 
@@ -351,10 +354,11 @@ def main():
         out["downstream"][name] = d6
         c7 = {}
         for m in METHODS:
-            ind = np.nanmean([by[(name, s)]["methods"][m]["agreement_inductive"] or np.nan
-                              for s in range(41, 51)])
-            trd = np.nanmean([by[(name, s)]["methods"][m]["agreement_transductive"] or np.nan
-                              for s in range(41, 51)])
+            def _ms(key):
+                v = [by[(name, s)]["methods"][m][key]
+                     for s in range(41, 51) if by[(name, s)]["methods"][m][key]]
+                return float(np.mean(v)) if v else float("nan")
+            ind, trd = _ms("agreement_inductive"), _ms("agreement_transductive")
             c7[m] = {"inductive": None if not np.isfinite(ind) else float(ind),
                      "transductive": None if not np.isfinite(trd) else float(trd),
                      "gap_pp": None if not (np.isfinite(ind) and np.isfinite(trd)) else float((ind - trd) * 100)}
@@ -372,7 +376,8 @@ def main():
     out["feasibility_contract"] = {
         "CL1_engine_reproduction": {"verdict": repro["verdict"],
                                     "max_rel_eps_diff": repro["max_rel_eps_diff"],
-                                    "criteria_failed": {k: len(v["failed"]) for k, v in repro["criteria"].items()},
+                                    "criteria_failed": {k: len(v.get("failed", v.get("hard_failed", [])))
+                                                        for k, v in repro["criteria"].items()},
                                     "seed46_outside_ranges": repro["seed46_range_check"]["n_outside"]},
         "CL2_ten_seed_replication": {"d_replication_10seed": c1["d_replication_10seed"],
                                      "all_five_conjunction": conjunction,

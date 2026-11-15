@@ -1,0 +1,37 @@
+{
+  "wikipedia": {
+    "gamma": 0.5,
+    "tau": 0.4,
+    "T": 4,
+    "percentile": 0.999,
+    "provenance": "v3 gamma_selection_v3.json; validation-only selection; streams hash-frozen identical; teacher code unchanged"
+  },
+  "mooc": {
+    "gamma": 0.5,
+    "tau": 0.4,
+    "T": 4,
+    "percentile": 0.999,
+    "provenance": "v3 gamma_selection_v3.json; validation-only selection; streams hash-frozen identical; teacher code unchanged"
+  },
+  "enron": {
+    "gamma": 0.5,
+    "tau": 0.37,
+    "T": 4,
+    "percentile": 0.999,
+    "provenance": "v3 gamma_selection_v3.json; validation-only selection; streams hash-frozen identical; teacher code unchanged"
+  },
+  "reddit": {
+    "gamma": 0.5,
+    "tau": 0.45,
+    "T": 4,
+    "percentile": 0.999,
+    "provenance": "v3 gamma_selection_v3.json; validation-only selection; streams hash-frozen identical; teacher code unchanged"
+  },
+  "lastfm": {
+    "gamma": 0.5,
+    "tau": 0.37,
+    "T": 4,
+    "percentile": 0.999,
+    "provenance": "v3 gamma_selection_v3.json; validation-only selection; streams hash-frozen identical; teacher code unchanged"
+  }
+}

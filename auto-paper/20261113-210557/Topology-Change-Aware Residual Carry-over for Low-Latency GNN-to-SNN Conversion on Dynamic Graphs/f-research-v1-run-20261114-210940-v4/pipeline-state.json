@@ -80,6 +80,14 @@
     {
       "action": "pass",
       "stage": "P3A"
+    },
+    {
+      "action": "pass",
+      "stage": "P4"
+    },
+    {
+      "action": "pass",
+      "stage": "P5"
     }
   ],
   "stages": [
@@ -299,19 +307,87 @@
     },
     {
       "id": "P4",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "results/aggregated.json",
+          "sha256": "b5710d363034f915945dfe687e195a54dce0d872817e0ae186c2b6b626394415"
+        },
+        {
+          "path": "results/latency/latency_probe.json",
+          "sha256": "044b31f345f932626134595d2d27ae6baf636707ef22fef3e9c42b400d2bfdd6"
+        },
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        },
+        {
+          "path": "results_main.log",
+          "sha256": "088750f8470c883a882eef67412e1c2d160d6a773bb3f56bcd97d35762dc89d6"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/aggregated.json",
+          "sha256": "b5710d363034f915945dfe687e195a54dce0d872817e0ae186c2b6b626394415"
+        },
+        {
+          "path": "results/latency/latency_probe.json",
+          "sha256": "044b31f345f932626134595d2d27ae6baf636707ef22fef3e9c42b400d2bfdd6"
+        },
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        },
+        {
+          "path": "results_main.log",
+          "sha256": "088750f8470c883a882eef67412e1c2d160d6a773bb3f56bcd97d35762dc89d6"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P5",
-      "status": "pending",
-      "contract_version": "v1",
-      "inputs": [],
-      "evidence": [],
-      "gate_verdict": "pending"
+      "status": "passed",
+      "contract_version": "v4",
+      "inputs": [
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        },
+        {
+          "path": "audits/reproduction-check.json",
+          "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd"
+        },
+        {
+          "path": "audits/v3-evidence-hashes.json",
+          "sha256": "fc31dceb30a8f44a7fadd8acfe50aea731d88fcaf88dc4fc2a9b0ed3acd3895c"
+        },
+        {
+          "path": "results/theory/bound_constants.json",
+          "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4"
+        }
+      ],
+      "evidence": [
+        {
+          "path": "results/final-analysis-v4.json",
+          "sha256": "22cdd1211a1da4e07805efebec79aa93a90de41526d474591c26221c99cf8f3c"
+        },
+        {
+          "path": "audits/reproduction-check.json",
+          "sha256": "f87daf2cd239308e8013288d1e72c17adf8ceef5e9bc6836edf42d292d0799dd"
+        },
+        {
+          "path": "audits/v3-evidence-hashes.json",
+          "sha256": "fc31dceb30a8f44a7fadd8acfe50aea731d88fcaf88dc4fc2a9b0ed3acd3895c"
+        },
+        {
+          "path": "results/theory/bound_constants.json",
+          "sha256": "c1bc604a4f24f4b6d03abeb40c3a10cfe840d3aeba1a22ccb475e80060cf16e4"
+        }
+      ],
+      "gate_verdict": "pass"
     },
     {
       "id": "P5A",

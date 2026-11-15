@@ -1,0 +1,56 @@
+{
+  "generated": "2026-11-15T15:41:08+0800",
+  "window": 2000,
+  "reps": 3,
+  "note": "end-to-end per-event wall time incl. shared ANN teacher forward (identical constant offset across methods); single-method isolation via V4_METHODS",
+  "methods": {
+    "C0": {
+      "ms_per_event_mean": 0.10494347232937191,
+      "ms_per_event_sd": 0.007810346327098573
+    },
+    "C1": {
+      "ms_per_event_mean": 0.25234014582626213,
+      "ms_per_event_sd": 0.005589852921268866
+    },
+    "C2": {
+      "ms_per_event_mean": 0.2769496735030164,
+      "ms_per_event_sd": 0.030416418114353163
+    },
+    "C3": {
+      "ms_per_event_mean": 0.09555703484026405,
+      "ms_per_event_sd": 0.008226600632092122
+    },
+    "C4": {
+      "ms_per_event_mean": 0.10555021499749273,
+      "ms_per_event_sd": 0.002995747306259015
+    },
+    "C5MT": {
+      "ms_per_event_mean": 0.08967577766937514,
+      "ms_per_event_sd": 0.0032511153327764424
+    },
+    "M0": {
+      "ms_per_event_mean": 0.25729811101336963,
+      "ms_per_event_sd": 0.0025578734671861825
+    },
+    "A1": {
+      "ms_per_event_mean": 0.30521942350120906,
+      "ms_per_event_sd": 0.028115666063185118
+    },
+    "A2": {
+      "ms_per_event_mean": 0.2653585764928721,
+      "ms_per_event_sd": 0.002852404985285169
+    },
+    "A3": {
+      "ms_per_event_mean": 0.2655337085210097,
+      "ms_per_event_sd": 0.0028226860048928197
+    },
+    "A5": {
+      "ms_per_event_mean": 0.2502029929989173,
+      "ms_per_event_sd": 0.0024097464583989147
+    },
+    "D1": {
+      "ms_per_event_mean": 0.08055572234055337,
+      "ms_per_event_sd": 0.0010821242281880714
+    }
+  }
+}
